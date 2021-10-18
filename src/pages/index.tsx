@@ -9,80 +9,58 @@ const Styles = require("../styles/_index.module.scss")
 
 const IndexPage = () => (
   <>
-    <header className={Styles.test} id="header">
-      <h2 className="header-sub-title">toriwatari</h2>
-      <h1 className="header-title">Portfolio Web Site</h1>
+    <header className={Styles.header} id="header">
+      <h2 className={Styles.headerSubTitle}>toriwatari</h2>
+      <h1 className={Styles.headerTitle}>Portfolio Web Site</h1>
       <p>更新日 : <time>2021-10-17</time></p>
 
-      <a href="/skill/" className="my-skill">
-        <h3 className="my-skill-title">I <i className="fas fa-heart"></i> HTML & CSS</h3>
-
-        {/*
-        <div className="skill-wrapper">
-          <div>
-            <p><i className="fab fa-html5"></i>HTML5</p>
-            <p><i className="fab fa-css3"></i>CSS3</p>
-            <p><i className="fab fa-js-square"></i>TypeScript</p>
-          </div>
-          <div>
-            <p><i className="fab fa-node"></i>Node.js</p>
-            <p><i className="fab fa-vuejs"></i>Vue.js</p>
-            <p><i className="fab fa-js-square"></i>GatsbyJS</p>
-          </div>
-          <div>
-            <p><i className="fas fa-database"></i>MongoDB</p>
-            <p><i className="fab fa-docker"></i>Docker</p>
-            <p><i className="fas fa-cloud"></i>AWS</p>
-          </div>
-        </div>
-        */}
+      <a href="/skill/" className={Styles.mySkill}>
+        <h3 className={Styles.mySkillTitle}>I <i className="fas fa-heart"></i> HTML & CSS</h3>
       </a>
 
-      <a className="arrow-container" href="#sec1">
-        <div className="arrow"></div>
-        <div className="arrow"></div>
-        <div className="arrow"></div>
+      <a className={Styles.arrowContainer} href="#sec1">
+        <div className={Styles.arrow}></div>
+        <div className={Styles.arrow}></div>
+        <div className={Styles.arrow}></div>
       </a>
     </header> 
 
-    <section className="section section-links sa sa--up" id="sec1">
-      <h2 className="section-title links-title">Sample Pages</h2> 
+    <section className={`${Styles.section} ${Styles.sec1} sa sa--up`} id="sec1">
+      <h2 className={Styles.sectionTitle}>Sample Pages</h2> 
 
-      <div className="links-wrapper">
+      <div className={Styles.linksWrapper}>
         <a
-          className="link-item sa sa--up"
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           href="sample-page/sample1/"
         >
-          <h3 className="title link-title">Sample1</h3>
+          <h3 className={Styles.linkTitle}>Sample1</h3>
           <i className="fas fa-code"></i>
           <p>サンプルページ1</p>
         </a>
 
         <a
-          className="link-item sa sa--up"
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           href="sample-page/sample2/"
         >
-          <h3 className="title link-title">Sample2</h3>
-          <div className="nogi"></div>
+          <h3 className={Styles.linkTitle}>Sample2</h3>
+          <div className={Styles.nogi}></div>
           <p>サンプルページ2です。〇木坂46をテーマにページを作成しました。</p>
         </a>
 
         <a
-          className="link-item sa sa--up"
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           href="sample-page/sample3/"
         >
-          <h3 className="title link-title">Sample3</h3>
+          <h3 className={Styles.linkTitle}>Sample3</h3>
           <i className="fas fa-code"></i>
           <p>サンプルページ3</p>
         </a>
-      </div>
 
-      <div className="links-wrapper">
         <a
-          className="link-item sa sa--up"
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           href="sample-page/sample4/"
         >
-          <h3 className="title link-title">Sample4</h3>
+          <h3 className={Styles.linkTitle}>Sample4</h3>
           <i className="fas fa-code"></i>
           <p>サンプルページ4</p>
         </a>
@@ -93,10 +71,10 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="section sec3 sa sa--up" id="sec3">
-      <h2 className="section-title">CSS Animation & Tips</h2>
+    <section className={`${Styles.section} sec3 sa sa--up`} id="sec3">
+      <h2 className={Styles.sectionTitle}>CSS Animation & Tips</h2>
 
-      <div className="section-wrapper">
+      <div className={Styles.sectionWrapper}>
         <img src="./src/images/css.svg" className="img" />
         <p>CSSで実現できるアニメーションや、ちょっとした小テクを紹介します。Nuxt.js + AWS Amplifyで構築しました。</p>
       </div>
@@ -105,12 +83,12 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="section sa sa--up" id="sec4">
-      <h2 className="section-title">Blog</h2>
+    <section className={`${Styles.section} sa sa--up`} id="sec4">
+      <h2 className={Styles.sectionTitle}>Blog</h2>
 
-      <div className="section-wrapper">
+      <div className={Styles.sectionWrapper}>
         <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + AWS Amplifyで構築しています。</p>
-        <img src="./src/images/gatsby.svg" className="img" />
+        <img src="./src/images/gatsby.svg" className={Styles.img} />
       </div>
 
       <div className="btn-wrapper">
@@ -118,15 +96,15 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="section section-jamstack sa sa--up" id="sec5">
-      <h2 className="section-title">JamstackなWebサイトを構築してみた</h2>
-      <div className="section-wrapper">
-        <img src="./src/images/static.svg" className="img" />
+    <section className={`${Styles.section} section-jamstack sa sa--up`} id="sec5">
+      <h2 className={Styles.sectionTitle}>JamstackなWebサイトを構築してみた</h2>
+      <div className={Styles.sectionWrapper}>
+        <img src="./src/images/static.svg" className={Styles.img} />
           <div>
             <p>Jamstack構成のWebサイト構築が面白いと感じ、サンプルで色々なサイトを作成しています。</p>
             <p>2021年度中に10個作成するのが目標です。</p>
           </div>
-          <img src="./src/images/jamstack.png" className="img" />
+          <img src="./src/images/jamstack.png" className={Styles.img} />
       </div>
 
       <div className="btn-wrapper">
@@ -134,7 +112,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className="section progress-section sa sa--up">
+    <section className={`${Styles.section} progress-section sa sa--up`}>
       <h2 className="section-title">2021年度の個人タスク</h2>
 
       <div className="wrapper">
