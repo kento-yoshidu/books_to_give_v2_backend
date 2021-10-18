@@ -5,9 +5,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+const Styles = require("../styles/_index.module.scss")
+
 const IndexPage = () => (
   <>
-    <header className="header" id="header">
+    <header className={Styles.test} id="header">
       <h2 className="header-sub-title">toriwatari</h2>
       <h1 className="header-title">Portfolio Web Site</h1>
       <p>更新日 : <time>2021-10-17</time></p>
