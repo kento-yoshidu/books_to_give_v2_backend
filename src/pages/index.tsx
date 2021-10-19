@@ -7,6 +7,13 @@ import Seo from "../components/seo"
 
 const Styles = require("../styles/_index.module.scss")
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
+
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
+
 const IndexPage = () => (
   <>
     <header className={Styles.header} id="header">
@@ -15,7 +22,7 @@ const IndexPage = () => (
       <p>更新日 : <time>2021-10-17</time></p>
 
       <a href="/skill/" className={Styles.mySkill}>
-        <h3 className={Styles.mySkillTitle}>I <i className="fas fa-heart"></i> HTML & CSS</h3>
+        <h3 className={Styles.mySkillTitle}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
       </a>
 
       <a className={Styles.arrowContainer} href="#sec1">
