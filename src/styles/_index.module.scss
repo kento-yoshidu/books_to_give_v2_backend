@@ -67,6 +67,9 @@ html {
       letter-spacing: 1px;
       text-align: center;
       transition: .2s;
+      svg {
+        color: pink
+      }
     }
   }
   .arrowContainer {
