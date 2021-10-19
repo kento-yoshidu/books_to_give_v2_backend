@@ -2,8 +2,10 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+/*
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+*/
 
 const Styles = require("../styles/_index.module.scss")
 
@@ -19,10 +21,9 @@ const IndexPage = () => (
     <header className={Styles.header} id="header">
       <h2 className={Styles.headerSubTitle}>toriwatari</h2>
       <h1 className={Styles.headerTitle}>Portfolio Web Site</h1>
-      <p>更新日 : <time>2021-10-17</time></p>
 
       <a href="/skill/" className={Styles.mySkill}>
-        <h3 className={Styles.mySkillTitle}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
+        <h3 className={Styles.mySkillTitle}>I <FontAwesomeIcon icon={faHeart} /> HTML  CSS</h3>
       </a>
 
       <a className={Styles.arrowContainer} href="#sec1">
@@ -99,7 +100,7 @@ const IndexPage = () => (
       </div>
 
       <div className="btn-wrapper">
-        <a href="https://blog.toriwatari.work" className="link-btn" target="_blank">サイトを見る</a>
+        <a href="https://blog.toriwatari.work" className="link-btn">サイトを見る</a>
       </div>
     </section>
 
