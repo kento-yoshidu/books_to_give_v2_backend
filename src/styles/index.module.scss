@@ -74,7 +74,7 @@ html {
     justify-content: center;
     align-items: center;
     margin-top: 25px;
-    width: 150px;
+    width: 100px;
     &:hover .arrow {
       border-color: orange;
     }
@@ -132,7 +132,92 @@ html {
       width: 90%;
     }
     .arrowContainer {
+      width: 50px;
       margin-top: -20px;
+      .arrow {
+        width: 25px;
+        height: 25px;
+      }
     }
   } 
 }
+
+.section {
+  padding: 5% 0;
+  .sectionTitle {
+    color: #444;
+    font-weight: 100;
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    .sectionTitle {
+      font-size: 3rem;
+      max-width: 80%;
+      margin: 0 auto;
+      line-height: 1.3;
+    }
+  }
+}
+
+.sec1 {
+  .linksWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 30px;
+  }
+  .linksTitle {
+    letter-spacing: 5px;
+  }
+
+  .link-item {
+    display: block;
+    width: 20vw;
+    margin: 0 1.2%;
+    border: 2px solid rgb(190,190,190);
+    border-radius: 3px;
+    color: #444;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      background: rgb(248,248,248);
+      color: orange;
+    }
+    .link-title {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      margin: 50px 0 30px 0;
+    }
+    svg {
+      font-size: 6rem;
+      margin: 0;
+    }
+    p {
+      width: 80%;
+      margin: 40px auto 50px;
+      font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+  } //link-item
+
+  .nogi {
+    background: linear-gradient(to bottom right, #fff 50%, rgb(147,41,147) 50.3%) no-repeat bottom right/100% 100%;
+    width: 62px;
+    height: 62px;
+    position: relative;
+    margin: 0 auto;
+    &::after {
+      content: "47";
+      font: 18px/1em -webkit-pictograph;
+      color: #fff;
+      right: 4px;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+} //section-links
