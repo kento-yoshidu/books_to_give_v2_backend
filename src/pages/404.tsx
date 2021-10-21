@@ -3,8 +3,12 @@ import { graphql } from "gatsby"
 
 import Seo from "../components/seo"
 
-const NotFoundPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+interface Props {
+  data: GatsbyTypes.NotFoundQuery
+}
+
+const NotFoundPage: React.VFC<Props> = ({ data }) => {
+  const siteTitle = data?.site?.siteMetadata?.title
 
   return (
     <>
@@ -18,7 +22,7 @@ const NotFoundPage = ({ data, location }) => {
 export default NotFoundPage
 
 export const pageQuery = graphql`
-  query {
+  query NotFound {
     site {
       siteMetadata {
         title

@@ -86,7 +86,7 @@ const Index: React.VFC = () => (
         <p>ogehogeh</p>
         <StaticImage
           src="../images/css.svg"
-          alt="hoge"
+          alt="CSSのイメージ画像"
           layout="fullWidth"
           className={Styles.imgWrapper}
         />
