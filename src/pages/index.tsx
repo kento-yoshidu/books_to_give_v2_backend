@@ -79,11 +79,10 @@ const Index: React.VFC = () => (
       </div>
     </section>
 
-    <section className="section sec3 sa sa--up" id="sec3">
-      <h2 className="section-title">CSS Animation & Tips</h2>
+    <section className={`${Styles.section} ${Styles.sec2} sa sa--up}`} id="sec3">
+      <h2 className={Styles.sectionTitle}>CSS Animation & Tips</h2>
 
-      <div className="section-wrapper">
-        <p>ogehogeh</p>
+      <div className={Styles.sectionWrapper}>
         <StaticImage
           src="../images/css.svg"
           alt="CSSのイメージ画像"
@@ -94,6 +93,44 @@ const Index: React.VFC = () => (
       </div>
       <div className="btn-wrapper">
         <a href="https://cssanimation.toriwatari.work/" className="link-btn" target="_blank">サイトを見る</a>
+      </div>
+    </section>
+
+    <section className={`${Styles.section} sa sa--up`} id="sec4">
+      <h2 className={Styles.sectionTitle}>Blog</h2>
+
+      <div className={Styles.sectionWrapper}>
+        <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + AWS Amplifyで構築しています。</p>
+        <StaticImage
+          src="../images/gatsby.svg"
+          alt="CSSのイメージ画像"
+          layout="fullWidth"
+          className={Styles.imgWrapper}
+        />
+      </div>
+
+      <div className="btn-wrapper">
+        <a href="https://blog.toriwatari.work" className="link-btn" target="_blank">サイトを見る</a>
+      </div>
+    </section>
+    
+    <section className={`${Styles.section} ${Styles.sectionJamstack} sa sa--up`} id="sec5">
+      <h2 className={Styles.sectionTitle}>JamstackなWebサイトを構築してみた</h2>
+      <div className={Styles.sectionWrapper}>
+        <div>
+          <p>Jamstack構成のWebサイト構築が面白いと感じ、サンプルで色々なサイトを作成しています。</p>
+          <p>2021年度中に10個作成するのが目標です。</p>
+        </div>
+        <StaticImage
+          src="../images/static.svg"
+          alt="CSSのイメージ画像"
+          layout="fullWidth"
+          className={Styles.imgWrapper}
+        />
+      </div>
+
+      <div className="btn-wrapper">
+        <a href="/jamstack/" className="link-btn">More</a>
       </div>
     </section>
   </>
