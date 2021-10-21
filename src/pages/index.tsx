@@ -2,10 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-/*
-import Layout from "../components/layout"
 import Seo from "../components/seo"
-*/
 
 const Styles = require("../styles/index.module.scss")
 
@@ -18,6 +15,10 @@ config.autoAddCss = false
 
 const Index: React.VFC = () => (
   <>
+    <Seo
+      title="ポートフォリオサイト"
+    />
+
     <header className={Styles.header} id="header">
       <h2 className={Styles.headerSubTitle}>toriwatari</h2>
       <h1 className={Styles.headerTitle}>Portfolio Website</h1>
