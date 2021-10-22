@@ -414,6 +414,7 @@ type SitePluginPluginOptionsDefaults = {
   readonly formats: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly quality: Maybe<Scalars['Int']>;
   readonly breakpoints: Maybe<ReadonlyArray<Maybe<Scalars['Int']>>>;
+  readonly backgroundColor: Maybe<Scalars['String']>;
 };
 
 type SitePluginPluginOptionsFeeds = {
@@ -2605,6 +2606,7 @@ type SitePluginPluginOptionsDefaultsFilterInput = {
   readonly formats: Maybe<StringQueryOperatorInput>;
   readonly quality: Maybe<IntQueryOperatorInput>;
   readonly breakpoints: Maybe<IntQueryOperatorInput>;
+  readonly backgroundColor: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPluginOptionsFeedsFilterListInput = {
@@ -2830,6 +2832,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.defaults.formats'
   | 'pluginCreator.pluginOptions.defaults.quality'
   | 'pluginCreator.pluginOptions.defaults.breakpoints'
+  | 'pluginCreator.pluginOptions.defaults.backgroundColor'
   | 'pluginCreator.pluginOptions.base64Width'
   | 'pluginCreator.pluginOptions.stripMetadata'
   | 'pluginCreator.pluginOptions.defaultQuality'
@@ -3065,6 +3068,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.defaults.formats'
   | 'pluginOptions.defaults.quality'
   | 'pluginOptions.defaults.breakpoints'
+  | 'pluginOptions.defaults.backgroundColor'
   | 'pluginOptions.base64Width'
   | 'pluginOptions.stripMetadata'
   | 'pluginOptions.defaultQuality'
@@ -3834,13 +3838,10 @@ type ImageSharpSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type cProductgatsbyportfoliositesrccomponentsseoTsx2841359383QueryVariables = Exact<{ [key: string]: never; }>;
+type NotFoundQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type cProductgatsbyportfoliositesrccomponentsseoTsx2841359383Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description'>
-      & { readonly social: Maybe<Pick<Social, 'twitter'>> }
-    )> }> };
+type NotFoundQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 type BlogPostBySlugQueryVariables = Exact<{
   id: Scalars['String'];
@@ -3853,11 +3854,6 @@ type BlogPostBySlugQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe
     Pick<MarkdownRemark, 'id' | 'excerpt' | 'html'>
     & { readonly frontmatter: Maybe<Pick<Frontmatter, 'title' | 'date' | 'description'>> }
   )>, readonly previous: Maybe<{ readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'title'>> }>, readonly next: Maybe<{ readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'title'>> }> };
-
-type NotFoundQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type NotFoundQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -3889,5 +3885,13 @@ type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type cProductgatsbyportfoliositesrccomponentsseoTsx2841359383QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type cProductgatsbyportfoliositesrccomponentsseoTsx2841359383Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'description'>
+      & { readonly social: Maybe<Pick<Social, 'twitter'>> }
+    )> }> };
 
 }

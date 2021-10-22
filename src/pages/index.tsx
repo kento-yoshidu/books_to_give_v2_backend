@@ -102,7 +102,7 @@ const Index: React.VFC = () => (
       <div className={Styles.sectionWrapper}>
         <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + AWS Amplifyで構築しています。</p>
         <StaticImage
-          src="../images/gatsby.svg"
+          src="../images/gatsby.png"
           alt="CSSのイメージ画像"
           layout="fullWidth"
           className={Styles.imgWrapper}
@@ -122,7 +122,7 @@ const Index: React.VFC = () => (
           <p>2021年度中に10個作成するのが目標です。</p>
         </div>
         <StaticImage
-          src="../images/static.svg"
+          src="../images/static.png"
           alt="CSSのイメージ画像"
           layout="fullWidth"
           className={Styles.imgWrapper}
