@@ -50,7 +50,19 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `png`],
+          //placeholder: `dominantColor`,
+          quality: 100,
+          breakpoints: [750, 1080, 1366, 1920],
+          //backgroundColor: `transparent`,
+          //pngOptions: {quality: 100, compressionSpeed: 1},
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
