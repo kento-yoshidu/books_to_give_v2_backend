@@ -84,7 +84,7 @@ const Index: React.VFC = () => (
 
       <div className={Styles.sectionWrapper}>
         <StaticImage
-          src="../images/css.svg"
+          src="../images/css.png"
           alt="CSSのイメージ画像"
           layout="fullWidth"
           className={Styles.imgWrapper}
