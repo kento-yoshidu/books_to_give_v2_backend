@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
+import Button from "../components/button"
 
 const Styles = require("../styles/index.module.scss")
 
@@ -66,13 +67,18 @@ const Index: React.VFC = () => (
 
         <Link
           className={`${Styles.linkItem} sa sa--up`}
-          to="sample-page/sample4/"
+          to="samplepage/sample4"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample4</h3>
           <FontAwesomeIcon icon={faCode} />
           <p>サンプルページ4</p>
         </Link>
       </div>
+
+      <Button
+        path="samplepage"
+        text="more"
+      />
 
       <div className="btn-wrapper sa sa--up">
         <Link to="#" className="link-btn">More</Link>
