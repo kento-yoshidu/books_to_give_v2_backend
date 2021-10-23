@@ -138,6 +138,76 @@ const Index: React.VFC = () => (
         text="more"
       />
     </section>
+
+    <section className={`${Styles.section} ${Styles.sec5} progress-section sa sa--up`}>
+      <h2 className={Styles.sectionTitle}>2021年度の個人タスク</h2>
+
+      <div className={Styles.wrapper}>
+        <div className={Styles.running}>
+          <h3>Running...<span className={Styles.emoji}>️🏃️💨</span></h3>
+
+          <div className={Styles.progressbarWrapper}>
+            <h4>サンプルWebサイトを20個作る</h4>
+            <span>45%</span>
+            <div className={Styles.progressbar}>
+              <div className={Styles.side}>
+                <div className={`${Styles.bar} ${Styles.barSample}`}></div>
+              </div>
+            </div>
+          </div>
+
+          <div className={Styles.progressbarWrapper}>
+            <h4>Jamstackなサイトを10個作る</h4>
+            <span>40%</span>
+            <div className={Styles.progressbar}>
+              <div className={Styles.side}>
+                <div className={`${Styles.bar} ${Styles.barJam}`}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={Styles.hurryUp}>
+          <h3>Hurry Up‍<span className={Styles.emoji}>️🏇️💦</span></h3>
+
+          <div className={Styles.progressbarWrapper}>
+            <h4>ECMAScript2021を全部読む</h4>
+            <span>1%</span>
+            <div className={Styles.progressbar}>
+              <div className={Styles.side}>
+                <div className={`${Styles.bar} ${Styles.barEcma}`}></div>
+              </div>
+            </div>
+          </div>
+          <div className="progressbar-wrapper">
+            <h4>Vue.js + GraphQL + MongoDBで何か作る</h4>
+            <span>0%</span>
+            <div className="progressbar">
+              <div className="side">
+                <div className="bar bar-app"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div className="finished">
+        <h3><span className="emoji">️🚀</span>Finished‍<span className="emoji">️🚀</span></h3>
+
+        <ul className="finished-list">
+          <div className="progressbar-wrapper">
+            <h4>🎊中小企業診断士 1次試験合格🎊</h4>
+            <br />
+            <h4>🎊GatsbyBlogの完成度を上げる🎊</h4>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer className="footer">
+    <h2 className="footer-title">toriwatari Portfolio Web Site</h2>
+    <p className="copyright">toriwatari @2021</p>
+  </footer>
   </>
 )
 
