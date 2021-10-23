@@ -79,10 +79,6 @@ const Index: React.VFC = () => (
         path="samplepage"
         text="more"
       />
-
-      <div className="btn-wrapper sa sa--up">
-        <Link to="#" className="link-btn">More</Link>
-      </div>
     </section>
 
     <section className={`${Styles.section} ${Styles.sec2} sa sa--up}`} id="sec3">
@@ -97,9 +93,10 @@ const Index: React.VFC = () => (
         />
         <p>CSSで実現できるアニメーションや、ちょっとした小テクを紹介します。Nuxt.js + AWS Amplifyで構築しました。</p>
       </div>
-      <div className="btn-wrapper">
-        <a href="https://cssanimation.toriwatari.work/" className="link-btn" target="_blank">サイトを見る</a>
-      </div>
+      <Button
+        path="samplepage"
+        text="more"
+      />
     </section>
 
     <section className={`${Styles.section} sa sa--up`} id="sec4">
@@ -115,9 +112,10 @@ const Index: React.VFC = () => (
         />
       </div>
 
-      <div className="btn-wrapper">
-        <a href="https://blog.toriwatari.work" className="link-btn" target="_blank">サイトを見る</a>
-      </div>
+      <Button
+        path="https://blog.toriwatari.work"
+        text="more"
+      />
     </section>
     
     <section className={`${Styles.section} ${Styles.sectionJamstack} sa sa--up`} id="sec5">
@@ -135,9 +133,10 @@ const Index: React.VFC = () => (
         />
       </div>
 
-      <div className="btn-wrapper">
-        <a href="/jamstack/" className="link-btn">More</a>
-      </div>
+      <Button
+        path="samplepage"
+        text="more"
+      />
     </section>
   </>
 )

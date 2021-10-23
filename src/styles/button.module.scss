@@ -1,8 +1,60 @@
 .wrapper {
+  margin: 20px auto;
   text-align: center;
   .button {
-    text-align: center;
-    border: 1px solid #399;
+    display: inline-block;
+    border: 1px solid;
+    position: relative;
+    background: #fff;
+    color: #399;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid #399;
+    padding: 1.3rem 5.5rem 1.3rem 2.2rem;
+    transition: .1s;
+    &:before,&:after{
+      content:"";
+      position:absolute;
+      display: block;
+      transition: all .3s;
+      right: 1.5rem;
+      top:50%;
+    }
+    &:before{
+      width: 2.5rem;
+      height: 1.8px;
+      background: #399;
+      transform: translateY(-50%) ;
+    }
+    &:after{
+      opacity:0;
+      width: 0;
+      height:0;
+      border-top: solid 2px currentColor;
+      border-right: solid 2px currentColor;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &:hover {
+      transform: scale(1.05);
+      &:before{
+        width: 2rem;
+      }
+      &:after {
+        opacity:1;
+        width: 8px;
+        height: 8px;
+        transition-delay: .2s;
+      }
+    }
   }
+}
 
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 1rem 5rem 1rem 2rem;
+    .button {
+      font-size: 1.8rem;
+    }
+  } 
 }
