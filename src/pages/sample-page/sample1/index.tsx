@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -13,7 +13,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
-const Sample1: React.VFC = () => (
+const Sample1: React.VFC = () => {
+  return (
   <>
     <nav className={Navi.globalNav} id="js-global-nav">
       <h1 className={`${Navi.title} ${Navi.navTitle}`}>Sample1</h1>
@@ -74,7 +75,6 @@ const Sample1: React.VFC = () => (
             <a className={Styles.topicBtn} href="https://blog.toriwatari.work/series/Diary/page/1/" target="_blink">more</a>
           </div>
         </div>
-        <div className="btn-wrapper"><a href="https://blog.toriwatari.work/page/1/" className="btn" target="_blink">read more</a></div>
       </section>
         
       <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
@@ -82,7 +82,7 @@ const Sample1: React.VFC = () => (
           <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
         </div>
 
-        <div className={Styles.photoWrapper}>
+        <div className={Styles.wrapper}>
           <StaticImage
             src="./images/image01.webp"
             alt="hoge"
@@ -157,6 +157,7 @@ const Sample1: React.VFC = () => (
       <p className={Styles.copyright}>Copyright © 2020 <a href="https://potsunen.info">toriwatari</a></p>
     </footer>
   </>
-)
+  )
+}
 
 export default Sample1
