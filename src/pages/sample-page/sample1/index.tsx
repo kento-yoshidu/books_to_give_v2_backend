@@ -4,6 +4,14 @@ import { StaticImage } from "gatsby-plugin-image"
 const Styles = require("./styles/sample1.module.scss")
 const Navi = require("./styles/navi.module.scss")
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCode, faBook } from "@fortawesome/free-solid-svg-icons"
+import { faGitAlt } from "@fortawesome/free-brands-svg-icons"
+
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
+
 const Sample1: React.VFC = () => (
   <>
     <nav className={Navi.globalNav} id="js-global-nav">
@@ -46,20 +54,21 @@ const Sample1: React.VFC = () => (
           <div className={Styles.topic}>
             <h2 className={`${Styles.title} ${Styles.topicTitle}`}>初めてのHTML & CSS</h2>
             <i className="topic-icon fab fa-html5"></i>
+            <FontAwesomeIcon icon={faCode} />
             <p className={Styles.topicText}>前提知識はほとんどなくてOKです。HTMLとCSSを使用してWebページを作成します。</p>
             <a className={Styles.topicBtn} href="https://blog.toriwatari.work/series/HelloWeb/page/1/" target="_blink">more</a>
           </div>
 
           <div className={Styles.topic}>
             <h2 className={`${Styles.title} ${Styles.topicTitle}`}>Git中級者を目指す</h2>
-            <i className="topic-icon fab fa-git-square"></i>
+            <FontAwesomeIcon icon={faGitAlt} />
             <p className={Styles.topicText}>Gitの入門書を読み終わった人向けの、さらなるステップへ進むためのGit講座です。</p>
             <a className={Styles.topicBtn} href="https://blog.toriwatari.work/series/GitAdvance/page/1/" target="_blink">more</a>
           </div>
 
           <div className={Styles.topic}>
             <h2 className={`${Styles.title} ${Styles.topicTitle}`}>日記</h2>
-            <i className="topic-icon fas fa-book"></i>
+            <FontAwesomeIcon icon={faBook} />
             <p className={Styles.topicText}>プログラミング以外のことを記事にしています。</p>
             <a className={Styles.topicBtn} href="https://blog.toriwatari.work/series/Diary/page/1/" target="_blink">more</a>
           </div>
@@ -67,95 +76,38 @@ const Sample1: React.VFC = () => (
         <div className="btn-wrapper"><a href="https://blog.toriwatari.work/page/1/" className="btn" target="_blink">read more</a></div>
       </section>
         
-      <section className="section photo-section" id="photograph">
-        <div className="section-title-parent">
-          <h2 className="title section-title">Photograph</h2>
+      <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
+        <div className={Styles.sectionTitleParent}>
+          <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
         </div>
-        <div className="photo-wrapper">
-          <picture>
-            <source
-              type="image/webp"
-              srcSet="./src/images/pc/image01.webp"
-              media="(min-width: 768px)"
-              width="300px"
-              height="200px"
-            />
-            <source
-              type="image/webp"
-              srcSet="./src/images/mobi/image01_mobi.webp"
-              media="(max-width: 767px)"
-              width="160px"
-            />
-            <img
-              src="src/images/pc/image02.jpg"
-              alt="トップ画像"
-            />
-          </picture>
 
-          <picture>
-            <source
-              type="image/webp"
-              srcSet="./src/images/pc/image02.webp"
-              media="(min-width: 768px)"
-              width="300px"
-              height="200px"
-            />
-            <source
-              type="image/webp"
-              srcSet="./src/images/mobi/image02_mobi.webp"
-              media="(max-width: 767px)"
-              width="160px"
-            />
-            <img
-              src="./src/images/pc/image02.jpg"
-              alt="トップ画像"
-            />
-          </picture>
+        <div className={Styles.photoWrapper}>
+          <StaticImage
+            src="./images/image01.webp"
+            alt="hoge"
+            className={Styles.imgWrapper}
+          />
 
-          <picture>
-            <source
-              type="image/webp"
-              srcSet="./src/images/pc/image03.webp"
-              media="(min-width: 768px)"
-              width="300px"
-              height="200px"
-            />
-            <source
-              type="image/webp"
-              srcset="./src/images/mobi/image03_mobi.webp"
-              media="(max-width: 767px)"
-              width="160px"
-            />
-            <img
-              src="./src/images/pc/image03.jpg"
-              alt="トップ画像"
-            />
-          </picture>
-
-          <picture>
-            <source
-              type="image/webp"
-              srcset="./src/images/pc/image04.webp"
-              media="(min-width: 768px)"
-              width="300px"
-              height="200px"
-            />
-            <source
-              type="image/webp"
-              srcset="./src/images/mobi/image04_mobi.webp"
-              media="(max-width: 767px)"
-              width="160px"
-            />
-            <img
-              src="./src/images/pc/image04.jpg"
-              alt="トップ画像"
-            />
-          </picture>
+          <StaticImage
+            src="./images/image02.webp"
+            alt="hoge"
+            className={Styles.imgWrapper}
+          />
+          <StaticImage
+            src="./images/image03.webp"
+            alt="hoge"
+            className={Styles.imgWrapper}
+          />
+          <StaticImage
+            src="./images/image04.webp"
+            alt="hoge"
+            className={Styles.imgWrapper}
+          />
         </div>
       </section>
     </main>
 
-    <footer className="footer">
+    <footer className={Styles.footer}>
       <h2 className="title footer-title">Toriwatari Portfolio</h2>
       <div className="footer-wrapper">
         <section className="footer-section">

@@ -142,11 +142,11 @@ $main-color-trans2: rgba(220,20,60,.3);
         font-size: 2.8rem;
         text-align: center;
       }
-      .topic-icon {
+      svg {
         font-size: 5rem;
         display: block;
         color: #888;
-        margin: 35px 0;
+        margin: 35px auto;
         text-align: center;
       }
       .topic-text {
@@ -192,6 +192,113 @@ $main-color-trans2: rgba(220,20,60,.3);
           margin: 20px auto 0;
         }
       }
+    }
+  }
+}
+
+.sec3 {
+  padding-bottom: 50px;
+  .section-title-parent {
+    margin-bottom: 60px;
+  }
+  .photo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto 40px;
+
+    .imgWrapper {
+      width: 23%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec3 {
+    width: 100%;
+    .section-title-parent {
+      margin-bottom: 30px;
+    }
+    .photo-wrapper {
+      margin: 0 auto;
+      width: 93%;
+      .imgWrapper {
+        width: 45%;
+      }
+    }
+  } 
+}
+
+.footer {
+  padding: 50px 10vw;
+  background: #b03131;
+
+  .footer-title {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 100;
+    letter-spacing: 4px;
+  }
+
+  .footer-wrapper {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    .footer-section {
+      margin-right: 50px;
+      padding: 8px 30px 20px 0;
+      .section-title {
+        color: #fff;
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+        text-align: left;
+        font-weight: 100;
+        margin: 0 0 10px 0;
+      }
+      .footer-list {
+        list-style: none;
+        .list-item {
+          font-size: 1.7rem;
+          line-height: 1.7;
+          letter-spacing: 2px;
+          margin-left: 10px;
+          @media screen and (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0da';
+            color: #fff;
+            font-weight: 900;
+            margin-right: 5px;
+          }
+          a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        } //list-item
+      } //footer-list
+    } //footer-section
+  } //footer-wrapper
+
+  .copyright {
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    a {
+      color: inherit;
+      font-size: 2rem;
+    }
+    a:hover {
+      color: #fff;
     }
   }
 }
