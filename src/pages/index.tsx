@@ -23,7 +23,7 @@ const Index: React.VFC = () => (
     <header className={Styles.header} id="header">
       <h2 className={Styles.headerSubTitle}>toriwatari</h2>
       <h1 className={Styles.headerTitle}>Portfolio Website</h1>
-      <p>更新日 : <time>2021-10-20</time></p>
+      <p>更新日 : <time>2021-10-27</time></p>
 
       <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
 
@@ -94,7 +94,7 @@ const Index: React.VFC = () => (
         <p>CSSで実現できるアニメーションや、ちょっとした小テクを紹介します。Nuxt.js + AWS Amplifyで構築しました。</p>
       </div>
       <Button
-        path="samplepage"
+        path="https://cssanimation-and-tips.netlify.app"
         text="more"
       />
     </section>
