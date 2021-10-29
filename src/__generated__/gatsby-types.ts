@@ -257,8 +257,6 @@ type Directory_ctimeArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
-  readonly port: Maybe<Scalars['Int']>;
-  readonly host: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -336,8 +334,6 @@ type SitePluginPluginOptions = {
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
   readonly failOnError: Maybe<Scalars['Boolean']>;
-  readonly query: Maybe<Scalars['String']>;
-  readonly feeds: Maybe<ReadonlyArray<Maybe<SitePluginPluginOptionsFeeds>>>;
   readonly short_name: Maybe<Scalars['String']>;
   readonly start_url: Maybe<Scalars['String']>;
   readonly background_color: Maybe<Scalars['String']>;
@@ -360,11 +356,6 @@ type SitePluginPluginOptionsDefaults = {
   readonly quality: Maybe<Scalars['Int']>;
   readonly breakpoints: Maybe<ReadonlyArray<Maybe<Scalars['Int']>>>;
   readonly backgroundColor: Maybe<Scalars['String']>;
-};
-
-type SitePluginPluginOptionsFeeds = {
-  readonly query: Maybe<Scalars['String']>;
-  readonly output: Maybe<Scalars['String']>;
 };
 
 type SitePluginPackageJson = {
@@ -841,8 +832,6 @@ type Query_allDirectoryArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  port: Maybe<IntQueryOperatorInput>;
-  host: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -1859,8 +1848,6 @@ type SiteFieldsEnum =
   | 'siteMetadata.author.summary'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.social.twitter'
-  | 'port'
-  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -1994,8 +1981,6 @@ type SiteGroupConnection_groupArgs = {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
-  readonly port: Maybe<IntQueryOperatorInput>;
-  readonly host: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -2233,8 +2218,6 @@ type SitePluginPluginOptionsFilterInput = {
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
   readonly failOnError: Maybe<BooleanQueryOperatorInput>;
-  readonly query: Maybe<StringQueryOperatorInput>;
-  readonly feeds: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
   readonly short_name: Maybe<StringQueryOperatorInput>;
   readonly start_url: Maybe<StringQueryOperatorInput>;
   readonly background_color: Maybe<StringQueryOperatorInput>;
@@ -2257,15 +2240,6 @@ type SitePluginPluginOptionsDefaultsFilterInput = {
   readonly quality: Maybe<IntQueryOperatorInput>;
   readonly breakpoints: Maybe<IntQueryOperatorInput>;
   readonly backgroundColor: Maybe<StringQueryOperatorInput>;
-};
-
-type SitePluginPluginOptionsFeedsFilterListInput = {
-  readonly elemMatch: Maybe<SitePluginPluginOptionsFeedsFilterInput>;
-};
-
-type SitePluginPluginOptionsFeedsFilterInput = {
-  readonly query: Maybe<StringQueryOperatorInput>;
-  readonly output: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginPackageJsonFilterInput = {
@@ -2462,10 +2436,6 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.stripMetadata'
   | 'pluginCreator.pluginOptions.defaultQuality'
   | 'pluginCreator.pluginOptions.failOnError'
-  | 'pluginCreator.pluginOptions.query'
-  | 'pluginCreator.pluginOptions.feeds'
-  | 'pluginCreator.pluginOptions.feeds.query'
-  | 'pluginCreator.pluginOptions.feeds.output'
   | 'pluginCreator.pluginOptions.short_name'
   | 'pluginCreator.pluginOptions.start_url'
   | 'pluginCreator.pluginOptions.background_color'
@@ -2660,10 +2630,6 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.stripMetadata'
   | 'pluginOptions.defaultQuality'
   | 'pluginOptions.failOnError'
-  | 'pluginOptions.query'
-  | 'pluginOptions.feeds'
-  | 'pluginOptions.feeds.query'
-  | 'pluginOptions.feeds.output'
   | 'pluginOptions.short_name'
   | 'pluginOptions.start_url'
   | 'pluginOptions.background_color'
@@ -3466,10 +3432,5 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSiteFunction: { readonly nodes: ReadonlyArray<Pick<SiteFunction, 'functionRoute'>> }, readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 }
