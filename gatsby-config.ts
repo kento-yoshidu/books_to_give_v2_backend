@@ -52,6 +52,7 @@ const plugins: GatsbyConfig['plugins'] = [
   //     trackingId: `ADD YOUR TRACKING ID HERE`,
   //   },
   // },
+  /*
   {
     resolve: `gatsby-plugin-feed`,
     options: {
@@ -104,6 +105,7 @@ const plugins: GatsbyConfig['plugins'] = [
       ],
     },
   },
+  */
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
