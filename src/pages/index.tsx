@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -14,7 +14,30 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
-const Index: React.VFC = () => (
+const Index: React.VFC = () => {
+  /*
+  const getElm = () => {
+    return  document.querySelectorAll(".sa"); 
+  }
+
+  useEffect(() => {
+    const hoge = getElm()
+  }, [])
+
+
+  const scrollAnimationFunc = () => {
+    for(var i = 0; i < scrollAnimationElm.length; i++) {
+      const triggerMargin = 100;
+      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        scrollAnimationElm[i].classList.add('show');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', scrollAnimationFunc);
+  */
+
+  return (
   <>
     <Seo
       title="ポートフォリオサイト"
@@ -134,7 +157,7 @@ const Index: React.VFC = () => (
       </div>
 
       <Button
-        path="samplepage"
+        path="Jamstack"
         text="more"
       />
     </section>
@@ -200,6 +223,7 @@ const Index: React.VFC = () => (
       <p className="copyright">toriwatari @2021</p>
     </footer>
   </>
-)
+  )
+}
 
 export default Index
