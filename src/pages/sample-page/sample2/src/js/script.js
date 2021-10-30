@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
 
   // 画面左のサムネイル一覧
@@ -43,3 +44,4 @@ for(let i = 0; i < links.length; i++) {
     check.checked = false;
   })
 }
+*/
