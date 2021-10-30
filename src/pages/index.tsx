@@ -15,21 +15,23 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const Index: React.VFC = () => {
-  const getElm = () => {
-    return  document.querySelectorAll(`.${Styles.sa}`); 
-  }
 
-  const scrollAnimationFunc = () => {
-    console.log(getElm().length)
-    Array.from(getElm()).map(el => {
-      if (window.innerHeight > el.getBoundingClientRect().top + 60) {
-        el.classList.add(Styles.show);
-      }
-      console.log(el)
-    })
-  }
+  useEffect(() => {
+    const getElm = () => {
+      return  document.querySelectorAll(`.${Styles.sa}`); 
+    }
 
-  window.addEventListener('scroll', scrollAnimationFunc);
+    const scrollAnimationFunc = () => {
+      console.log(getElm().length)
+      Array.from(getElm()).map(el => {
+        if (window.innerHeight > el.getBoundingClientRect().top + 60) {
+          el.classList.add(Styles.show);
+        }
+        console.log(el)
+      })
+    }
+    window.addEventListener('scroll', scrollAnimationFunc);
+  },[]);
 
   return (
   <>
