@@ -15,27 +15,21 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const Index: React.VFC = () => {
-  /*
   const getElm = () => {
-    return  document.querySelectorAll(".sa"); 
+    return  document.querySelectorAll(`.${Styles.sa}`); 
   }
 
-  useEffect(() => {
-    const hoge = getElm()
-  }, [])
-
-
   const scrollAnimationFunc = () => {
-    for(var i = 0; i < scrollAnimationElm.length; i++) {
-      const triggerMargin = 100;
-      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-        scrollAnimationElm[i].classList.add('show');
+    console.log(getElm().length)
+    Array.from(getElm()).map(el => {
+      if (window.innerHeight > el.getBoundingClientRect().top + 60) {
+        el.classList.add(Styles.show);
       }
-    }
+      console.log(el)
+    })
   }
 
   window.addEventListener('scroll', scrollAnimationFunc);
-  */
 
   return (
   <>
@@ -44,25 +38,27 @@ const Index: React.VFC = () => {
     />
 
     <header className={Styles.header} id="header">
-      <h2 className={Styles.headerSubTitle}>toriwatari</h2>
-      <h1 className={Styles.headerTitle}>Portfolio Website</h1>
-      <p>更新日 : <time>2021-10-27</time></p>
+      <div className={`${Styles.sa} ${Styles.saUp}`}>
+        <h2 className={Styles.headerSubTitle}>toriwatari</h2>
+        <h1 className={Styles.headerTitle}>Portfolio Website</h1>
+        <p>更新日 : <time>2021-10-27</time></p>
 
-      <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
+        <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
 
-      <Link className={Styles.arrowContainer} to="#sec1">
-        <div className={Styles.arrow}></div>
-        <div className={Styles.arrow}></div>
-        <div className={Styles.arrow}></div>
-      </Link>
+        <Link className={Styles.arrowContainer} to="#sec1">
+          <div className={Styles.arrow}></div>
+          <div className={Styles.arrow}></div>
+          <div className={Styles.arrow}></div>
+        </Link>
+      </div>
     </header> 
 
-    <section className={`${Styles.section} ${Styles.sec1} sa sa--up`} id="sec1">
+    <section className={`${Styles.section} ${Styles.sec1} ${Styles.sa} ${Styles.saUp}`} id="sec1">
       <h2 className={`${Styles.sectionTitle} ${Styles.linksTitle}`}>Sample Pages</h2> 
 
       <div className={Styles.linksWrapper}>
         <Link
-          className={`${Styles.linkItem} sa sa--up`}
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           to="sample-page/sample1/"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample1</h3>
@@ -71,7 +67,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} sa sa--up`}
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           to="sample-page/sample2/"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample2</h3>
@@ -80,7 +76,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} sa sa--up`}
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           to="sample-page/sample3/"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample3</h3>
@@ -89,7 +85,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} sa sa--up`}
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
           to="samplepage/sample4"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample4</h3>
@@ -104,7 +100,7 @@ const Index: React.VFC = () => {
       />
     </section>
 
-    <section className={`${Styles.section} ${Styles.sec2} sa sa--up}`} id="sec3">
+    <section className={`${Styles.section} ${Styles.sec2} ${Styles.sa} ${Styles.saUp}`} id="sec3">
       <h2 className={Styles.sectionTitle}>CSS Animation & Tips</h2>
 
       <div className={Styles.sectionWrapper}>
@@ -114,7 +110,7 @@ const Index: React.VFC = () => {
           layout="fullWidth"
           className={Styles.imgWrapper}
         />
-        <p>CSSで実現できるアニメーションや、ちょっとした小テクを紹介します。Nuxt.js + AWS Amplifyで構築しました。</p>
+        <p>CSSで実現できるアニメーションや、ちょっとした小テクを紹介します。Gatsby + MDXファイル + Netlifyで構築しました。</p>
       </div>
       <Button
         path="https://cssanimation-and-tips.netlify.app"
@@ -122,11 +118,11 @@ const Index: React.VFC = () => {
       />
     </section>
 
-    <section className={`${Styles.section} sa sa--up`} id="sec4">
+    <section className={`${Styles.section} ${Styles.sa} ${Styles.saUp}`} id="sec4">
       <h2 className={Styles.sectionTitle}>Blog</h2>
 
       <div className={Styles.sectionWrapper}>
-        <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + AWS Amplifyで構築しています。</p>
+        <p>技術ネタや日記のためのブログ「鳥に生まれることができなかった人へ」を作りました。Gatsby + MDファイル + AWS Amplifyで構築しています。</p>
         <StaticImage
           src="../images/gatsby.png"
           alt="CSSのイメージ画像"
@@ -141,7 +137,7 @@ const Index: React.VFC = () => {
       />
     </section>
     
-    <section className={`${Styles.section} ${Styles.sectionJamstack} sa sa--up`} id="sec5">
+    <section className={`${Styles.section} ${Styles.sectionJamstack} ${Styles.sa} ${Styles.saUp}`} id="sec5">
       <h2 className={Styles.sectionTitle}>JamstackなWebサイトを構築してみた</h2>
       <div className={Styles.sectionWrapper}>
         <div>
