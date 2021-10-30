@@ -13,14 +13,17 @@ html {
 
 .header {
   background-image: linear-gradient(124deg, rgba(21, 87, 153, .9), rgba(21, 153, 87, .9));
-  height: 100vh;
-  padding-top: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #eee;
   font-weight: 100;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 5%;
+  }
 
   .headerTitle,
   .headerSubTitle,
@@ -451,37 +454,6 @@ html {
   transform: none;
 }
 
-.sa--lr {
-  transform: translate(-100px, 0);
-}
- 
-.sa--rl {
-  transform: translate(100px, 0);
-}
-
-.sa--up {
+.saUp {
   transform: translate(0, 200px);
-}
-
-.sa--down {
-  transform: translate(0, -100px);
-}
-
-.sa--scaleUp {
-  transform: scale(.5);
-}
-
-.sa--scaleDown {
-  transform: scale(1.5);
-}
-
-.sa--rotateL {
-  transform: rotate(1800deg);
-}
-
-.sa--rotateR {
-  transform: rotate(-180deg);
-}
-
-@media screen and (max-width: 768px) {
 }
