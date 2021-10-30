@@ -9,12 +9,14 @@ import {
   DocumentTextOutline
 } from 'react-ionicons'
 
-import IO from "./intersectionObserver"
+//import IO from "./intersectionObserver"
 
 const Jamstack = () => {
+  /*
   useEffect(() => {
     IO();
   }, [])
+  */
 
   return (
     <div className={Styles.allWrapper}>

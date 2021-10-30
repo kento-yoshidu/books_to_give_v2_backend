@@ -1,3 +1,4 @@
+/*
 const InterSectionObserver = () => {
 	const boxes = document.querySelectorAll('.view');
 
@@ -37,3 +38,4 @@ const InterSectionObserver = () => {
 }}
 
 export default InterSectionObserver
+*/
