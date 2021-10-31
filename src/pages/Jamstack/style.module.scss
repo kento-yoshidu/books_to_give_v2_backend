@@ -30,12 +30,11 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
     overflow-x: auto;
     white-space: nowrap;
 		li {
-      display: inline-block;
-			font-size: 1.2rem;
-			font-weight: bold;
-			letter-spacing: 1px;
 			a {
 				color: #fff;
+				font-size: 1.8rem;
+				font-weight: bold;
+				letter-spacing: 1px;
 				text-decoration: none;
 			}
 		}
@@ -49,15 +48,11 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
       width: 90%;
       li {
         margin-right: 20px;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         font-weight: normal;
       }
     }
   }
-}
-
-.view {
-	min-height: 100vh;
 }
 
 .header {
@@ -73,12 +68,12 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	h1 {
 		margin-bottom: 4vh;
 		color: rgb(226, 232, 240);
-		font-size: 2.2rem;
+		font-size: 3rem;
 		letter-spacing: 2px;
 	}
 	p {
 		margin-bottom: 6vh;
-		font-size: 1.3rem;
+		font-size: 1.8rem;
 		text-align: center;
 		letter-spacing: 1px;
 		width: 50%;
@@ -113,7 +108,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		li {
 			position: relative;
 			text-align: center;
-			font-size: 1.4rem;
+			font-size: 2rem;
 			font-weight: 500;
 			letter-spacing: 1px;
 			z-index: 1;
@@ -122,7 +117,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	.scroll {
 		position: absolute;
 		bottom: 8vh;
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 		font-weight: 500;
 		border-bottom: 1.5px solid #fff;
 	}
@@ -163,7 +158,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 }
 
 .cutout {
-	font-size: 1.7em;
+	font-size: 2em;
 	color: transparent;
 	-webkit-text-stroke: 1px $main-color;
 }
@@ -190,10 +185,10 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		a {
 			display: block;
 			position: relative;
-			text-decoration: none;
-			z-index: 2;
-			transition: .35s;
       padding: 15px 20px;
+			text-decoration: none;
+			transition: .35s;
+			z-index: 2;
       svg {
         color: #fff;
         font-size: 3rem;
@@ -229,7 +224,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	.section-title {
 		color: transparent;
 		-webkit-text-stroke: 1px #fff;
-		font-size: 4rem;
+		font-size: 5rem;
 		font-weight: 100;
 		letter-spacing: 3px;
 		text-align: center;
@@ -252,12 +247,12 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		justify-content: space-around;
 	}
 	.box {
-		position: relative;
-		width: 240px;
-		height: 350px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+		width: 240px;
+		height: 350px;
 		margin: 0 auto;
 		transition: 0.5s;
 		&::before,
@@ -305,10 +300,6 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 			&::after {
 				content: "";
 				position: absolute;
-        /*
-				width: 100%;
-				height: 100%;
-        */
 				border-radius: 8px;
 				backdrop-filter: blur(10px);
 				background-color: rgba(#fff, 0.1);
@@ -319,37 +310,38 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		}
 		&:hover span::before,
 		&:hover span::after {
-			width: 100px;
-			height: 100px;
+			width: 80px;
+			height: 80px;
 			opacity: 1;
 		}
 		&:nth-child(1) span::before {
 			animation: span-anime1 2s ease-in-out infinite;
-			top: -50px;
+			top: -40px;
+      left: 5px;
 		}
 		&:nth-child(1) span::after {
 			animation: span-anime2 2s ease-in-out infinite;
-			bottom: -50px;
-			right: 0;
+			bottom: -40px;
+			right: 4px;
 		}
 		&:nth-child(2) span::before {
 			animation: span-anime2 2s ease-in-out infinite;
-			top: -50px;
-			right: 0
+			top: -40px;
+			right: 5px;
 		}
 		&:nth-child(2) span::after {
 			animation: span-anime1 2s ease-in-out infinite;
-			bottom: -50px;
-			left: 0; 
+			bottom: -40px;
+			left: 5px; 
 		}
 		&:nth-child(3) span::before {
 			animation: span-anime2 2s ease-in-out infinite;
-			top: -50px;
+			top: -40px;
 			right: 0;
 		}
 		&:nth-child(3) span::after {
 			animation: span-anime3 2s ease-in-out infinite;
-			bottom: -50px;
+			bottom: -40px;
 			left: 0;
 		}
 		@keyframes span-anime1 {
@@ -379,25 +371,25 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		.content {
 			position: absolute;
 			width: 100%;
-			padding: 30px 40px;
+			padding: 20px 30px;
 			background-color: rgba(#fff, 0.3);
+			backdrop-filter: blur(10px);
 			box-shadow: 0 5px 15px rgba(#000, 0.1);
 			border-radius: 8px;
-			backdrop-filter: blur(10px);
-			z-index: 1;
-			transition: 0.5s;
 			color: #fff;
+			transition: 0.5s;
+			z-index: 1;
 			h3 {
         margin-bottom: 20px;
-				font-size: 1.5rem;
+				font-size: 2.5rem;
 			}
 			p {
-				font-size: 1rem;
+				font-size: 1.7rem;
 				line-height: 1.7;
 			}
 		}
 		&:hover .content {
-			padding: 18px 45px;
+			padding: 15px 35px;
 			width: 110%;
 		}
 	}
@@ -414,7 +406,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 			padding: 12px 20px;
 			th,
 			td {
-				font-size: 1.5rem;
+				font-size: 1.8rem;
 				line-height: 1.3;
 			}
 			th {
@@ -513,10 +505,9 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		margin: 50px auto;
 		.content {
 			display: flex;
-			color: #fff;
-			width: 80%;
 			margin-bottom: 30px;
 			padding: 12px 8px;
+			color: #fff;
 			transition: .3s;
 			text-decoration: none;
 			&:hover {
@@ -557,18 +548,18 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 				}
 				h4 {
 					position: relative;
-					font-size: 1.2rem;
+					font-size: 1.6rem;
 					z-index: 3;
 				}
 			} //page-number
 			.setumei {
 				h3 {
 					margin-bottom: 20px;
-					font-size: 1.8rem;
+					font-size: 2.5rem;
 					line-height: 1.5;
 				}
 				p {
-					font-size: 1.1rem;
+					font-size: 1.7rem;
 					line-height: 1.5;
 				}
 			}
