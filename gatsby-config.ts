@@ -113,19 +113,15 @@ const plugins: GatsbyConfig['plugins'] = [
       short_name: `GatsbyJS`,
       start_url: `/`,
       background_color: `#ffffff`,
-      // This will impact how browsers show your PWA/website
-      // https://css-tricks.com/meta-theme-color-and-trickery/
-      // theme_color: `#663399`,
+      theme_color: `#399`,
       display: `minimal-ui`,
-      icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      icon: `src/images/gatsby-icon.png`,
     },
   },
+  `gatsby-plugin-offline`,
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-sass`,
   `gatsby-plugin-typegen`,
-  // this (optional) plugin enables Progressive Web App + Offline functionality
-  // To learn more, visit: https://gatsby.dev/offline
-  // `gatsby-plugin-offline`,
 ]
 
 const siteMetadata: GatsbyConfig['siteMetadata'] = {
