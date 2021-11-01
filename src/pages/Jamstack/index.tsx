@@ -10,14 +10,13 @@ import {
   DocumentTextOutline
 } from 'react-ionicons'
 
-//import IO from "./intersectionObserver"
+import IO from "./IO"
 
 const Jamstack = () => {
-  /*
+
   useEffect(() => {
-    IO();
+    IO()
   }, [])
-  */
 
   return (
     <div className={Styles.allWrapper}>
@@ -206,7 +205,7 @@ const Jamstack = () => {
     </div>
 	</section>
 
-  <section className="view view4" id="view4">
+  <section className={`${Styles.section} ${Styles.view} ${Styles.view4}`} id="view4">
     <br />
   </section>
     </div>
