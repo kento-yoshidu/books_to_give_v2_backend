@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
-import Styles from "./style.module.scss"
+const Styles = require("./style.module.scss")
 
 import {
   HomeOutline,
