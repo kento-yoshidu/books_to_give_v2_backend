@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Link } from "gatsby"
 
 const Styles = require("./style.module.scss")
 
@@ -22,7 +23,7 @@ const Jamstack = () => {
     <div className={Styles.allWrapper}>
       <nav className={Styles.nav}>
         <ul>
-          <li><a href="#">HOME</a></li>
+          <li><Link to="#">HOME</Link></li>
           <li><a href="#">Architecture</a></li>
           <li><a href="#">Sample Sites</a></li>
           <li><a href="#">Blog Article</a></li>
@@ -129,7 +130,7 @@ const Jamstack = () => {
 
         <a
           className={Styles.content}
-          href="https://blog.toriwatari.work/page/1/"
+          href="https://ps.toriwatari.work/"
           target="_blink"
         >
           <div className={`${Styles.pageNumber} ${Styles.page1}`}>
@@ -144,7 +145,7 @@ const Jamstack = () => {
 
         <a
           className={Styles.content}
-          href="https://blog.toriwatari.work/page/1/"
+          href="https://blog.toriwatari.work/"
           target="_blink"
         >
           <div className={`${Styles.pageNumber} ${Styles.page2}`}>
@@ -159,7 +160,7 @@ const Jamstack = () => {
 
         <a
           className={Styles.content}
-          href="cssanimation.toriwatari.work"
+          href="https://cssanimation-and-tips.netlify.app/"
           target="_blank"
         >
           <div className={`${Styles.pageNumber} ${Styles.page3}`}>
@@ -168,7 +169,7 @@ const Jamstack = () => {
           </div>
           <div className={Styles.setumei}>
             <h3>CSS Animation & Tips</h3>
-            <p>Gatsbyとmdxファイルを使って、CSSのアニメーションやTipsを解説するサイトを作成しました。</p>
+            <p>Gatsbyとmdxファイルで、CSSのアニメーションやTipsを解説するサイトを作成しました。</p>
           </div>
         </a>
 
@@ -183,7 +184,7 @@ const Jamstack = () => {
           </div>
           <div className={Styles.setumei}>
             <h3>Gatsby-microCMS-Site</h3>
-            <p>GatsbyとmicroCMSを組み合わせたサイトを作りました。<br />Headless UIを導入しています。</p>
+            <p>GatsbyとmicroCMSを組み合わせたサイトを作りました。Headless UIを導入しています。</p>
           </div>
         </a>
 
@@ -202,104 +203,10 @@ const Jamstack = () => {
 				</div>
 			</a>
 
-			<a
-        className={Styles.content}
-				href="/"
-				target="_blink"
-			>
-        <div className={`${Styles.pageNumber} ${Styles.page6}`}>
-					<span></span>
-					<h4>#06</h4>
-				</div>
-        <div className={Styles.setumei}>
-					<h3>Gatsby-graphCMS-Site</h3>
-					<p>GatsbyとgraohCMSを組み合わせたサイトを作成しました。</p>
-				</div>
-			</a>
-
-			<a
-        className={Styles.content}
-				href="/"
-				target="_blink"
-			>
-        <div className={`${Styles.pageNumber} ${Styles.page7}`}>
-					<span></span>
-					<h4>#07</h4>
-				</div>
-        <div className={Styles.setumei}>
-					<h3>NextJS-graphCMS-Site</h3>
-					<p>GatsbyとContentfulを組み合わせたサイトを作りました。<br />CSSフレームワークはTailwind CSSを採用しました。</p>
-				</div>
-			</a>
-
-			<a
-        className={Styles.content}
-				href="/"
-				target="_blink"
-			>
-        <div className={`${Styles.pageNumber} ${Styles.page8}`}>
-					<span></span>
-					<h4>#08</h4>
-				</div>
-        <div className={Styles.setumei}>
-					<h3>NextJS-microCMS-Site</h3>
-					<p>NextJSとmicroCMSを組み合わせたサイトを作りました。</p>
-				</div>
-			</a>
     </div>
 	</section>
 
   <section className="view view4" id="view4">
-    jgao
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <br />
   </section>
     </div>
