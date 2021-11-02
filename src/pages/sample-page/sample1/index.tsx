@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Styles = require("./styles/sample1.module.scss")
+const Styles = require("./styles/style.module.scss")
 const Navi = require("./styles/navi.module.scss")
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -15,7 +15,7 @@ config.autoAddCss = false
 
 const Sample1: React.VFC = () => {
   return (
-  <>
+  <div className={Styles.wrapper}>
     <nav className={Navi.globalNav} id="js-global-nav">
       <h1 className={`${Navi.title} ${Navi.navTitle}`}>Sample1</h1>
       <ul className={Navi.navList}>
@@ -154,9 +154,9 @@ const Sample1: React.VFC = () => {
         </section>
       </div>
 
-      <p className={Styles.copyright}>Copyright © 2020 <a href="https://potsunen.info">toriwatari</a></p>
+      <p className={Styles.copyright}>Copyright © 2021 <a href="https://potsunen.info">toriwatari</a></p>
     </footer>
-  </>
+  </div>
   )
 }
 
