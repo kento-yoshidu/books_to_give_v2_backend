@@ -24,7 +24,7 @@ const Index: React.VFC = () => {
     const scrollAnimationFunc = () => {
       console.log(getElm().length)
       Array.from(getElm()).map(el => {
-        if (window.innerHeight > el.getBoundingClientRect().top + 60) {
+        if (window.innerHeight > el.getBoundingClientRect().top + 40) {
           el.classList.add(Styles.show);
         }
         console.log(el)
@@ -55,7 +55,7 @@ const Index: React.VFC = () => {
       </div>
     </header> 
 
-    <section className={`${Styles.section} ${Styles.sec1} ${Styles.sa} ${Styles.saUp}`} id="sec1">
+    <section className={`${Styles.section} ${Styles.sec1}`} id="sec1">
       <h2 className={`${Styles.sectionTitle} ${Styles.linksTitle}`}>Sample Pages</h2> 
 
       <div className={Styles.linksWrapper}>
@@ -96,10 +96,12 @@ const Index: React.VFC = () => {
         </Link>
       </div>
 
-      <Button
-        path="samplepage"
-        text="more"
-      />
+      <div className={`${Styles.sa} ${Styles.saUp}`}>
+        <Button
+          path="samplepage"
+          text="more"
+        />
+      </div>
     </section>
 
     <section className={`${Styles.section} ${Styles.sec2} ${Styles.sa} ${Styles.saUp}`} id="sec3">
@@ -142,10 +144,7 @@ const Index: React.VFC = () => {
     <section className={`${Styles.section} ${Styles.sectionJamstack} ${Styles.sa} ${Styles.saUp}`} id="sec5">
       <h2 className={Styles.sectionTitle}>JamstackなWebサイトを構築してみた</h2>
       <div className={Styles.sectionWrapper}>
-        <div>
-          <p>Jamstack構成のWebサイト構築が面白いと感じ、サンプルで色々なサイトを作成しています。</p>
-          <p>2021年度中に10個作成するのが目標です。</p>
-        </div>
+        <p>Jamstack構成のWebサイト構築が面白いと感じ、サンプルで色々なサイトを作成しています。2021年度中に10個作成するのが目標です。</p>
         <StaticImage
           src="../images/static.png"
           alt="CSSのイメージ画像"
