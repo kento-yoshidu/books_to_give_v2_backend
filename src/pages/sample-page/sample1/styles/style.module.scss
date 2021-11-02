@@ -3,6 +3,10 @@ $main-color: #dc143c;
 $main-color-trans: rgba(220,20,60,.5);
 $main-color-trans2: rgba(220,20,60,.3);
 
+.wrapper {
+  font-family: 'Amiri', serif;
+}
+
 .header {
   .header-title {
     font-size: 5rem;
@@ -53,7 +57,7 @@ $main-color-trans2: rgba(220,20,60,.3);
 
 .title {
   color: #444;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 .section-title-parent {
@@ -193,7 +197,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     .wrapper {
       flex-direction: column;
       .topic {
-        width: 95%;
+        width: 75%;
         margin: 10px auto;
         padding: 30px 10px 70px;
         .topic-title {
@@ -240,7 +244,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     .section-title-parent {
       margin-bottom: 30px;
     }
-    .photo-wrapper {
+    .wrapper {
       margin: 0 auto;
       width: 93%;
       .imgWrapper {
@@ -256,7 +260,7 @@ $main-color-trans2: rgba(220,20,60,.3);
   .footer-title {
     color: #fff;
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: 500;
     letter-spacing: 4px;
   }
   .footer-wrapper {
