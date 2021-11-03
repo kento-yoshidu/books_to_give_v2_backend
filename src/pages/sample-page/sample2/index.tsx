@@ -94,7 +94,11 @@ const Sample2 = () => (
             <p>2020.11.01 New Single</p>
             <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
             <div className={Styles.wrapper}>
-              <StaticImage src="./src/images/disc/01.jpg" alt="hoge" />
+              <StaticImage
+								src="./src/images/disc/01.jpg"
+								alt="hoge"
+								className={Styles.imgWrapper}
+							/>
               <ol>
                 <li><p className={Styles.info}>PTNN38887-1022</p></li>
                 <li><p className={Styles.info}>税込 : 1,895円</p></li>
@@ -113,14 +117,15 @@ const Sample2 = () => (
               <StaticImage
                 src="./src/images/disc/02.jpg"
                 alt="hoge"
+								className={Styles.imgWrapper}
               />
               <ol>
                 <li><p className={Styles.info}>PTNN38887-1023</p></li>
                 <li><p className={Styles.info}>税込 : 1,895円</p></li>
                 <li>1. 死ぬまで愛して</li>
                 <li>2. ロマンス浮船</li>
-                <li>3. 朝ごはんを食べよう</li>
-                <li>4. ピンクの画鋲</li>
+                <li>3. ケチャップ濃い目</li>
+                <li>4. ピンクの画鋲を踏んだなら</li>
               </ol>
             </div>
           </div>
@@ -132,13 +137,14 @@ const Sample2 = () => (
               <StaticImage
                 src="./src/images/disc/03.jpg"
                 alt="hoge"
+								className={Styles.imgWrapper}
               />
               <ol>
                 <li><p className={Styles.info}>PTNN38887-1024</p></li>
                 <li><p className={Styles.info}>税込 : 1,895円</p></li>
                 <li>1. 死ぬまで愛して</li>
                 <li>2. 私の父は結界師</li>
-                <li>3. 朝ごはんを食べよう</li>
+                <li>3. </li>
                 <li>4. </li>
               </ol>
             </div>
@@ -179,138 +185,176 @@ const Sample2 = () => (
           <StaticImage
             src="src/images/news/news2.jpg"
             alt="Hoge"
+						className={Styles.imgWrapper}
           />
-          <div className="contents-wrapper">
+          <div className={Styles.contentsWrapper}>
           <div className={Styles.titleWrapper}>
-              <p className="contents-title">初めてのHTML & CSS</p>
+              <p className={Styles.contentsTitle}>初めてのHTML & CSS</p>
               <time>2019.1.26</time>
             </div>
-            <p className="contents-text">HTMLとCSSはIT技術の入門に最適だと考えています。これらの言語を用い簡単なWebページを作成し、Webページの仕組みを学びます。<br />環境構築で躓くことはありません。今すぐ始められます。</p>
+            <p className={Styles.contentsText}>HTMLとCSSはIT技術の入門に最適だと考えています。これらの言語を用い簡単なWebページを作成し、Webページの仕組みを学びます。<br />環境構築で躓くことはありません。今すぐ始められます。</p>
           </div>
         </a>
-        <a className="contents" href="#">
-          <img src="src/images/news/news3.jpg" />
-          <div className="contents-wrapper">
-              <div className={Styles.titleWrapper}>
-              <p className="contents-title">Flexboxをマスターする</p>
-              <time>2019.1.26</time>
-            </div>
-            <p className="contents-text">理想の毛虫は視聴率を見るのであったが、木の葉が乾いた眠ることがある。歯磨きが縄で吊り下げられた蝶の進化した姿であるのだった。</p>
+
+        <a
+          className={Styles.contents}
+					href="#"
+					target="_blank"
+				>
+          <StaticImage
+						src="src/images/news/news3.jpg"
+						alt="#"
+						className={Styles.imgWrapper}
+					/>
+          <div className={Styles.contentsWrapper}>
+						<div className={Styles.titleWrapper}>
+							<p className={Styles.contentsTitle}>Flexboxをマスターする</p>
+							<time>2019.1.26</time>
+						</div>
+            <p className={Styles.contentsText}>理想の毛虫は視聴率を見るのであったが、木の葉が乾いた眠ることがある。歯磨きが縄で吊り下げられた蝶の進化した姿であるのだった。</p>
           </div>
         </a>
       </div>
 
-	<div className="contents-container container-4">
-		<a className="contents" href="#">
-			<img src="src/images/news/news4.jpg" />
-			<div className="contents-wrapper">
-				<div className="title-wrapper">
-					<p className="contents-title">柱時計と互換性のある電子</p>
-					<time>2019.1.26</time>
-				</div>
-				<p className="contents-text">実は、女はクォークの兄弟である雪だるまの秘密を知る予定である。</p>
-			</div>
-		</a>
-		<a className="contents" href="#">
-			<img src="src/images/news/news5.jpg" />
-			<div className="contents-wrapper">
-				<div className="title-wrapper">
-						<p className="contents-title">伊勢海老とは似ても似つかない月</p>
-						<time>2019.1.26</time>
-				</div>
-				<p>read more...</p>
-			</div>
-		</a>
-		<a className="contents" href="#">
-			<img src="src/images/news/news6.jpg" />
-			<div className="contents-wrapper">
-				<div className="title-wrapper">
-					<p className="contents-title">新進気鋭の正義の味方</p>
-					<time>2019.1.26</time>
-				</div>
-				<p>read more...</p>
-			</div>
-		</a>
-	</div>
+      <div className={`${Styles.contentsContainer} ${Styles.container2}`}>
+				<a className={Styles.contents} href="#">
+					<StaticImage
+						src="src/images/news/news4.jpg"
+						alt="#"
+						className={Styles.imgWrapper}
+					/>
+					<div className={Styles.contentsWrapper}>
+						<div className={Styles.titleWrapper}>
+							<p className={Styles.contentsTitle}>柱時計と互換性のある電子</p>
+							<time>2019.1.26</time>
+						</div>
+						<p className={Styles.contentsText}>実は、女はクォークの兄弟である雪だるまの秘密を知る予定である。</p>
+					</div>
+				</a>
 
-	<div className="btn-wrapper"><a href="#" className="btn">More</a></div>
-</section>
+				<a className={Styles.contents} href="#">
+					<StaticImage
+						src="src/images/news/news5.jpg"
+						alt="#"
+						className={Styles.imgWrapper}
+					/>
+					<div className={Styles.contentsWrapper}>
+						<div className={Styles.titleWrapper}>
+							<p className={Styles.contentsTitle}>伊勢海老とは似ても似つかない月</p>
+							<time>2019.1.26</time>
+						</div>
+						<p>read more...</p>
+					</div>
+				</a>
+			</div>
 
-<section className="section member-section" id="member">
-	<h2 className="title section-title member-section-title">Member</h2>
-	<div className="flex">
-		<a href="" className="member">
-			<img src="src/images/member/member1.jpg" className="member-img" />
-			<div className="mask">
-					<p>nanase</p>
-			</div>
-		</a>
-		<a href="" className="member">
-			<img src="src/images/member/member2.jpg" className="member-img" />
-			<div className="mask">
-					<p>nanami</p>
-			</div>
-		</a>
-		<a href="" className="member">
-			<img src="src/images/member/member3.jpg" className="member-img" />
-			<div className="mask">
-					<p>mai</p>
-			</div>
-		</a>
-		<a href="" className="member">
-			<img src="src/images/member/member4.jpg" className="member-img" />
-			<div className="mask">
-					<p>sayuri</p>
-			</div>
-		</a>
-	</div>
-	<div className="flex">
-		<a href="" className="member">
-			<img src="src/images/member/member5.jpg" className="member-img" />
-			<div className="mask">
-					<p>rina</p>
-			</div>
-		</a>
-		<a href="" className="member">
-			<img src="src/images/member/member6.jpg" className="member-img" />
-			<div className="mask">
-				<p>mai</p>
-			</div>
-		</a>
-		<a href="" className="member">
-			<img src="src/images/member/member7.jpg" className="member-img" />
-			<div className="mask">
-					<p>erika</p>
-			</div>
-		</a>
-		<a href="" className="member">
-			<img src="src/images/member/member8.jpg" className="member-img" />
-			<div className="mask">
-					<p>manatsu</p>
-			</div>
-		</a>
-	</div>
-	
-	<div className="btn-wrapper">
-		<a href="#" className="btn">More</a>
-	</div>
-</section>
+			<div className="btn-wrapper"><a href="#" className="btn">More</a></div>
+		</section>
 
-</main>
+		<section className={`${Styles.section} ${Styles.memberSection}`} id="member">
+			<h2 className={`${Styles.title} ${Styles.sectionTitle} ${Styles.memberSectionTitle}`}>Member</h2>
 
-<footer className="footer">
-	<div className="footer-nogi sa"></div>
-	<h2 className="footer-title title sa">Potsunen 47 Official Web Site</h2>
+			<div className={Styles.flex}>
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member1.jpg"
+						alt="oge"
+					/>
+					<div className={Styles.mask}>
+						<p>nanase</p>
+					</div>
+				</a>
 
-	<div className="wrapper sa">
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member2.jpg"
+						alt="oge"
+					/>
+					<div className={Styles.mask}>
+						<p>nanami</p>
+					</div>
+				</a>
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member3.jpg"
+						alt="oge"
+					/>
+					<div className={Styles.mask}>
+						<p>mai</p>
+					</div>
+				</a>
+        
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member4.jpg"
+						alt="oge"
+					/>
+					<div className={Styles.mask}>
+							<p>sayuri</p>
+					</div>
+				</a>
 
-		<div className="border"></div>
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member5.jpg"
+						alt="oge"
+					/>
+          <div className="mask">
+            <p>rina</p>
+          </div>
+        </a>
 
-		<div className="list">
-			<h3 className="list-title">Sample Pages</h3>
-			<ul>
-				<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample1/">Sample1</a></li>
-				<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample2/">Sample2</a></li>
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member6.jpg"
+						alt="oge"
+					/>
+          <div className="mask">
+            <p>mai</p>
+          </div>
+        </a>
+
+				<a href="" className={Styles.member}>
+					<StaticImage
+						src="src/images/member/member7.jpg"
+						alt="oge"
+					/>
+          <div className="mask">
+              <p>erika</p>
+          </div>
+        </a>
+        <a href="" className="member">
+					<StaticImage
+						src="src/images/member/member8.jpg"
+						alt="oge"
+            imgClassName={Styles.memberImg}
+					/>
+          <div className="mask">
+              <p>manatsu</p>
+          </div>
+        </a>
+      </div>
+      
+      <div className="btn-wrapper">
+        <a href="#" className="btn">More</a>
+      </div>
+    </section>
+
+    </main>
+
+    <footer className="footer">
+      <div className="footer-nogi sa"></div>
+      <h2 className="footer-title title sa">Potsunen 47 Official Web Site</h2>
+
+      <div className="wrapper sa">
+
+        <div className="border"></div>
+
+        <div className="list">
+          <h3 className="list-title">Sample Pages</h3>
+          <ul>
+            <li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample1/">Sample1</a></li>
+            <li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample2/">Sample2</a></li>
 				<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample3/">Sample3</a></li>
 
 			</ul>

@@ -206,7 +206,7 @@ a {
           align-items: start; 
           padding-top: 50px;
 
-          img {
+          .imgWrapper {
             width: 45%;
             height: auto;
             margin-bottom: 50px;
@@ -328,7 +328,7 @@ a {
     color: #fff;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     max-width: 1500px;
     margin: 0 auto;
     border: 1px solid #222;
@@ -384,17 +384,16 @@ a {
   **/
   .contents-container {
     display: flex;
-    width: 80%;
+    width: 70%;
     max-width: 1500px;
     margin: 0 auto;
   }
 
   .container-2 {
-
     .contents {
       width: 50%;
-
-      img {
+      .imgWrapper {
+        min-height: 52%;
         height: 52%;
       }
       .contents-wrapper {
@@ -415,31 +414,6 @@ a {
       } //news-wrapper
     } //news
   } //container-2
-
-  .container-4 {
-
-    .contents {
-
-      img {
-        height: 52%;
-      }
-
-      .contents-wrapper {
-        padding: 10px 20px;
-        .title-wrapper {
-          flex-direction: column;
-          .contents-title {
-            font-size: 1.8rem;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-          }
-        }
-        .contents-text {
-          font-size: 1.8rem;
-        }
-      } //news-wrapper
-    } //news
-  } //container-4
 } //contents-section
 
 @media screen and (max-width: 768px) {
@@ -447,17 +421,13 @@ a {
     .contents {
       margin-bottom: 20px;
       width: 80%;
-
       img {
         height: 100%;
       }
-
       .contents-wrapper {
         padding: 15px 0 0px;
-
         .title-wrapper {
           flex-direction: column;
-
           .contents-title {
             font-size: 2rem;
             text-align: center;
@@ -467,13 +437,11 @@ a {
             font-size: 1.5rem;
           }
         } // title-wrapper
-
         .contents-text {
           font-size: 1.4rem;
         }
       }
     }
-
     .container-2 {
       flex-direction: column;
       .contents {
@@ -483,11 +451,6 @@ a {
         font-size: 1.2rem;
       }
     }
-
-    .container-4 {
-      display: none;
-    }
-
   }
 }
 
@@ -498,16 +461,17 @@ a {
     color: #fff;
   }
   .flex {
-    width: 80%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
     margin-bottom: 10px;
-    overflow: hidden;
     .member {
+      position: relative;
       display: block;
       width: 24%;
-      position: relative;
+      height: 400px;
       .member-img {
         width: 100%;
       }
