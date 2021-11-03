@@ -40,7 +40,7 @@ const Index: React.VFC = () => {
     />
 
     <header className={Styles.header} id="header">
-      <div className={`${Styles.sa} ${Styles.saUp}`}>
+      <div>
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
         <h1 className={Styles.headerTitle}>Portfolio Website</h1>
         <p>更新日 : <time>2021-10-27</time></p>
