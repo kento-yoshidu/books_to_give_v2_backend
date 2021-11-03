@@ -41,7 +41,6 @@ a {
 }
 
 .main {
-  border: 1px solid red;
   padding-top: 60px;
   transition-property: all;
   transition-delay: .3s;
@@ -464,6 +463,7 @@ a {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 10px;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -471,10 +471,13 @@ a {
       position: relative;
       display: block;
       width: 24%;
-      height: 400px;
+      overflow: hidden;
+      max-height: 320px;
+      /*
       .member-img {
         width: 100%;
       }
+      */
       .mask {
         position: absolute;
         top: 0;
@@ -707,3 +710,79 @@ a {
   transform: translate(0, 200px);
 }
 */
+
+.nogi-base {
+  background: linear-gradient(to bottom right, rgba(255, 255,255, 0) 50%, $main-color 50.3%) no-repeat bottom right/100% 100%;
+  position: relative;
+  font-family: 'Bitter', serif;
+}
+.nogi-before {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  content: "potsunen";
+  color: $main-color;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.nogi-after {
+  content: "47";
+  font: 80px/1em -webkit-pictograph;
+  color: #fff;
+  right: 4px;
+  bottom: 2px;
+  position: absolute;
+}
+
+//ロゴのベース
+.header-nogi {
+  @extend .nogi-base;
+  width: 60px;
+  height: 63px;
+  margin: -10px 20px 0 -10px;
+  &::before {
+    @extend .nogi-before;
+    font-size: 1.2rem;
+    bottom: -12px;
+  }
+  &::after {
+    @extend .nogi-after;
+    font-size: 1.5rem;
+  }
+} //nogi
+
+@media (max-width: 768px) {
+  .header-nogi {
+    width: 45px;
+    height: 46px;
+    margin: 0 10px 0 -10px;
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.footer-nogi {
+  @extend .nogi-base;
+  width: 100px;
+  height: 104px;
+  margin: 0 auto 100px;
+  &::before {
+    @extend .nogi-before;
+    font-size: 2rem;
+    bottom: -22px;
+  }
+  &::after {
+    @extend .nogi-after;
+    font-size: 2.5rem;
+  }
+} //nogi
+
+@media (max-width: 768px) {
+  .footer-nogi {
+    margin: 0 auto 50px;
+    width: 70px;
+    height: 73px;
+  }
+}

@@ -1,5 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
+
+import { Tab } from "@headlessui/react"
 
 const Styles = require("./styles/style.module.scss")
 const Drawer = require("./styles/_drawer.module.scss")
@@ -7,23 +9,6 @@ const GlobalNav = require("./styles/_globalNav.module.scss")
 
 const Sample2 = () => (
 	<>
-
-		<input type="checkbox" className={Drawer.check} id="checked" />
-		<label className={Drawer.menuBtn} htmlFor="checked">
-			<span className={`${Drawer.bar} ${Drawer.barTop}`}></span>
-			<span className={`${Drawer.bar} ${Drawer.barMiddle}`}></span>
-			<span className={`${Drawer.bar} ${Drawer.barBottom}`}></span>
-		</label>
-
-		<label className={Drawer.closeMenu} htmlFor="checked"></label>
-		<nav className={Drawer.drawerMenu}>
-			<ul className={Drawer.drawerList}>
-				<li className={Drawer.drawerItem}>Navi</li>
-				<li className={Drawer.drawerItem}><a href="#" className={Drawer.drawerLink}>TOP</a></li>
-				<li className={Drawer.drawerItem}><a href="#intro" className={Drawer.drawerLink}>What's potsunen47?</a></li>
-			</ul>
-		</nav>
-
 		<nav className={GlobalNav.globalNav}>
 			<ul className={GlobalNav.links}>
 				<li>hoge</li>
@@ -39,6 +24,22 @@ const Sample2 = () => (
 				<li className={GlobalNav.navItem}><a href="#contents">Contents</a></li>
 				<li className={GlobalNav.navItem}><a href="#member">Member</a></li>
 			</ul>
+
+			<input type="checkbox" className={Drawer.check} id="checked" />
+			<label className={Drawer.menuBtn} htmlFor="checked">
+				<span className={`${Drawer.bar} ${Drawer.barTop}`}></span>
+				<span className={`${Drawer.bar} ${Drawer.barMiddle}`}></span>
+				<span className={`${Drawer.bar} ${Drawer.barBottom}`}></span>
+			</label>
+
+			<label className={Drawer.closeMenu} htmlFor="checked"></label>
+			<nav className={Drawer.drawerMenu}>
+				<ul className={Drawer.drawerList}>
+					<li className={Drawer.drawerItem}>Navi</li>
+					<li className={Drawer.drawerItem}><a href="#" className={Drawer.drawerLink}>TOP</a></li>
+					<li className={Drawer.drawerItem}><a href="#intro" className={Drawer.drawerLink}>What's potsunen47?</a></li>
+				</ul>
+			</nav>
 		</nav>
 
 		<main className={Styles.main} role="main">
@@ -150,6 +151,18 @@ const Sample2 = () => (
             </div>
           </div>
         </div>
+				<Tab.Group>
+					<Tab.List>
+						<Tab>Tab 1</Tab>
+						<Tab>Tab 2</Tab>
+						<Tab>Tab 3</Tab>
+					</Tab.List>
+					<Tab.Panels>
+						<Tab.Panel>Content 1</Tab.Panel>
+						<Tab.Panel>Content 2</Tab.Panel>
+						<Tab.Panel>Content 3</Tab.Panel>
+					</Tab.Panels>
+				</Tab.Group>
       </div>
     </section>
 
@@ -259,6 +272,7 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member1.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
 					<div className={Styles.mask}>
 						<p>nanase</p>
@@ -269,6 +283,7 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member2.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
 					<div className={Styles.mask}>
 						<p>nanami</p>
@@ -278,6 +293,7 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member3.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
 					<div className={Styles.mask}>
 						<p>mai</p>
@@ -288,6 +304,7 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member4.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
 					<div className={Styles.mask}>
 							<p>sayuri</p>
@@ -298,8 +315,9 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member5.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
-          <div className="mask">
+					<div className={Styles.mask}>
             <p>rina</p>
           </div>
         </a>
@@ -308,8 +326,9 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member6.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
-          <div className="mask">
+					<div className={Styles.mask}>
             <p>mai</p>
           </div>
         </a>
@@ -318,19 +337,21 @@ const Sample2 = () => (
 					<StaticImage
 						src="src/images/member/member7.jpg"
 						alt="oge"
+						layout="fullWidth"
 					/>
-          <div className="mask">
+					<div className={Styles.mask}>
               <p>erika</p>
           </div>
         </a>
-        <a href="" className="member">
+
+				<a href="" className={Styles.member}>
 					<StaticImage
 						src="src/images/member/member8.jpg"
 						alt="oge"
-            imgClassName={Styles.memberImg}
+						layout="fullWidth"
 					/>
-          <div className="mask">
-              <p>manatsu</p>
+					<div className={Styles.mask}>
+						<p>manatsu</p>
           </div>
         </a>
       </div>
@@ -342,54 +363,42 @@ const Sample2 = () => (
 
     </main>
 
-    <footer className="footer">
-      <div className="footer-nogi sa"></div>
-      <h2 className="footer-title title sa">Potsunen 47 Official Web Site</h2>
+    <footer className={Styles.footer}>
+      <div className={`${Styles.footerNogi} ${Styles.sa}`}></div>
+      <h2 className={`${Styles.footerTitle} ${Styles.title} ${Styles.sa}`}>Potsunen 47 Official Web Site</h2>
 
-      <div className="wrapper sa">
+      <div className={`${Styles.wrapper} ${Styles.sa}`}>
 
-        <div className="border"></div>
+        <div className={Styles.border}></div>
 
-        <div className="list">
-          <h3 className="list-title">Sample Pages</h3>
+        <div className={Styles.list}>
+          <h3 className={Styles.listTitle}>Sample Pages</h3>
           <ul>
             <li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample1/">Sample1</a></li>
             <li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample2/">Sample2</a></li>
-				<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample3/">Sample3</a></li>
+						<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample3/">Sample3</a></li>
+					</ul>
+				</div>
 
-			</ul>
-		</div>
+				<div className={Styles.border}></div>
 
-		<div className="border"></div>
-
-		<div className="list">
-			<h3 className="list-title">Contents</h3>
-			<ul>
-				<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/css-animation/">CSS Animation & Tips</a></li>
-			</ul>
-		</div>
-
-		<div className="border"></div>
-
-		<div className="list">
-			<h3 className="list-title">Blog</h3>
-			<ul>
-				<li><i className="fas fa-caret-right"></i><a href="https://potsunen-blog.netlify.com/">鳥に生まれることが出来なかった人へ</a></li>
-			</ul>
-		</div>
-
-		<div className="border"></div>
-	</div>
-	<div className="hoge"></div>
-		<ul className="link">
-			<li><a href="/">HOME</a></li>
-			<li><a href="/">サイトマップ</a></li>
-			<li><a href="/">プライバシーポリシー</a></li>
-			<li><a href="/">お問い合わせ</a></li>
-		</ul>
-    <p className="copyright">Copyright © 2020 <a href="https://potsunen.info">potsunen</a></p>
-	</footer>
-
+				<div className={Styles.list}>
+					<h3 className={Styles.listTitle}>Contents</h3>
+					<ul>
+						<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/css-animation/">CSS Animation & Tips</a></li>
+					<li><i className="fas fa-caret-right"></i><a href="https://potsunen-blog.netlify.com/">鳥に生まれることが出来なかった人へ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div className={Styles.infomation}></div>
+				<ul className={Styles.link}>
+					<li><a href="/">HOME</a></li>
+					<li><a href="/">サイトマップ</a></li>
+					<li><a href="/">プライバシーポリシー</a></li>
+					<li><a href="/">お問い合わせ</a></li>
+				</ul>
+				<p className={Styles.copyright}>Copyright © 2020 <a href="https://potsunen.info">potsunen</a></p>
+			</footer>
 	</>
 )
 
