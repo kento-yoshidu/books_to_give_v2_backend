@@ -48,16 +48,13 @@
 
 .menu-btn {
   display: block;
-  position: fixed;
-  top: 20px;
-  right: 20px;
   cursor: pointer;
   z-index: 4;
 
   .bar {
     display: block;
-    width: 35px;
-    height: 3px;
+    width: 40px;
+    height: 5px;
     background: $main-color;
     border-radius: 3px;
     transition: .5s;
@@ -89,14 +86,14 @@
     background: #ddd;
   }
   .bar-top {
-    transform:  translateY(20px) rotate(405deg);
+    transform:  translateY(10px) rotate(405deg);
   }
   .bar-middle {
     display: none;
   }
   .bar-bottom {
     transition-delay: .3s;
-    transform: translateY(8px) rotate(-405deg);
+    transform: translateY(-3px) rotate(-405deg);
   }
 }
 
