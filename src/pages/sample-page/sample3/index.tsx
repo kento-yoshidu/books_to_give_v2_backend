@@ -1,20 +1,108 @@
 ﻿import React from "react"
+import Particles from "react-tsparticles";
+
+const Styles = require("./scss/style.module.scss")
 
 const Sample3 = () => (
 	<>
-	<header className="header" id="js-header">
-		<div className="circle circle1"></div>
-		<div className="circle circle2"></div>
-		<div className="circle circle3"></div>
+		<header className={Styles.header} id="js-header">
+			<Particles
+				className={Styles.particle}
+					id="tsparticles"
+					//init={particlesInit}
+					//loaded={particlesLoaded}
+					options={{
+						/*
+						background: {
+							color: {
+								value: "#0d47a1",
+							},
+						},
+						*/
+						fpsLimit: 60,
+						interactivity: {
+							events: {
+								onClick: {
+								enable: false,
+								//mode: "push",
+							},
+							onHover: {
+								enable: false,
+								mode: "repulse",
+							},
+							resize: true,
+						},
+						modes: {
+							bubble: {
+							distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 40,
+            },
+            push: {
+              quantity: 4,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+          },
+        },
+        particles: {
+          color: {
+            value: "#ffffff",
+          },
+          links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+          },
+          collisions: {
+            enable: true,
+          },
+          move: {
+            direction: "top-right",
+            enable: true,
+            outMode: "out",
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+          number: {
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+            value: 75,
+          },
+          opacity: {
+            value: 0.5,
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            random: true,
+            value: 5,
+          },
+        },
+        detectRetina: true,
+      }}
+    />
+		<div className={`${Styles.circle} ${Styles.circle1}`}></div>
+		<div className={`${Styles.circle} ${Styles.circle2}`}></div>
+		<div className={`${Styles.circle} ${Styles.circle3}`}></div>
 
-		<div className="text-wrapper">
-			<h1 className="header-title">
+		<div className={Styles.textWrapper}>
+			<h1 className={Styles.headerTitle}>
 				Sample Page 3
 			</h1>
-			<h2 className="product-title">
+			<h2 className={Styles.productTitle}>
 				Sample Web Service
 			</h2>
-			<p className="text">
+			<p className={Styles.text}>
 				<span>静</span>
 				<span>的</span>
 				<span>ホ</span>
@@ -24,7 +112,7 @@ const Sample3 = () => (
 				<span>ン</span>
 				<span>グ</span>
 			</p>
-			<p className="text">
+			<p className={Styles.text}>
 				<span>自</span>
 				<span>動</span>
 				<span>デ</span>
@@ -32,7 +120,7 @@ const Sample3 = () => (
 				<span>ロ</span>
 				<span>イ</span>
 			</p>
-			<p className="text">
+			<p className={Styles.text}>
 				<span>ロ</span>
 				<span>ー</span>
 				<span>ド</span>
@@ -43,7 +131,7 @@ const Sample3 = () => (
 				<span>ン</span>
 				<span>グ</span>
 			</p>
-			<p className="text">
+			<p className={Styles.text}>
 				<span>マ</span>
 				<span>イ</span>
 				<span>ク</span>
@@ -56,7 +144,7 @@ const Sample3 = () => (
 		</div>
 	</header>
 
-	<section className="section contents-section">
+	<section className={`${Styles.section} ${Styles.contentsSection}`}>
 		<h2 className="section-title">Contents</h2>
 
 		<section className="contents-01">
