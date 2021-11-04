@@ -25,10 +25,6 @@ p {
   background: linear-gradient(to left bottom, $main-color1, $main-color2);
   overflow: hidden;
 
-  .particles {
-    position: absolute;
-  }
-
   .circle {
     position: absolute;
     top: 50%;
@@ -210,6 +206,11 @@ p {
   }
 }
 
+.main {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+}
 .section-title {
   margin-bottom: 30px;
   color: #444;
@@ -230,7 +231,7 @@ p {
   .section-wrapper {
     padding: 50px 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     max-width: 1000px;
     margin: 0 auto 30px;
@@ -261,24 +262,26 @@ p {
       }
     }
     .section-image {
-      width: 50%;
+      width: 35%;
       .svg-image {
-        width: 100%;
-        min-height: 35vh;
-        background-size: 60%;
+        //width: 100%;
+        //min-height: 35vh;
+        /*
+        background-size: 40%;
         background-position: top center;
         background-repeat: no-repeat;
+        */
       }
     }
   }
 } //contents-section
 
 .contents-section {
-  .contents-01,
-  .contents-02 {
+  .contents1,
+  .contents2 {
     padding: 30px 0 40px;
   }
-  .contents-01 {
+  .contents1 {
     .section-wrapper {
       .introduction {
         background: #fff;
@@ -312,20 +315,6 @@ p {
       }
     }
   } // contents-01
-  .contents-02 {
-    background: linear-gradient(to right top, lighten(#b3d4fc, .5) 10%, #fff 70%);
-    .section-wrapper {
-      flex-direction: row-reverse;
-      .section-image {
-        /*
-        .svg-image {
-          background-image: url(../svg/section2-bg.svg);
-          background-size: 75%;
-        }
-        */
-      }
-    }
-  }
 } //contents-section
 
 @media screen and (max-width: 768px) {
@@ -383,7 +372,7 @@ p {
 .sec3 {
   background-color: $main-color1;
   background-attachment: fixed;
-  //background-image: url(../svg/section3-bg.svg), linear-gradient(to right, $main-color1, $main-color2);
+  background-image: url(../svg/section3-bg.svg), linear-gradient(to right, $main-color1, $main-color2);
   display: flex;
   padding: 50px 0 30px;
 
@@ -459,16 +448,6 @@ p {
 .sec4 {
   position: relative;
   padding: 70px 0;
-  #js-sec4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    z-index: -1;
-    width: 100%;
-  }
   .board {
     position: relative;
     background: #fff;
@@ -476,7 +455,7 @@ p {
     border-radius: 3px;
     padding: 3% 3% 2%;
     width: 35%;
-
+    text-align: center;
     .index {
       position: absolute;
       height: 40px;
@@ -493,13 +472,10 @@ p {
       color: #666;
       font-size: 2.8rem;
       text-align: center;
-      margin-bottom: 15px;
       line-height: 1.5;
     }
-    .icon {
-      display: block;
-      text-align: center;
-      margin: 25px auto;
+    .iconWrapper {
+      margin: 20px auto;
     }
     .text,
     .client {
@@ -512,12 +488,12 @@ p {
     }
     .client {
       margin-top: 25px;
-      color: #444;
+      color: #666;
       text-align: right;
     }
   }
 
-  .board-1 {
+  .board1 {
     margin-top: 100px;
     margin-left: 41%;
     .index {
@@ -527,7 +503,7 @@ p {
       background: linear-gradient(transparent 65%, rgba($main-color2, .7) 0);
     }
   }
-  .board-2 {
+  .board2 {
     width: 50%;
     margin-top: 100px;
     margin-left: 15%;
@@ -609,7 +585,7 @@ p {
     .icon {
       height: 80px;
       width: 100%;
-      //background-image: url(../svg/section4-free.svg);
+      background-image: url(../svg/section4-free.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 20%;
