@@ -136,18 +136,18 @@ p {
 @media screen and (max-width: 768px) {
   .header {
     .circle1 {
-      width: 48vh;
-      height: 48vh;
+      width: 88vh;
+      height: 88vh;
       border: 60px solid rgba(160, 180, 240, 0.1);
     }
     .circle2 {
-      width: 45vh;
-      height: 45vh;
+      width: 85vh;
+      height: 85vh;
       border: 80px solid rgba(160, 180, 240, 0.1);
     }
     .circle3 {
-      width: 45vh;
-      height: 45vh;
+      width: 80vh;
+      height: 78vh;
       border: 80px solid rgba(160, 180, 240, 0.1);
     }
 
@@ -263,15 +263,6 @@ p {
     }
     .section-image {
       width: 35%;
-      .svg-image {
-        //width: 100%;
-        //min-height: 35vh;
-        /*
-        background-size: 40%;
-        background-position: top center;
-        background-repeat: no-repeat;
-        */
-      }
     }
   }
 } //contents-section
@@ -335,7 +326,6 @@ p {
           margin-bottom: 20px;
         }
       }
-
       .section-image {
         display: none;
       }
@@ -345,14 +335,14 @@ p {
 
 @media screen and (max-width: 768px) {
   .contents-section {
-    .contents-01,
-    .contents-02 {
+    .contents1,
+    .contents2 {
       padding-top: 10px 0 20px;
       .introduction {
         width: 80%;
       }
     }
-    .contents-01 {
+    .contents1 {
       .section-wrapper {
         .introduction {
           border: none;
@@ -363,7 +353,7 @@ p {
         }
       }
     }
-    .contents-02 {
+    .contents2 {
       background: lighten(#b3d4fc, 10%);
     }
   }
@@ -458,12 +448,11 @@ p {
     text-align: center;
     .index {
       position: absolute;
-      height: 40px;
       top: -20px;
       left: -50px;
-      padding: 12px 25px 0;
-      font-size: 2.8rem;
       background-color: #fff;
+      padding: 10px 25px 10px;
+      font-size: 2.8rem;
       font-weight: 900;
       box-shadow: 0 0 5px 5px #ddd;
       border-radius: 3px;
@@ -620,7 +609,6 @@ p {
           text-align: left;
           letter-spacing: 1px;
         }
-
       }
     }
     .btn {
@@ -631,7 +619,6 @@ p {
       display: inline-block;
       padding: 10px 20px 10px 20px;
       margin-top: 20px;
-
       letter-spacing: 2px;
       font-weight: 900;
       background: #fff;
@@ -649,7 +636,8 @@ p {
     }
     p {
       color: #444;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
+      line-height: 1.6;
       letter-spacing: 1px;
       .span1 {
         color: $sub-color1;
@@ -674,6 +662,9 @@ p {
     background: linear-gradient(-10deg, $main-color1, $main-color2);
     box-shadow: 0 0 8px 2px $main-color2;
     margin: 0 3%;
+    .btn {
+      color: $main-color1;
+    }
   }
 }
 
@@ -766,6 +757,16 @@ p {
     margin-top: 30px;
     font-size: 1.5rem;
     text-align: center;
+    a {
+      display: inline-block;
+      color: #fff;
+      font-weight: 900;
+      margin: 0 3px;
+      transition: 0.2s;
+      &:hover {
+        color: $main-color2;
+      }
+    }
   }
 }
 
