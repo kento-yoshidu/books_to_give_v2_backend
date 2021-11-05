@@ -289,77 +289,77 @@ const Sample3 = () => (
 			</div>
 
 			<div className={Styles.paidMember}>
-				<div className="icon"></div>
-				<p className="title">有料会員</p>
-				<p className="fee">\<span>28,000</span>/月</p>
+				<div className={Styles.icon}></div>
+				<p className={Styles.title}>有料会員</p>
+				<p className={Styles.fee}>\<span>28,000</span>/月</p>
 
-				<dl className="plan-specific">
-					<div className="list">
+				<dl className={Styles.planSpecific}>
+					<div className={Styles.list}>
 						<dt>インスタンス稼働時間</dt>
 						<dl>5000時間/月</dl>
 					</div>
-					<div className="list">
+					<div className={Styles.list}>
 						<dt>クラウドストレージ</dt>
 						<dl>100GB</dl>
 					</div>
-					<div className="list">
+					<div className={Styles.list}>
 						<dt>同時稼働コンテナ数</dt>
 						<dl>15</dl>
 					</div>
-					<div className="list">
+					<div className={Styles.list}>
 						<dt>各種APIコール数</dt>
 						<dl>20000回/日</dl>
 					</div>
-					<div className="list">
+					<div className={Styles.list}>
 						<dt>各種インスタンス<br />DB</dt>
 						<dl>フルマネージド</dl>
 					</div>
-					<div className="list">
+					<div className={Styles.list}>
 						<dt>ホスティング</dt>
 						<dl>世界中に分散</dl>
 					</div>
 				</dl>
-				<a href="#" className="btn">登録する！</a>
+				<a href="#" className={Styles.btn}>登録する！</a>
 			</div>
 
-			<div className="introduction">
-				<p className="title">無料会員と有料会員</p>
-				<p>まずは<span className="span1">無料会員</span>に登録し導入を検討してください。利用制限を超えるとサービスは停止しますが、料金は一切かかりません。</p>
-				<p>本格的な運用には<span className="span2">有料会員</span>に登録してください。料金はかかりますが、基本料金の範囲で多くのことが可能です。超えた分は従量課金となります。</p>
+			<div className={Styles.introduction}>
+				<p className={Styles.title}>無料会員と有料会員</p>
+				<p>まずは<span className={Styles.span1}>無料会員</span>に登録し導入を検討してください。利用制限を超えるとサービスは停止しますが、料金は一切かかりません。</p>
+				<p>本格的な運用には<span className={Styles.span2}>有料会員</span>に登録してください。料金はかかりますが、基本料金の範囲で多くのことが可能です。超えた分は従量課金となります。</p>
 			</div>
 		</div>
 	</section>
 
-	<footer className="footer" id="footer">
-		<div className="wrapper">
-			<div className="info">
-				<h2 className="footer-title">Sample Web Service</h2>
+	<footer className={Styles.footer} id="footer">
+		<div className={Styles.wrapper}>
+			<div className={Styles.info}>
+				<h2 className={Styles.footerTitle}>Sample Web Service</h2>
 				<address>
-					<p className="company">toriwatari net app Ltd.</p>
-					<p className="address">滋賀県 草津市 追分南 x-xx-xxxx</p>
-					<p className="address"><a href="/" target="_blink">作者ポートフォリオサイト</a></p>
+					<p className={Styles.company}>toriwatari net app Ltd.</p>
+					<p className={Styles.address}>滋賀県 草津市 追分南 x-xx-xxxx</p>
+					<p className={Styles.address}><a href="/" target="_blink">作者ポートフォリオサイト</a></p>
 				</address>
 			</div>
-			<div className="list-block">
-				<div className="list-column">
+			<div className={Styles.listBlock}>
+				<div className={Styles.listColumn}>
 					<a href="#footer">Sample Web Serviceについて</a>
 					<a href="#footer">Sample Web Service API</a>
 					<a href="#footer">料金プラン</a>
 				</div>
-				<div className="list-column">
+				<div className={Styles.listColumn}>
 					<a href="#footer">リファレンス</a>
 					<a href="#footer">開発者ブログ</a>
 					<a href="#footer">コミュニティ</a>
 				</div>
-				<div className="list-column">
+				<div className={Styles.listColumn}>
 					<a href="#footer">お知らせ</a>
 					<a href="#footer">FAQ</a>
 					<a href="#footer">お問い合わせ</a>
 				</div>
 			</div>
 		</div>
-		 <hr />
-		<p className="refer">このページは<a href="https://api.ce-cotoha.com/contents/index.html" target="_blank">こちらのWebサイト</a>を参考にしました。</p>
+		<hr />
+		<p className={Styles.refer}>このページは<a href="https://api.ce-cotoha.com/contents/index.html" target="_blank">こちらのWebサイト</a>を参考にしました。</p>
 	</footer>
 
   </main>
