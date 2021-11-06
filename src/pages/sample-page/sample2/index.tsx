@@ -4,13 +4,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Tab } from "@headlessui/react"
 
 const Styles = require("./styles/style.module.scss")
-const Drawer = require("./styles/_drawer.module.scss")
-const GlobalNav = require("./styles/_globalNav.module.scss")
 
 const Sample2 = () => (
 	<>
-		<nav className={GlobalNav.globalNav}>
-			<ul className={GlobalNav.links}>
+		<nav className={Styles.globalNav}>
+			<ul className={Styles.links}>
 				<li>hoge</li>
 				<li>hoge</li>
 				<li>hoge</li>
@@ -18,26 +16,26 @@ const Sample2 = () => (
 				<li>hoge</li>
 			</ul>
 
-			<ul className={GlobalNav.siteNav}>
-				<li className={GlobalNav.navItem}><a href="#intro">What's potsunen47?</a></li>
-				<li className={GlobalNav.navItem}><a href="#newRelease">New Release</a></li>
-				<li className={GlobalNav.navItem}><a href="#contents">Contents</a></li>
-				<li className={GlobalNav.navItem}><a href="#member">Member</a></li>
+			<ul className={Styles.siteNav}>
+				<li className={Styles.navItem}><a href="#intro">What's potsunen47?</a></li>
+				<li className={Styles.navItem}><a href="#newRelease">New Release</a></li>
+				<li className={Styles.navItem}><a href="#contents">Contents</a></li>
+				<li className={Styles.navItem}><a href="#member">Member</a></li>
 			</ul>
 
-			<input type="checkbox" className={Drawer.check} id="checked" />
-			<label className={Drawer.menuBtn} htmlFor="checked">
-				<span className={`${Drawer.bar} ${Drawer.barTop}`}></span>
-				<span className={`${Drawer.bar} ${Drawer.barMiddle}`}></span>
-				<span className={`${Drawer.bar} ${Drawer.barBottom}`}></span>
+			<input type="checkbox" className={Styles.check} id="checked" />
+			<label className={Styles.menuBtn} htmlFor="checked">
+				<span className={`${Styles.bar} ${Styles.barTop}`}></span>
+				<span className={`${Styles.bar} ${Styles.barMiddle}`}></span>
+				<span className={`${Styles.bar} ${Styles.barBottom}`}></span>
 			</label>
 
-			<label className={Drawer.closeMenu} htmlFor="checked"></label>
-			<nav className={Drawer.drawerMenu}>
-				<ul className={Drawer.drawerList}>
-					<li className={Drawer.drawerItem}>Navi</li>
-					<li className={Drawer.drawerItem}><a href="#" className={Drawer.drawerLink}>TOP</a></li>
-					<li className={Drawer.drawerItem}><a href="#intro" className={Drawer.drawerLink}>What's potsunen47?</a></li>
+			<label className={Styles.closeMenu} htmlFor="checked"></label>
+			<nav className={Styles.drawerMenu}>
+				<ul className={Styles.drawerList}>
+					<li className={Styles.drawerItem}>Navi</li>
+					<li className={Styles.drawerItem}><a href="#" className={Styles.drawerLink}>TOP</a></li>
+					<li className={Styles.drawerItem}><a href="#intro" className={Styles.drawerLink}>What's potsunen47?</a></li>
 				</ul>
 			</nav>
 		</nav>
