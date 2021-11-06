@@ -88,7 +88,7 @@ const Index: React.VFC = () => {
 
         <Link
           className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
-          to="samplepage/sample4"
+          to="sample-page/sample4"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample4</h3>
           <FontAwesomeIcon icon={faCode} />
@@ -98,7 +98,7 @@ const Index: React.VFC = () => {
 
       <div className={`${Styles.sa} ${Styles.saUp}`}>
         <Button
-          path="samplepage"
+          path="sample-page"
           text="more"
         />
       </div>

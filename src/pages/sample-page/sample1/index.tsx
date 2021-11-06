@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Styles = require("./styles/style.module.scss")
-const Navi = require("./styles/navi.module.scss")
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCode, faBook } from "@fortawesome/free-solid-svg-icons"
@@ -16,13 +15,13 @@ config.autoAddCss = false
 const Sample1: React.VFC = () => {
   return (
   <div className={Styles.wrapper}>
-    <nav className={Navi.globalNav} id="js-global-nav">
-      <h1 className={`${Navi.title} ${Navi.navTitle}`}>Sample1</h1>
-      <ul className={Navi.navList}>
-        <li className={Navi.navItem}><a href="#">HOME</a></li>
-        <li className={Navi.navItem}><a href="#about">About</a></li>
-        <li className={Navi.navItem}><a href="#article">Article</a></li>
-        <li className={Navi.navItem}><a href="#photograph">Photograph</a></li>
+    <nav className={Styles.globalNav} id="js-global-nav">
+      <h1 className={`${Styles.title} ${Styles.navTitle}`}>Sample1</h1>
+      <ul className={Styles.navList}>
+        <li className={Styles.navItem}><a href="#">HOME</a></li>
+        <li className={Styles.navItem}><a href="#about">About</a></li>
+        <li className={Styles.navItem}><a href="#article">Article</a></li>
+        <li className={Styles.navItem}><a href="#photograph">Photograph</a></li>
       </ul>
     </nav>
 
