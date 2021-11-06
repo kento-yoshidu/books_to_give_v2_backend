@@ -1,23 +1,5 @@
 $main-color: orange;
 
-* {
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	font-size: 62.5%;
-}
-
-h1, h2, h3 {
-	color: #444;
-	font-weight: 100;
-}
-
-p {
-	text-indent: .7rem;
-}
-
 .nav {
 	display: flex;
 	justify-content: space-between;
@@ -52,7 +34,7 @@ p {
 .header {
 	position: relative;
 	height: 80vh;
-	background-image: url(../images/header.webp);
+	background-image: url(../src/images/header.webp);
 	background-position: center center;
 	background-size: cover;
 	.header-wrapper {
@@ -174,7 +156,7 @@ p {
 		position: absolute;
 		top: 20vh;
 		right: 0;
-		background-image: url(../images/header.webp);
+		background-image: url(../src/images/header.webp);
 		background-size: cover;
 		display: block;
 		width: 55%;
