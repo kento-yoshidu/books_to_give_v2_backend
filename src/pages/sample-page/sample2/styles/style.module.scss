@@ -108,10 +108,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
   background: linear-gradient(to bottom, rgba(52, 52, 52, .9), rgba(67, 67, 67, .9));
-
   transform: translateX(-10vw); //少し左にずらしておく
   opacity: 0; //透明にしておく
 
@@ -174,6 +171,8 @@ a {
 
 .check:checked ~ .drawer-menu {
   display: block;
+  width: 100%;
+  height: 100vh;
   transition-delay: .1s;
   transform: none;
   opacity: 1;
@@ -203,6 +202,8 @@ a {
   }
 }
 .main {
+  position: relative;
+  z-index: 1;
   padding-top: 60px;
   transition-property: all;
   transition-delay: .3s;
@@ -322,7 +323,8 @@ a {
   }
 }
 
-.disc-section {
+.disc-section,
+.tempSection {
   .section-title {
     margin-bottom: 60px;
   }
@@ -344,19 +346,15 @@ a {
     .detail {
       width: 69vw;
       height: 100%;
-
       .item {
         width: 100%;
         height: 100%;
-        display: none;
-
         p {
+          margin-bottom: 20px;
+          color: $main-color;
           font-size: 2rem;
           font-weight: 900;
-          color: $main-color;
-          margin-bottom: 20px;
         }
-
         .title {
           color: #444;
           font-size: 4rem;
@@ -366,20 +364,17 @@ a {
           display: flex;
           align-items: start; 
           padding-top: 50px;
-
           .imgWrapper {
             width: 45%;
             height: auto;
             margin-bottom: 50px;
           }
           ol {
-            list-style-type: none;
             margin-left: 3vw;
-
+            list-style-type: none;
             li {
               margin-bottom: 2rem;
               font-size: 2.2rem;
-
               .info {
                 color: #aaa;
                 font-size: 1.8rem;
@@ -388,14 +383,9 @@ a {
             }
           }
         }
-
-        &.is-active {
-          display: block;
-          animation: fade .6s;
-        }
       }
     }
-  } //wrapper
+  }
 
   .thum-list {
     .thum {

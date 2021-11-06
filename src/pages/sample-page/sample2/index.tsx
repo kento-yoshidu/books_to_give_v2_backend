@@ -79,90 +79,102 @@ const Sample2 = () => (
 			<p>よりによって、<span className={Styles.purple}>ダチョウにも似た木の葉</span>は思想を問い詰めるだろうし、海亀は洗濯機の独自規格であるニンジャに変身する気がした。</p>
 		</section>
 
-		<section className={`${Styles.section} ${Styles.discSection} ${Styles.sa} ${Styles.saUp}`} id="newRelease">
+		<section className={`${Styles.discSection} ${Styles.section}`}>
 			<h2 className={`${Styles.title} ${Styles.sectionTitle}`}>New R<span className={Styles.purple}>el</span>ease</h2>
 			<div className={Styles.wrapper}>
-				<div className={Styles.thumList}>
-					<StaticImage src="./src/images/disc/01.jpg" className={Styles.thum} data-id="one" alt="hoge" />
-					<StaticImage src="./src/images/disc/02.jpg" className={Styles.thum} data-id="two" alt="hoge" />
-					<StaticImage src="./src/images/disc/03.jpg" className={Styles.thum} data-id="three" alt="joeg" />
-        </div>
-
-        <div className={Styles.detail}>
-          <div className={`${Styles.item} ${Styles.isActive}`} id="one">
-            <p>2020.11.01 New Single</p>
-            <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
-            <div className={Styles.wrapper}>
-              <StaticImage
-								src="./src/images/disc/01.jpg"
-								alt="hoge"
-								className={Styles.imgWrapper}
-							/>
-              <ol>
-                <li><p className={Styles.info}>PTNN38887-1022</p></li>
-                <li><p className={Styles.info}>税込 : 1,895円</p></li>
-                <li>1. 死ぬまで愛して</li>
-                <li>2. ギャラクティカ銀河</li>
-                <li>3. アイスホッケーの恋</li>
-                <li>4. OL人生</li>
-              </ol>
-            </div>
-          </div>
-
-          <div className={Styles.item} id="two">
-            <p>2020.11.01 New Single</p>
-            <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-B</p>
-            <div className={Styles.wrapper}>
-              <StaticImage
-                src="./src/images/disc/02.jpg"
-                alt="hoge"
-								className={Styles.imgWrapper}
-              />
-              <ol>
-                <li><p className={Styles.info}>PTNN38887-1023</p></li>
-                <li><p className={Styles.info}>税込 : 1,895円</p></li>
-                <li>1. 死ぬまで愛して</li>
-                <li>2. ロマンス浮船</li>
-                <li>3. ケチャップ濃い目</li>
-                <li>4. ピンクの画鋲を踏んだなら</li>
-              </ol>
-            </div>
-          </div>
-
-          <div className={`${Styles.item}`} id="three">
-            <p>2020.11.01 New Single</p>
-            <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-C</p>
-            <div className={Styles.wrapper}>
-              <StaticImage
-                src="./src/images/disc/03.jpg"
-                alt="hoge"
-								className={Styles.imgWrapper}
-              />
-              <ol>
-                <li><p className={Styles.info}>PTNN38887-1024</p></li>
-                <li><p className={Styles.info}>税込 : 1,895円</p></li>
-                <li>1. 死ぬまで愛して</li>
-                <li>2. 私の父は結界師</li>
-                <li>3. </li>
-                <li>4. </li>
-              </ol>
-            </div>
-          </div>
-        </div>
 				<Tab.Group>
-					<Tab.List>
-						<Tab>Tab 1</Tab>
-						<Tab>Tab 2</Tab>
-						<Tab>Tab 3</Tab>
-					</Tab.List>
-					<Tab.Panels>
-						<Tab.Panel>Content 1</Tab.Panel>
-						<Tab.Panel>Content 2</Tab.Panel>
-						<Tab.Panel>Content 3</Tab.Panel>
-					</Tab.Panels>
+					<div className={Styles.wrapper}>
+						<Tab.List
+							className={Styles.thumList}
+						>
+							<Tab>
+								<StaticImage
+									src="./src/images/disc/01.jpg"
+									className={Styles.thum}
+									alt="hoge"
+								/>
+							</Tab>
+							<Tab>
+								<StaticImage
+									src="./src/images/disc/02.jpg"
+									className={Styles.thum}
+									alt="hoge"
+								/>
+							</Tab>
+							<Tab>
+								<StaticImage
+									src="./src/images/disc/03.jpg"
+									className={Styles.thum}
+									alt="hoge"
+								/>
+							</Tab>
+						</Tab.List>
+
+						<Tab.Panels
+							className={Styles.detail}
+						>
+							<Tab.Panel className={Styles.item}>
+								<p>2020.11.01 New Single</p>
+								<p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
+								<div className={Styles.wrapper}>
+									<StaticImage
+										src="./src/images/disc/01.jpg"
+										alt="hoge"
+										className={Styles.imgWrapper}
+									/>
+									<ol>
+										<li><p className={Styles.info}>PTNN38887-1022</p></li>
+										<li><p className={Styles.info}>税込 : 1,895円</p></li>
+										<li>1. 死ぬまで愛して</li>
+										<li>2. ギャラクティカ銀河</li>
+										<li>3. アイスホッケーの恋</li>
+										<li>4. OL人生</li>
+									</ol>
+								</div>
+							</Tab.Panel>
+							<Tab.Panel className={Styles.item}>
+								<p>2020.11.01 New Single</p>
+								<p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-B</p>
+								<div className={Styles.wrapper}>
+									<StaticImage
+										src="./src/images/disc/02.jpg"
+										alt="hoge"
+										className={Styles.imgWrapper}
+									/>
+									<ol>
+										<li><p className={Styles.info}>PTNN38887-1023</p></li>
+										<li><p className={Styles.info}>税込 : 1,895円</p></li>
+										<li>1. 死ぬまで愛して</li>
+										<li>2. ロマンス浮船</li>
+										<li>3. ケチャップ濃い目</li>
+										<li>4. ピンクの画鋲を踏んだなら</li>
+									</ol>
+								</div>
+							</Tab.Panel>
+							<Tab.Panel className={Styles.item}>
+								<p>2020.11.01 New Single</p>
+								<p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-C</p>
+								<div className={Styles.wrapper}>
+									<StaticImage
+										src="./src/images/disc/03.jpg"
+										alt="hoge"
+										className={Styles.imgWrapper}
+									/>
+									<ol>
+										<li><p className={Styles.info}>PTNN38887-1024</p></li>
+										<li><p className={Styles.info}>税込 : 1,895円</p></li>
+										<li>1. 死ぬまで愛して</li>
+										<li>2. 私の父は結界師</li>
+										<li>3. </li>
+										<li>4. </li>
+									</ol>
+								</div>
+							</Tab.Panel>
+						</Tab.Panels>
+					</div>
 				</Tab.Group>
-      </div>
-    </section>
+			</div>
+		</section>
 
     <section className={`${Styles.section} ${Styles.contentsSection}`} id="contents">
       <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Contents</h2>
