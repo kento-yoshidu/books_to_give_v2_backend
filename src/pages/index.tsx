@@ -94,6 +94,24 @@ const Index: React.VFC = () => {
           <FontAwesomeIcon icon={faCode} />
           <p>サンプルページ4</p>
         </Link>
+
+        <Link
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          to="sample-page/sample5"
+        >
+          <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample5</h3>
+          <FontAwesomeIcon icon={faCode} />
+          <p>サンプルページ5</p>
+        </Link>
+
+        <Link
+          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          to="sample-page/sample6"
+        >
+          <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample6</h3>
+          <FontAwesomeIcon icon={faCode} />
+          <p>サンプルページ6</p>
+        </Link>
       </div>
 
       <div className={`${Styles.sa} ${Styles.saUp}`}>
