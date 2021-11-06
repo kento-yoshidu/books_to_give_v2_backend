@@ -8,14 +8,6 @@ const Styles = require("./styles/style.module.scss")
 const Sample2 = () => (
 	<>
 		<nav className={Styles.globalNav}>
-			<ul className={Styles.links}>
-				<li>hoge</li>
-				<li>hoge</li>
-				<li>hoge</li>
-				<li>hoge</li>
-				<li>hoge</li>
-			</ul>
-
 			<ul className={Styles.siteNav}>
 				<li className={Styles.navItem}><a href="#intro">What's potsunen47?</a></li>
 				<li className={Styles.navItem}><a href="#newRelease">New Release</a></li>
@@ -46,26 +38,6 @@ const Sample2 = () => (
 			<div className={Styles.headerTitleWrapper}>
 				<div className={Styles.headerNogi}></div>
 				<h2 className={`${Styles.title} ${Styles.headerTitle}`}>Potsunen47<br />Official Web Site</h2>
-			</div>
-
-			<div className="swiper-container">
-				<div className="swiper-wrapper">
-					<div className="swiper-slide slide-1">
-						<h3 className="slide-title">Live Photograph 1</h3>
-						<p className="slide-text">2019.01.01 Tokyo Dome Live</p>
-					</div>
-					<div className="swiper-slide slide-2">
-						<h3 className="slide-title">Live Photograph 2</h3>
-						<p className="slide-text">2019.01.03 Nagoya Dome Live</p>
-					</div>
-					<div className="swiper-slide slide-3">
-						<h3 className="slide-title">Live Photograph 3</h3>
-						<p className="slide-text">2019.01.09 Osaka Dome Live</p>
-					</div>
-				</div>
-				<div className="swiper-pagination"></div>
-				<div className="swiper-button-prev"></div>
-				<div className="swiper-button-next"></div>
 			</div>
 		</header>
 
