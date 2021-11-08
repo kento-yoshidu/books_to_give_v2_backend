@@ -48,8 +48,10 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
       width: 90%;
       li {
         margin-right: 20px;
-        font-size: 1.2rem;
         font-weight: normal;
+				a {
+					font-size: 1.5rem;
+				}
       }
     }
   }
@@ -117,7 +119,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	.scroll {
 		position: absolute;
 		bottom: 8vh;
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		font-weight: 500;
 		border-bottom: 1.5px solid #fff;
 	}
@@ -137,11 +139,11 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
     margin-top: 30px;
 		h1 {
 			width: 80%;
-			font-size: 1.3rem;
+			font-size: 2rem;
 		}
 		p {
 			width: 80%;
-			font-size: 0.9rem;
+			font-size: 1.2rem;
 		}
 		.box {
 			width: 65%;
@@ -150,8 +152,11 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 				width: 150px;
 			}
 			li {
-				font-size: 1rem;
+				font-size: 1.5rem;
 			}
+		}
+		.scroll {
+			font-size: 1.5rem;
 		}
 	}
 	
@@ -234,7 +239,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 @media screen and (max-width: 768px) {
 	.section {
 		.section-title {
-			font-size: 2.5rem;
+			font-size: 3.5rem;
 		}
   }
 }
@@ -370,7 +375,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		}
 		.content {
 			position: absolute;
-			width: 100%;
+			width: 120%;
 			padding: 20px 30px;
 			background-color: rgba(#fff, 0.3);
 			backdrop-filter: blur(10px);
@@ -380,17 +385,17 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 			transition: 0.5s;
 			z-index: 1;
 			h3 {
-        margin-bottom: 20px;
-				font-size: 2.5rem;
+        margin-bottom: 10px;
+				font-size: 2.2rem;
 			}
 			p {
-				font-size: 1.7rem;
+				font-size: 1.6rem;
 				line-height: 1.7;
 			}
 		}
 		&:hover .content {
-			padding: 15px 35px;
-			width: 110%;
+			padding: 18px 35px;
+			width: 130%;
 		}
 	}
 
@@ -412,6 +417,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 			th {
 				position: relative;
 				width: 190px;
+				padding-left: 40px;
 				&::before {
 					content: "";
 					position: absolute;
@@ -421,6 +427,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 					top: 50%;
 					transform: translateY(-50%);
 					border-radius: 10px;
+					margin-right: 30px;
 				}
 			}
 			&:nth-child(1) th::before {
@@ -453,21 +460,19 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 			&:nth-child(3)::after {
 				transform: skewX(0);
 			}
-      span {
-      }
       &:hover span::before,
       &:hover span::after {
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
       }
       .content {
         width: 80%;
         padding: 20px 25px;
         h3 {
-          font-size: 1.2rem;
+          font-size: 1.6rem;
         }
         p {
-          font-size: 0.9rem;
+          font-size: 1.2rem;
         }
       }
       &:hover .content {
@@ -481,13 +486,14 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
       tr {
         padding: 12px;
         th {
-					font-size: 0.9rem;
+					font-size: 1.5rem;
 				}
         td {
-          font-size: 0.8rem;
+          font-size: 1.2rem;
         }
         th {
           max-width: 110px;
+					padding-left: 25px;
           &::before {
             height: 18px;
             width: 18px;
@@ -551,7 +557,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 					font-size: 1.6rem;
 					z-index: 3;
 				}
-			} //page-number
+			}
 			.setumei {
 				h3 {
 					margin-bottom: 20px;
@@ -623,17 +629,17 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 					width: 45px;
 					height: 45px;
 					h4 {
-						font-size: 1rem;
+						font-size: 1.8rem;
 					}
 				}
 				.setumei {
 					width: 95%;
 					h3 {
-						font-size: 1.3rem;
+						font-size: 1.8rem;
 						margin-bottom: 10px;
 					}
 					p {
-						font-size: 0.9rem;
+						font-size: 1.2rem;
 					}
 				}
 			}
