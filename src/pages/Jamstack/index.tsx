@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
+import Seo from "../../components/seo"
 const Styles = require("./style.module.scss")
 
 import {
@@ -13,7 +14,6 @@ import {
 const Jamstack = () => {
   const InterSectionObserver = () => {
     const boxes = document.querySelectorAll(`.${Styles.view}`);
-    console.log(boxes)
 
     const options = {
       root: null,
@@ -45,9 +45,8 @@ const Jamstack = () => {
         currentActiveIndex.classList.remove(Styles.active);
       }
       // 引数で渡されたDOMが飛び先のaタグを選択し、activeクラスを付与
-      //const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
       const newActiveIndex = document.querySelector(`li[data-li='${element.id}']`);
-      newActiveIndex.classList.add(Styles.active);
+      newActiveIndex?.classList.add(Styles.active);
     }
   }
 
@@ -56,6 +55,10 @@ const Jamstack = () => {
   }, [])
 
   return (
+    <>
+    <Seo
+      title="JamstackなWebサイトを構築してみた"
+    />
     <div className={Styles.allWrapper}>
       <nav className={Styles.nav}>
         <ul>
@@ -164,9 +167,9 @@ const Jamstack = () => {
 
       <div className={Styles.wrapper}>
 
-        <a
+        <Link
           className={Styles.content}
-          href="https://ps.toriwatari.work/"
+          to="/"
           target="_blink"
         >
           <div className={`${Styles.pageNumber} ${Styles.page1}`}>
@@ -177,7 +180,7 @@ const Jamstack = () => {
             <h3>Portfolio Site</h3>
             <p>このドメインのサイトです。Gatsbyで作成しました。</p>
           </div>
-        </a>
+        </Link>
 
         <a
           className={Styles.content}
@@ -246,6 +249,7 @@ const Jamstack = () => {
     <br />
   </section>
     </div>
+    </>
   )
 }
 
