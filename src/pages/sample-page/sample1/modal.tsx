@@ -14,8 +14,11 @@ const Image1 = () => (
 
 const Modal = () => {
   const [show, setShow] = useState(false)
+  const [imgNumber, setImgNumber] = useState<number>(0)
 
-  const toggleShow = () => {
+  const toggleShow = (e) => {
+    setImgNumber(e.target.dataset.img)
+
     setShow(!show)
   }
 
@@ -25,7 +28,12 @@ const Modal = () => {
   {show &&
     <div className={ModalStyles.overlay}>
       <div className={ModalStyles.content}>
-        <Image1 />
+        <StaticImage
+          src={`./images/image01.webp`}
+          alt="hoge"
+          className={Styles.imgWrapper}
+        />
+        {imgNumber} <br />
         <button onClick={toggleShow}>CLOSE</button>
       </div>
     </div>
@@ -41,12 +49,12 @@ const Modal = () => {
     </div>
 
     <div className={Styles.wrapper}>
-
       <StaticImage
         src="./images/image01.webp"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
+        data-img="1"
       />
 
       <StaticImage
@@ -54,18 +62,21 @@ const Modal = () => {
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
+        data-img="2"
       />
       <StaticImage
         src="./images/image03.webp"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
+        data-img="3"
       />
       <StaticImage
         src="./images/image04.webp"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
+        data-img="4"
       />
     </div>
   </section>
