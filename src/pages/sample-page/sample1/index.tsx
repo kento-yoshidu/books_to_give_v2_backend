@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../../../components/seo"
+import Modal from "./modal"
 
 const Styles = require("./styles/style.module.scss")
 
@@ -82,36 +83,9 @@ const Sample1: React.VFC = () => (
           </div>
         </div>
       </section>
+
+      <Modal />
         
-      <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
-        <div className={Styles.sectionTitleParent}>
-          <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
-        </div>
-
-        <div className={Styles.wrapper}>
-          <StaticImage
-            src="./images/image01.webp"
-            alt="hoge"
-            className={Styles.imgWrapper}
-          />
-
-          <StaticImage
-            src="./images/image02.webp"
-            alt="hoge"
-            className={Styles.imgWrapper}
-          />
-          <StaticImage
-            src="./images/image03.webp"
-            alt="hoge"
-            className={Styles.imgWrapper}
-          />
-          <StaticImage
-            src="./images/image04.webp"
-            alt="hoge"
-            className={Styles.imgWrapper}
-          />
-        </div>
-      </section>
     </main>
 
     <footer className={Styles.footer}>
