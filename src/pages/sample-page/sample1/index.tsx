@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import Seo from "../../../components/seo"
+
 const Styles = require("./styles/style.module.scss")
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,8 +14,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
-const Sample1: React.VFC = () => {
-  return (
+const Sample1: React.VFC = () => (
+  <>
+
+  <Seo
+    title="Sample1"
+  />
+
   <div className={Styles.wrapper}>
     <nav className={Styles.globalNav} id="js-global-nav">
       <h1 className={`${Styles.title} ${Styles.navTitle}`}>Sample1</h1>
@@ -156,7 +163,7 @@ const Sample1: React.VFC = () => {
       <p className={Styles.copyright}>Copyright © 2021 <a href="https://potsunen.info">toriwatari</a></p>
     </footer>
   </div>
-  )
-}
+  </>
+)
 
 export default Sample1
