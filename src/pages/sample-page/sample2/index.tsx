@@ -1,12 +1,19 @@
 import React, { useState } from "react"
+import ReactHelmet from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
 
+import ReactSlick from "./components/ReactSlick"
 import { Tab } from "@headlessui/react"
 
 const Styles = require("./styles/style.module.scss")
 
 const Sample2 = () => (
 	<>
+    <ReactHelmet>
+      <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    </ReactHelmet>
+
 		<nav className={Styles.globalNav}>
 			<ul className={Styles.siteNav}>
 				<li className={Styles.navItem}><a href="#intro">What's potsunen47?</a></li>
@@ -40,6 +47,8 @@ const Sample2 = () => (
 				<h2 className={`${Styles.title} ${Styles.headerTitle}`}>Potsunen47<br />Official Web Site</h2>
 			</div>
 		</header>
+
+    <ReactSlick />
 
 		<section className={`${Styles.section} ${Styles.introSection}`} id="intro">
 			<h2 className={`${Styles.title} ${Styles.sectionTitle}`}>What's Potsunen47?</h2>
