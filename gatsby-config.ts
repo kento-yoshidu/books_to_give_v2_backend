@@ -15,7 +15,7 @@ const plugins: GatsbyConfig['plugins'] = [
     resolve: `gatsby-plugin-sharp`,
     options: {
       defaults: {
-        formats: [`auto`],
+        formats: [`png`],
         quality: 80,
         breakpoints: [750, 1080, 1366, 1920],
         backgroundColor: `transparent`,

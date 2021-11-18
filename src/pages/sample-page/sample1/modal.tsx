@@ -4,44 +4,66 @@ import { StaticImage } from "gatsby-plugin-image"
 const Styles = require("./styles/style.module.scss")
 const ModalStyles = require("./styles/modal.module.scss")
 
-const Image1 = () => (
-  <StaticImage
-    src="./images/image01.webp"
-    alt="hoge"
-    className={Styles.imgWrapper}
-  />
-)
-
 const Modal = () => {
   const [show, setShow] = useState(false)
   const [imgNumber, setImgNumber] = useState<number>(0)
 
   const toggleShow = (e) => {
-    setImgNumber(e.target.dataset.img)
-
-    setShow(!show)
+    if (!show) {
+      setShow(true)
+      setImgNumber(parseInt(e.target.dataset.img))
+    } else {
+      setShow(false)
+    }
   }
 
   return (
   <>
 
-  {show &&
+  {show && 
     <div className={ModalStyles.overlay}>
       <div className={ModalStyles.content}>
-        <StaticImage
-          src={`./images/image01.webp`}
-          alt="hoge"
-          className={Styles.imgWrapper}
-        />
-        {imgNumber} <br />
+        {console.log(typeof imgNumber)}
+
+        {imgNumber === 1 &&
+          <StaticImage
+            src={`./images/image01.webp`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
+
+        {imgNumber === 2 &&
+          <StaticImage
+            src={`./images/image02.webp`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
+
+        {imgNumber === 3 &&
+          <StaticImage
+            src={`./images/image03.webp`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
+
+        {imgNumber === 4 &&
+          <StaticImage
+            src={`./images/image04.webp`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
         <button onClick={toggleShow}>CLOSE</button>
       </div>
     </div>
   }
-
-  <div>
-    <button onClick={toggleShow}>Click</button>
-  </div>
 
   <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
     <div className={Styles.sectionTitleParent}>
