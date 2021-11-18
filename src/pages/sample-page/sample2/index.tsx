@@ -247,7 +247,7 @@ const Sample2 = () => (
 							<p className={Styles.contentsTitle}>伊勢海老とは似ても似つかない月</p>
 							<time>2019.1.26</time>
 						</div>
-						<p>read more...</p>
+						<p className={Styles.contentsText}>実は、女はクォークの兄弟である雪だるまの秘密を知る予定である。</p>
 					</div>
 				</a>
 			</div>
