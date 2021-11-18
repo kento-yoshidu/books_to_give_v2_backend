@@ -1,10 +1,12 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image";
 
 import Slider from "react-slick"
 
 const SlickConfig = {
+  fade: true,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 4000,
   dots: true,
   infinite: true,
   speed: 750,
@@ -15,28 +17,38 @@ const SlickConfig = {
 const Styles = require("./slick.module.scss")
 
 const ReactSlick = () => (
+  <>
   <div className={Styles.wrapper}>
     <Slider {...SlickConfig}>
-      <div>
-        <h3>1</h3>
+      <div className={`${Styles.slide} ${Styles.slideA}`}>
+        <StaticImage
+          src="../src/images/live_photograph/live1.jpg"
+          alt="hoge"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </div>
-      <div>
-        <h3>2</h3>
+
+      <div className={`${Styles.slide} ${Styles.slideB}`}>
+        <StaticImage
+          src="../src/images/live_photograph/live2.jpg"
+          alt="hoge"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
+
+      <div className={`${Styles.slide} ${Styles.slideC}`}>
+        <StaticImage
+          src="../src/images/live_photograph/live3.jpg"
+          alt="hoge"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </div>
     </Slider>
   </div>
+  </>
 )
 
 export default ReactSlick

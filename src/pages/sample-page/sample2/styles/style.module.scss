@@ -51,9 +51,6 @@ a {
   }
 }
 
-/**
-* global-nav
-**/
 .global-nav {
   position: fixed;
   top: 0;
@@ -84,6 +81,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .global-nav {
+    display: none;
   }
 }
 
@@ -248,9 +246,8 @@ a {
 
 @media screen and (max-width: 768px) {
   .header {
-    padding: 10px 0;
     height: auto;
-
+    padding: 10px 0;
     .header-title-wrapper {
       .header-title {
         font-size: 3rem;
@@ -341,7 +338,6 @@ a {
           color: #444;
           font-size: 4rem;
         }
-
         .wrapper {
           display: flex;
           align-items: start; 
@@ -423,10 +419,11 @@ a {
             }
           }
           .wrapper {
+            padding-top: 10px;
             align-items: center;
-            img {
-              width: 38%;
-              margin-bottom: 20px;
+            .imgWrapper {
+              width: 70%;
+              margin-bottom: 10px;
             }
             ol {
               margin: 0;
@@ -478,11 +475,6 @@ a {
         }
         time {
           font-size: 2rem;
-          &:before {
-            content: "\f017";
-            font-family: "Font Awesome 5 Free";
-            margin-right: 10px;
-          }
         }
       } //title-wrapper
       .contents-text {
@@ -539,7 +531,7 @@ a {
   .contents-section {
     .contents {
       margin-bottom: 20px;
-      width: 80%;
+      width: 90%;
       img {
         height: 100%;
       }
@@ -548,9 +540,11 @@ a {
         .title-wrapper {
           flex-direction: column;
           .contents-title {
-            font-size: 2rem;
-            text-align: center;
+            width: 90%;
             margin-bottom: 20px;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            text-align: center;
           }
           time {
             font-size: 1.5rem;
@@ -563,6 +557,7 @@ a {
     }
     .container-2 {
       flex-direction: column;
+      width: 90%;
       .contents {
         width: 100%;
       }
