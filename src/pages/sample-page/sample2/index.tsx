@@ -3,6 +3,7 @@ import ReactHelmet from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
 
 import ReactSlick from "./components/ReactSlick"
+import GlobalNav from "./components/GlobalNav"
 import { Tab } from "@headlessui/react"
 
 const Styles = require("./styles/style.module.scss")
@@ -14,30 +15,7 @@ const Sample2 = () => (
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     </ReactHelmet>
 
-		<nav className={Styles.globalNav}>
-			<ul className={Styles.siteNav}>
-				<li className={Styles.navItem}><a href="#intro">What's potsunen47?</a></li>
-				<li className={Styles.navItem}><a href="#newRelease">New Release</a></li>
-				<li className={Styles.navItem}><a href="#contents">Contents</a></li>
-				<li className={Styles.navItem}><a href="#member">Member</a></li>
-			</ul>
-
-			<input type="checkbox" className={Styles.check} id="checked" />
-			<label className={Styles.menuBtn} htmlFor="checked">
-				<span className={`${Styles.bar} ${Styles.barTop}`}></span>
-				<span className={`${Styles.bar} ${Styles.barMiddle}`}></span>
-				<span className={`${Styles.bar} ${Styles.barBottom}`}></span>
-			</label>
-
-			<label className={Styles.closeMenu} htmlFor="checked"></label>
-			<nav className={Styles.drawerMenu}>
-				<ul className={Styles.drawerList}>
-					<li className={Styles.drawerItem}>Navi</li>
-					<li className={Styles.drawerItem}><a href="#" className={Styles.drawerLink}>TOP</a></li>
-					<li className={Styles.drawerItem}><a href="#intro" className={Styles.drawerLink}>What's potsunen47?</a></li>
-				</ul>
-			</nav>
-		</nav>
+    <GlobalNav />
 
 		<main className={Styles.main} role="main">
 
@@ -60,7 +38,7 @@ const Sample2 = () => (
 			<p>よりによって、<span className={Styles.purple}>ダチョウにも似た木の葉</span>は思想を問い詰めるだろうし、海亀は洗濯機の独自規格であるニンジャに変身する気がした。</p>
 		</section>
 
-		<section className={`${Styles.discSection} ${Styles.section}`}>
+		<section className={`${Styles.discSection} ${Styles.section}`} id="newRelease">
 			<h2 className={`${Styles.title} ${Styles.sectionTitle}`}>New R<span className={Styles.purple}>el</span>ease</h2>
 			<div className={Styles.wrapper}>
 				<Tab.Group>
@@ -251,8 +229,6 @@ const Sample2 = () => (
 					</div>
 				</a>
 			</div>
-
-			<div className="btn-wrapper"><a href="#" className="btn">More</a></div>
 		</section>
 
 		<section className={`${Styles.section} ${Styles.memberSection}`} id="member">
@@ -345,10 +321,6 @@ const Sample2 = () => (
 						<p>manatsu</p>
           </div>
         </a>
-      </div>
-      
-      <div className="btn-wrapper">
-        <a href="#" className="btn">More</a>
       </div>
     </section>
 
