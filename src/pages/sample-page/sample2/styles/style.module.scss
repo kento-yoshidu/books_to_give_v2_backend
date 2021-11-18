@@ -13,11 +13,6 @@ $sub-color: #ffd700;
   }
 }
 
-a {
-  color: #444;
-  text-decoration: none;
-}
-
 .purple {
   color: $main-color;
 }
@@ -308,7 +303,7 @@ a {
   .wrapper {
     display: flex;
     width: 100%;
-    overflow: hidden;
+    //overflow: hidden;
 
     .thum-list {
       height: 100%;
@@ -318,6 +313,9 @@ a {
       justify-content: center;
       align-items: center;
       margin-bottom: 30px;
+      .thum {
+        box-sizing:unset;
+      }
     }
 
     .detail {
@@ -366,12 +364,19 @@ a {
   }
 
   .thum-list {
-    .thum {
-      margin: 3vh 0;
-      width: 12vh;
-      height: auto;
-      position: relative;
-      //z-index: 3;
+    button {
+      .thum {
+        margin: 3vh 0;
+        width: 12vh;
+        height: auto;
+        position: relative;
+        //z-index: 3;
+      }
+      &[aria-selected="true"] {
+        .thum {
+          border: 5px solid rgba($main-color, 0.8);
+        }
+      }
     }
   }
 
@@ -397,7 +402,13 @@ a {
       .thum-list {
         width: 100%;
         height: auto;
+        padding: 5px 0;
         flex-direction: row;
+        position: -webkit-sticky; /* Safariに対応する */
+        position: sticky; /* 要素を固定/解除する */
+        top: 10px; /* 縦方向の閾値 */
+        background-color: #444;
+        z-index: 2;
         .thum {
           width: 8vh;
           margin: 0 20px;
@@ -422,13 +433,17 @@ a {
             padding-top: 10px;
             align-items: center;
             .imgWrapper {
-              width: 70%;
+              width: 50%;
               margin-bottom: 10px;
             }
             ol {
               margin: 0;
               li {
-                font-size: 1.6rem;
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+                .info {
+                  font-size: 1.5rem;
+                }
               }
             }
           }
