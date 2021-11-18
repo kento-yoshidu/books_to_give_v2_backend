@@ -43,6 +43,7 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.4",
     "@types/react-slick": "^0.23.7",
     "esbuild": "^0.13.8",
     "esbuild-register": "^3.0.0",
