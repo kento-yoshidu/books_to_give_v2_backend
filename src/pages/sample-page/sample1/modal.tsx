@@ -5,11 +5,10 @@ const Styles = require("./styles/style.module.scss")
 const ModalStyles = require("./styles/modal.module.scss")
 
 const Modal = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(true)
   const [imgNumber, setImgNumber] = useState<number>(0)
 
-  const toggleShow = (e) => {
-    console.log("onClicked")
+  const toggleShow = (e: React.MouseEvent<HTMLImageElement>) => {
     if (!show) {
       setShow(true)
       setImgNumber(parseInt(e.target.dataset.img))
@@ -24,8 +23,6 @@ const Modal = () => {
   {show && 
     <div className={ModalStyles.overlay}>
       <div className={ModalStyles.content}>
-        {console.log(typeof imgNumber)}
-
         {imgNumber === 1 &&
           <StaticImage
             src={`./images/image01.jpg`}
