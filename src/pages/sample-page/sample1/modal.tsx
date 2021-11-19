@@ -9,6 +9,7 @@ const Modal = () => {
   const [imgNumber, setImgNumber] = useState<number>(0)
 
   const toggleShow = (e) => {
+    console.log("onClicked")
     if (!show) {
       setShow(true)
       setImgNumber(parseInt(e.target.dataset.img))
@@ -27,7 +28,7 @@ const Modal = () => {
 
         {imgNumber === 1 &&
           <StaticImage
-            src={`./images/image01.webp`}
+            src={`./images/image01.jpg`}
             alt="hoge"
             className={Styles.imgWrapper}
             layout="fullWidth"
@@ -36,7 +37,7 @@ const Modal = () => {
 
         {imgNumber === 2 &&
           <StaticImage
-            src={`./images/image02.webp`}
+            src={`./images/image02.jpg`}
             alt="hoge"
             className={Styles.imgWrapper}
             layout="fullWidth"
@@ -72,7 +73,7 @@ const Modal = () => {
 
     <div className={Styles.wrapper}>
       <StaticImage
-        src="./images/image01.webp"
+        src="./images/image01.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
@@ -80,7 +81,7 @@ const Modal = () => {
       />
 
       <StaticImage
-        src="./images/image02.webp"
+        src="./images/image02.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
