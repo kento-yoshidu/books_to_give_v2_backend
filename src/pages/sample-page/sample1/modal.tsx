@@ -9,6 +9,7 @@ const Modal = () => {
   const [imgNumber, setImgNumber] = useState<number>(0)
 
   const toggleShow = (e: React.MouseEvent<HTMLImageElement>) => {
+    console.log("onClick")
     if (!show) {
       setShow(true)
       setImgNumber(parseInt(e.target.dataset.img))
@@ -21,8 +22,14 @@ const Modal = () => {
   <>
 
   {show && 
-    <div className={ModalStyles.overlay}>
-      <div className={ModalStyles.content}>
+    <div
+      className={ModalStyles.overlay}
+      onClick={toggleShow}
+    >
+      <div
+        className={ModalStyles.content}
+        onClick={(e) => e.stopPropagation()}
+      >
         {imgNumber === 1 &&
           <StaticImage
             src={`./images/image01.jpg`}
@@ -43,7 +50,7 @@ const Modal = () => {
 
         {imgNumber === 3 &&
           <StaticImage
-            src={`./images/image03.webp`}
+            src={`./images/image03.jpg`}
             alt="hoge"
             className={Styles.imgWrapper}
             layout="fullWidth"
@@ -52,7 +59,7 @@ const Modal = () => {
 
         {imgNumber === 4 &&
           <StaticImage
-            src={`./images/image04.webp`}
+            src={`./images/image03.jpg`}
             alt="hoge"
             className={Styles.imgWrapper}
             layout="fullWidth"
@@ -85,14 +92,42 @@ const Modal = () => {
         data-img="2"
       />
       <StaticImage
-        src="./images/image03.webp"
+        src="./images/image03.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
         data-img="3"
       />
       <StaticImage
-        src="./images/image04.webp"
+        src="./images/image03.jpg"
+        alt="hoge"
+        className={Styles.imgWrapper}
+        onClick={toggleShow}
+        data-img="4"
+      />
+      <StaticImage
+        src="./images/image03.jpg"
+        alt="hoge"
+        className={Styles.imgWrapper}
+        onClick={toggleShow}
+        data-img="4"
+      />
+      <StaticImage
+        src="./images/image03.jpg"
+        alt="hoge"
+        className={Styles.imgWrapper}
+        onClick={toggleShow}
+        data-img="4"
+      />
+      <StaticImage
+        src="./images/image03.jpg"
+        alt="hoge"
+        className={Styles.imgWrapper}
+        onClick={toggleShow}
+        data-img="4"
+      />
+      <StaticImage
+        src="./images/image03.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
