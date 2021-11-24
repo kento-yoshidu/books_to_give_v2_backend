@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import ReactHelmet from "react-helmet"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import Seo from "../../../components/seo"
 import ReactSlick from "./components/ReactSlick"
 import GlobalNav from "./components/GlobalNav"
 import { Tab } from "@headlessui/react"
@@ -10,6 +12,10 @@ const Styles = require("./styles/style.module.scss")
 
 const Sample2 = () => (
 	<>
+    <Seo
+      title="Sample2"
+    />
+
     <ReactHelmet>
       <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
@@ -360,7 +366,7 @@ const Sample2 = () => (
 					<li><a href="/">プライバシーポリシー</a></li>
 					<li><a href="/">お問い合わせ</a></li>
 				</ul>
-				<p className={Styles.copyright}>Copyright © 2020 <a href="https://potsunen.info">potsunen</a></p>
+				<p className={Styles.copyright}>Copyright © 2020 <Link to="/">toriwatari</Link></p>
 			</footer>
 	</>
 )
