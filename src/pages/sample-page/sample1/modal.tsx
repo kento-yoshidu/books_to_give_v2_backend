@@ -5,7 +5,7 @@ const Styles = require("./styles/style.module.scss")
 const ModalStyles = require("./styles/modal.module.scss")
 
 const Modal = () => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
   const [imgNumber, setImgNumber] = useState<number>(0)
 
   const toggleShow = (e: React.MouseEvent<HTMLImageElement>) => {
