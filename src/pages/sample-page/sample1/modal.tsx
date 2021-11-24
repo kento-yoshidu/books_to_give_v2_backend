@@ -75,6 +75,8 @@ const Modal = () => {
       <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
     </div>
 
+    <button onClick={toggleShow}>Test</button>
+
     <div className={Styles.wrapper}>
       <StaticImage
         src="./images/image01.jpg"
