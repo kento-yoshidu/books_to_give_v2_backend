@@ -59,7 +59,16 @@ const Modal = () => {
 
         {imgNumber === 4 &&
           <StaticImage
-            src={`./images/image03.jpg`}
+            src={`./images/image04.jpg`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
+
+        {imgNumber === 5 &&
+          <StaticImage
+            src={`./images/image05.jpg`}
             alt="hoge"
             className={Styles.imgWrapper}
             layout="fullWidth"
@@ -74,8 +83,6 @@ const Modal = () => {
     <div className={Styles.sectionTitleParent}>
       <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
     </div>
-
-    <button onClick={toggleShow}>Test</button>
 
     <div className={Styles.wrapper}>
       <StaticImage
@@ -101,39 +108,39 @@ const Modal = () => {
         data-img="3"
       />
       <StaticImage
-        src="./images/image03.jpg"
+        src="./images/image04.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
         data-img="4"
       />
       <StaticImage
-        src="./images/image03.jpg"
+        src="./images/image05.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
-        data-img="4"
+        data-img="5"
       />
       <StaticImage
         src="./images/image03.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
-        data-img="4"
+        data-img="6"
       />
       <StaticImage
         src="./images/image03.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
-        data-img="4"
+        data-img="7"
       />
       <StaticImage
         src="./images/image03.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
-        data-img="4"
+        data-img="8"
       />
     </div>
   </section>
