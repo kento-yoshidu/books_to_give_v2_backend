@@ -89,7 +89,7 @@ const Sample1: React.VFC = () => (
     </main>
 
     <footer className={Styles.footer}>
-      <h2 className={`${Styles.title} ${Styles.footerTitle}`}>Toriwatari Portfolio</h2>
+      <h2 className={`${Styles.title} ${Styles.footerTitle}`}>Portfolio Site</h2>
       <div className={Styles.footerWrapper}>
         <section className={Styles.footerSection}>
           <h3 className={`${Styles.title} ${Styles.sectionTitle}`}>Sample Page</h3>
@@ -118,18 +118,14 @@ const Sample1: React.VFC = () => (
         </section>
 
         <section className={Styles.footerSection}>
-          <h3 className={`${Styles.title} ${Styles.sectionTitle}`}>Techs</h3>
+          <h3 className={`${Styles.title} ${Styles.sectionTitle}`}>Contents</h3>
           <ul className={Styles.footerList}>
             <li className={Styles.listItem}>
               <a href="https://cssanimation.toriwatari.work/" target="_blink">CSS Animation & Tips</a>
             </li>
-          </ul>
-        </section>
-
-        <section className={`${Styles.footerSection}`}>
-          <h3 className={`${Styles.title} ${Styles.sectionTitle}`}>Blog</h3>
-          <ul className={Styles.footerList}>
-            <li className={Styles.listItem}><a href="https://blog.toriwatari.work/page/1/" target="_blink">鳥に生まれることができなかった人へ</a></li>
+            <li className={Styles.listItem}>
+              <a href="https://blog.toriwatari.work/page/1/" target="_blink">鳥に生まれることができなかった人へ</a>
+            </li>
           </ul>
         </section>
       </div>

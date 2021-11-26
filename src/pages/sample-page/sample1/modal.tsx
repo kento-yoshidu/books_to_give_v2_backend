@@ -74,6 +74,33 @@ const Modal = () => {
             layout="fullWidth"
           />
         }
+
+        {imgNumber === 6 &&
+          <StaticImage
+            src={`./images/image06.jpg`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
+
+        {imgNumber === 7 &&
+          <StaticImage
+            src={`./images/image07.jpg`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
+
+        {imgNumber === 8 &&
+          <StaticImage
+            src={`./images/image08.jpg`}
+            alt="hoge"
+            className={Styles.imgWrapper}
+            layout="fullWidth"
+          />
+        }
         <button onClick={toggleShow}>CLOSE</button>
       </div>
     </div>
@@ -122,21 +149,21 @@ const Modal = () => {
         data-img="5"
       />
       <StaticImage
-        src="./images/image03.jpg"
+        src="./images/image06.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
         data-img="6"
       />
       <StaticImage
-        src="./images/image03.jpg"
+        src="./images/image07.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}
         data-img="7"
       />
       <StaticImage
-        src="./images/image03.jpg"
+        src="./images/image08.jpg"
         alt="hoge"
         className={Styles.imgWrapper}
         onClick={toggleShow}

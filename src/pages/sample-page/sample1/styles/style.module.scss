@@ -149,6 +149,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     width: 80%;
     height: 50vh;
     margin: 50px auto;
+    max-width: 1000px;
   }
 }
 
@@ -160,6 +161,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     }
     .imgWrapper {
       width: 90%;
+      max-width: none;
       height: 30vh;
     }
   }
@@ -214,8 +216,8 @@ $main-color-trans2: rgba(220,20,60,.3);
     &::after {
       right: -5rem;
     }
-  } //section-title
-} //title-parent
+  }
+}
 
 @media screen and (max-width: 768px) {
   .section-title-parent {
@@ -276,8 +278,8 @@ $main-color-trans2: rgba(220,20,60,.3);
     justify-content: center;
     .topic {
       position: relative;
-      padding: 50px 10px 90px;
-      width: 25%;
+      padding: 50px 40px 90px;
+      width: 28%;
       margin: 20px 15px;
       border:1px solid #bbb;
       .topic-title {
@@ -303,8 +305,8 @@ $main-color-trans2: rgba(220,20,60,.3);
       .topic-btn {
         display: inline-block;
         position: absolute;
-        bottom: 15px;
-        right: 15px;
+        bottom: 25px;
+        right: 25px;
         padding: 8px 15px;
         background: #ccc;
         border-radius: 2px;
@@ -328,9 +330,9 @@ $main-color-trans2: rgba(220,20,60,.3);
       .topic {
         width: 75%;
         margin: 10px auto;
-        padding: 30px 10px 70px;
+        padding: 30px 25px 70px;
         .topic-title {
-          font-size: 2.2rem;
+          font-size: 2rem;
         }
         .topic-icon {
           font-size: 4rem;
@@ -338,6 +340,7 @@ $main-color-trans2: rgba(220,20,60,.3);
         }
         .topic-text {
           margin: 20px auto 0;
+          font-size: 1.4rem;
         }
         .topic-btn {
           padding: 7px 13px;
