@@ -336,6 +336,7 @@ const Sample2 = () => (
       <div className={`${Styles.footerNogi} ${Styles.sa}`}></div>
       <h2 className={`${Styles.footerTitle} ${Styles.title} ${Styles.sa}`}>Potsunen 47 Official Web Site</h2>
 
+      {/*
       <div className={`${Styles.wrapper} ${Styles.sa}`}>
 
         <div className={Styles.border}></div>
@@ -366,6 +367,7 @@ const Sample2 = () => (
 					<li><a href="/">プライバシーポリシー</a></li>
 					<li><a href="/">お問い合わせ</a></li>
 				</ul>
+      */}
 				<p className={Styles.copyright}>Copyright © 2020 <Link to="/">toriwatari</Link></p>
 			</footer>
 	</>
