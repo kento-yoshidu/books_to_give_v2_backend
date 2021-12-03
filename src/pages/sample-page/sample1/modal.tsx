@@ -112,63 +112,93 @@ const Modal = () => {
     </div>
 
     <div className={Styles.wrapper}>
-      <StaticImage
-        src="./images/image01.jpg"
-        alt="hoge"
-        className={Styles.imgWrapper}
+      <div
         onClick={toggleShow}
-        data-img="1"
-      />
+        className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image01.jpg"
+          alt="hoge"
+          data-img="1"
+        />
+      </div>
 
-      <StaticImage
-        src="./images/image02.jpg"
-        alt="hoge"
-        className={Styles.imgWrapper}
+      <div
         onClick={toggleShow}
-        data-img="2"
-      />
-      <StaticImage
-        src="./images/image03.jpg"
-        alt="hoge"
         className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image02.jpg"
+          alt="hoge"
+          data-img="2"
+        />
+      </div>
+
+      <div
         onClick={toggleShow}
-        data-img="3"
-      />
-      <StaticImage
-        src="./images/image04.jpg"
-        alt="hoge"
         className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image03.jpg"
+          alt="hoge"
+          data-img="3"
+        />
+      </div>
+
+      <div
         onClick={toggleShow}
-        data-img="4"
-      />
-      <StaticImage
-        src="./images/image05.jpg"
-        alt="hoge"
         className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image04.jpg"
+          alt="hoge"
+          data-img="4"
+        />
+      </div>
+
+      <div
         onClick={toggleShow}
-        data-img="5"
-      />
-      <StaticImage
-        src="./images/image06.jpg"
-        alt="hoge"
         className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image05.jpg"
+          alt="hoge"
+          data-img="5"
+        />
+      </div>
+
+      <div
         onClick={toggleShow}
-        data-img="6"
-      />
-      <StaticImage
-        src="./images/image07.jpg"
-        alt="hoge"
         className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image06.jpg"
+          alt="hoge"
+          data-img="6"
+        />
+      </div>
+
+      <div
         onClick={toggleShow}
-        data-img="7"
-      />
-      <StaticImage
-        src="./images/image08.jpg"
-        alt="hoge"
         className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image07.jpg"
+          alt="hoge"
+          data-img="7"
+        />
+      </div>
+
+      <div
         onClick={toggleShow}
-        data-img="8"
-      />
+        className={Styles.imgWrapper}
+      >
+        <StaticImage
+          src="./images/image08.jpg"
+          alt="hoge"
+          data-img="8"
+        />
+      </div>
     </div>
   </section>
   </>
