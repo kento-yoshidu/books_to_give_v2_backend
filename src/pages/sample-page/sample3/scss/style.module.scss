@@ -235,7 +235,6 @@ p {
     align-items: flex-start;
     max-width: 1000px;
     margin: 0 auto 30px;
-
     .introduction {
       position: relative;
       padding: 30px 50px;
@@ -296,13 +295,6 @@ p {
           background: transparentize($main-color1, .4);
           z-index: -2;
         }
-      }
-      .section-image {
-        /*
-        .svg-image {
-          background-image: url(../svg/section1-bg.svg);
-        }
-        */
       }
     }
   } // contents-01
@@ -438,6 +430,7 @@ p {
 .sec4 {
   position: relative;
   padding: 70px 0;
+  overflow: hidden;
   .board {
     position: relative;
     background: #fff;
@@ -446,6 +439,7 @@ p {
     padding: 3% 3% 2%;
     width: 35%;
     text-align: center;
+    z-index: 2;
     .index {
       position: absolute;
       top: -20px;

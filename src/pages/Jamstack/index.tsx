@@ -214,7 +214,7 @@ const Jamstack = () => {
 
         <a
           className={Styles.content}
-          href="https://gatsby-micro-cms.vercel.app/"
+          href="https://nextjs-blog-sage-six.vercel.app/"
           target="_blink"
         >
           <div className={`${Styles.pageNumber} ${Styles.page4}`}>
@@ -222,32 +222,46 @@ const Jamstack = () => {
             <h4>#04</h4>
           </div>
           <div className={Styles.setumei}>
+            <h3>怪文書置き場</h3>
+            <p>Next.jsとマークダウンファイルでブログを作成しました。</p>
+          </div>
+        </a>
+
+        <a
+          className={Styles.content}
+          href="https://gatsby-micro-cms.vercel.app/"
+          target="_blink"
+        >
+          <div className={`${Styles.pageNumber} ${Styles.page4}`}>
+            <span></span>
+            <h4>#05</h4>
+          </div>
+          <div className={Styles.setumei}>
             <h3>Gatsby-microCMS-Site</h3>
             <p>GatsbyとmicroCMSを組み合わせたサイトを作りました。Headless UIを導入しています。</p>
           </div>
         </a>
 
-			<a
-        className={Styles.content}
-				href="https://gatsby-contentful-site.netlify.app"
-				target="_blink"
-			>
-        <div className={`${Styles.pageNumber} ${Styles.page5}`}>
-					<span></span>
-					<h4>#05</h4>
-				</div>
-        <div className={Styles.setumei}>
-					<h3>Gatsby-Contentful-Site</h3>
-					<p>GatsbyとContentfulを組み合わせたサイトを作りました。</p>
-				</div>
-			</a>
+        <a
+          className={Styles.content}
+          href="https://gatsby-contentful-site.netlify.app"
+          target="_blink"
+        >
+          <div className={`${Styles.pageNumber} ${Styles.page5}`}>
+            <span></span>
+            <h4>#06</h4>
+          </div>
+          <div className={Styles.setumei}>
+            <h3>Gatsby-Contentful-Site</h3>
+            <p>GatsbyとContentfulを組み合わせたサイトを作りました。</p>
+          </div>
+        </a>
+      </div>
+    </section>
 
-    </div>
-	</section>
-
-  <section className={`${Styles.section} ${Styles.view} ${Styles.view4}`} id="view4">
-    <br />
-  </section>
+    <section className={`${Styles.section} ${Styles.view} ${Styles.view4}`} id="view4">
+      <br />
+    </section>
     </div>
     </>
   )
