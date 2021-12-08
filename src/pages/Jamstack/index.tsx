@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
-import InterSectionObserver from "../../../lib/IO"
+import InterSectionObserver from "../../lib/IO"
 
 import Seo from "../../components/seo"
 const Styles = require("./style.module.scss")

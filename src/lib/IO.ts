@@ -1,4 +1,4 @@
-const Styles = require("../src/pages/Jamstack/style.module.scss")
+const Styles = require("../pages/Jamstack/style.module.scss")
 
 const InterSectionObserver = () => {
   const boxes = document.querySelectorAll(`.${Styles.view}`);
