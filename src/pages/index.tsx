@@ -15,7 +15,6 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const Index: React.VFC = () => {
-
   useEffect(() => {
     const getElm = () => {
       return  document.querySelectorAll(`.${Styles.sa}`); 
@@ -43,7 +42,7 @@ const Index: React.VFC = () => {
       <div>
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
         <h1 className={Styles.headerTitle}>Portfolio Website</h1>
-        <p>更新日 : <time>2021-10-27</time></p>
+        <p>更新日 : <time>2021-12-10</time></p>
 
         <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
 
@@ -58,9 +57,9 @@ const Index: React.VFC = () => {
     <section className={`${Styles.section} ${Styles.sec1}`} id="sec1">
       <h2 className={`${Styles.sectionTitle} ${Styles.linksTitle}`}>Sample Pages</h2> 
 
-      <div className={Styles.linksWrapper}>
+      <div className={`${Styles.linksWrapper} ${Styles.sa} ${Styles.saUp}`}>
         <Link
-          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          className={Styles.linkItem}
           to="sample-page/sample1/"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample1</h3>
@@ -69,7 +68,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          className={Styles.linkItem}
           to="sample-page/sample2/"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample2</h3>
@@ -78,7 +77,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          className={Styles.linkItem}
           to="sample-page/sample3/"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample3</h3>
@@ -87,7 +86,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          className={Styles.linkItem}
           to="sample-page/sample4"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample4</h3>
@@ -96,7 +95,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          className={Styles.linkItem}
           to="sample-page/sample5"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample5</h3>
@@ -105,7 +104,7 @@ const Index: React.VFC = () => {
         </Link>
 
         <Link
-          className={`${Styles.linkItem} ${Styles.sa} ${Styles.saUp}`}
+          className={Styles.linkItem}
           to="sample-page/sample6"
         >
           <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample6</h3>
