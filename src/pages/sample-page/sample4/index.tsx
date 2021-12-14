@@ -1,5 +1,6 @@
 ﻿import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Styles = require("./scss/style.module.scss")
 
@@ -36,7 +37,16 @@ const Sample4 = () => (
 
     <div className={Styles.wrapper}>
       <main className={Styles.main} >
-  main
+        <section className={Styles.hotTopic}>
+
+          <a href="#" className={Styles.topic}>
+            <StaticImage
+              src="./src/images/hero.jpg"
+              alt="hoge"
+            />
+          </a>
+
+        </section>
       </main>
 
       <div className={Styles.sideMenu}>
