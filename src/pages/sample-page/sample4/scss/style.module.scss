@@ -13,6 +13,7 @@
 
 .global-nav {
   padding: 10px 0;
+  width: 100%;
   ul {
     display: flex;
     justify-content: center;
@@ -41,15 +42,59 @@
 
 .wrapper {
   display: flex;
+  width: 1200px;
   justify-content: center;
   margin: 30px auto 40px;
-  border: 2px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  } 
 }
 
 .main {
   display: block;
-  width: 50%;
+  width: 70%;
   border: 2px solid #ddd;
+}
+
+.hot-topic {
+  border: 1px solid red;
+  display: flex;
+  .topic {
+    width: 60%;
+  }
+  .content {
+    position: relative;
+    width: 40%;
+    padding: 85px 25px 0;
+    background-color: #2d3d54;
+    line-height: 1.6;
+    .title {
+      margin-bottom: 15px;
+      color: #fff;
+      font-size: 2.3rem;
+      font-weight: normal;
+    }
+    .desc {
+      color: #dcc;
+      font-size: 1.6rem;
+    }
+    .date {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 50%;
+      padding: 4px;
+      background-color: #fff;
+      color: #2d3d54;
+      font-size: 1.35rem;
+      font-weight: bold;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }
 }
 
 .sideMenu {
