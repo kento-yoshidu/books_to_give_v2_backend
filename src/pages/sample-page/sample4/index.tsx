@@ -38,13 +38,26 @@ const Sample4 = () => (
     <div className={Styles.wrapper}>
       <main className={Styles.main} >
         <section className={Styles.hotTopic}>
-
           <a href="#" className={Styles.topic}>
             <StaticImage
               src="./src/images/hero.jpg"
               alt="hoge"
             />
           </a>
+          <div className={Styles.content}>
+            <h3 className={Styles.title}>
+              Sample page 4
+            </h3>
+            <p className={Styles.desc}>
+              ムカデは怒った時、雲型定規がアプリケーションを代表する豚肉を目撃した。
+            </p>
+            <time
+              dateTime="2021-12-19"
+              className={Styles.date}
+            >
+              2021.12.19
+            </time>
+          </div>
 
         </section>
       </main>
