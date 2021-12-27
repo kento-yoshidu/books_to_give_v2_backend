@@ -2,7 +2,10 @@ import type { GatsbyConfig } from "gatsby"
 import { resolve } from "path"
 
 const plugins: GatsbyConfig['plugins'] = [
+  `gatsby-plugin-typegen`,
   `gatsby-plugin-image`,
+  `gatsby-plugin-sass`,
+  `gatsby-plugin-dts-css-modules`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
@@ -36,8 +39,6 @@ const plugins: GatsbyConfig['plugins'] = [
   },
   `gatsby-plugin-offline`,
   `gatsby-plugin-react-helmet`,
-  `gatsby-plugin-sass`,
-  `gatsby-plugin-typegen`,
 ]
 
 const siteMetadata: GatsbyConfig['siteMetadata'] = {
