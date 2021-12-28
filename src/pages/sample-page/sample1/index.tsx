@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../../../components/seo"
 import Modal from "./modal"
 
-const Styles = require("./styles/style.module.scss")
+import * as Styles from "./styles/style.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCode, faBook } from "@fortawesome/free-solid-svg-icons"

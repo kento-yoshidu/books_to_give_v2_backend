@@ -14,7 +14,7 @@ const SlickConfig = {
   slidesToScroll: 1
 };
 
-const Styles = require("./slick.module.scss")
+import * as Styles from "./slick.module.scss"
 
 const ReactSlick = () => (
   <>

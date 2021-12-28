@@ -2,7 +2,7 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Styles = require("./scss/style.module.scss")
+import * as Styles from "./scss/style.module.scss"
 
 const Sample4 = () => (
 	<>

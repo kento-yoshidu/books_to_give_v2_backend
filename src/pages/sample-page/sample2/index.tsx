@@ -8,7 +8,7 @@ import ReactSlick from "./components/ReactSlick"
 import GlobalNav from "./components/GlobalNav"
 import { Tab } from "@headlessui/react"
 
-const Styles = require("./styles/style.module.scss")
+import * as Styles from "./styles/style.module.scss"
 
 const Sample2 = () => (
 	<>

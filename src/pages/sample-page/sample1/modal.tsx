@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Styles = require("./styles/style.module.scss")
-const ModalStyles = require("./styles/modal.module.scss")
+import * as Styles from "./styles/style.module.scss"
+import * as ModalStyles from "./styles/modal.module.scss"
 
 const Modal = () => {
   const [show, setShow] = useState(false)
