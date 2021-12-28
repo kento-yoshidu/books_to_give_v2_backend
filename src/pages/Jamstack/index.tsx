@@ -1,10 +1,10 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
+import Seo from "../../components/seo"
 import InterSectionObserver from "../../lib/IO"
 
-import Seo from "../../components/seo"
-const Styles = require("./style.module.scss")
+import * as Styles from "./style.module.scss"
 
 import {
   HomeOutline,

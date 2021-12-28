@@ -2,7 +2,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import Particles from "react-tsparticles";
 
-const Styles = require("./scss/style.module.scss")
+import * as Styles from "./scss/style.module.scss"
 
 const options = {
     fpsLimit: 60,

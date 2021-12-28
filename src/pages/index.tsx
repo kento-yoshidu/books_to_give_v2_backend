@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import Button from "../components/button"
 
-const Styles = require("../styles/index.module.scss")
+import * as Styles from "../styles/index.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHeart, faCode } from "@fortawesome/free-solid-svg-icons"
@@ -21,12 +21,10 @@ const Index: React.VFC = () => {
     }
 
     const scrollAnimationFunc = () => {
-      console.log(getElm().length)
       Array.from(getElm()).map(el => {
         if (window.innerHeight > el.getBoundingClientRect().top + 40) {
           el.classList.add(Styles.show);
         }
-        console.log(el)
       })
     }
     window.addEventListener('scroll', scrollAnimationFunc);

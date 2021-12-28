@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const Styles = require("./GlobalNav.module.scss")
+import * as Styles from "./GlobalNav.module.scss"
 
 const GlobalNav = () => (
   <nav className={Styles.globalNav}>
