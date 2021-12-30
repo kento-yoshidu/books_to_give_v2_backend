@@ -1,40 +1,34 @@
-const Styles = require("../pages/Jamstack/style.module.scss")
+import * as Styles from "../styles/index.module.scss"
 
 const InterSectionObserver = () => {
-  const boxes = document.querySelectorAll(`.${Styles.view}`);
-
   const options = {
     root: null,
-    rootMargin: "-50% 0px",
+    rootMargin: "0%",
     threshold: 0
   }
 
   const observer = new IntersectionObserver(doWhenIntersect, options);
 
-  boxes.forEach(box => {
-    observer.observe(box)
+  // 監視対象にしたい要素
+  const elements = document.querySelectorAll(`.${Styles.sa}`);
+
+  // それぞれの要素を監視対象にする
+  elements.forEach(element => {
+    observer.observe(element)
   })
 
-  function doWhenIntersect(entries) {
-    entries.forEach(entry => {
+  // 交差したときに呼び出される関数
+  function doWhenIntersect(entries: IntersectionObserverEntry[]) {
+    entries.forEach((entry: IntersectionObserverEntry) => {
       if (entry.isIntersecting) {
-        activateIndex(entry.target)
+        addShowClass(entry.target)
       }
     })
   }
 
-  function activateIndex(element) {
-    // すでにアクティブになっている目次を選択
-    const currentActiveIndex = document.querySelector(`#viewList .${Styles.active}`);
-    console.log(currentActiveIndex)
-
-    // すでにアクティブになっているものが0個の時（=null）以外は、activeクラスを除去
-    if (currentActiveIndex !== null) {
-      currentActiveIndex.classList.remove(Styles.active);
-    }
-    // 引数で渡されたDOMが飛び先のaタグを選択し、activeクラスを付与
-    const newActiveIndex = document.querySelector(`li[data-li='${element.id}']`);
-    newActiveIndex?.classList.add(Styles.active);
+  // showクラスを付与する関数
+  function addShowClass(element: HTMLElement) {
+    element?.classList.add(Styles.show);
   }
 }
 
