@@ -1,9 +1,10 @@
 import React, { useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
 import Button from "../components/button"
+import IO from "../lib/IO"
 
 import * as Styles from "../styles/index.module.scss"
 
@@ -16,18 +17,7 @@ config.autoAddCss = false
 
 const Index: React.VFC = () => {
   useEffect(() => {
-    const getElm = () => {
-      return  document.querySelectorAll(`.${Styles.sa}`); 
-    }
-
-    const scrollAnimationFunc = () => {
-      Array.from(getElm()).map(el => {
-        if (window.innerHeight > el.getBoundingClientRect().top + 40) {
-          el.classList.add(Styles.show);
-        }
-      })
-    }
-    window.addEventListener('scroll', scrollAnimationFunc);
+    IO() 
   },[]);
 
   return (
@@ -37,7 +27,7 @@ const Index: React.VFC = () => {
     />
 
     <header className={Styles.header} id="header">
-      <div>
+      <div className={Styles.sa}>
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
         <h1 className={Styles.headerTitle}>Portfolio Website</h1>
         <p>更新日 : <time>2021-12-10</time></p>
@@ -60,7 +50,7 @@ const Index: React.VFC = () => {
           className={Styles.linkItem}
           to="sample-page/sample1/"
         >
-          <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample1</h3>
+          <h3 className={`${Styles.linkTitle}`}>Sample1</h3>
           <FontAwesomeIcon icon={faCode} />
           <p>サンプルページ1</p>
         </Link>
@@ -69,7 +59,7 @@ const Index: React.VFC = () => {
           className={Styles.linkItem}
           to="sample-page/sample2/"
         >
-          <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample2</h3>
+          <h3 className={`${Styles.linkTitle}`}>Sample2</h3>
           <div className={Styles.nogi}></div>
           <p>サンプルページ2です。〇木坂46をテーマにページを作成しました。</p>
         </Link>
@@ -78,7 +68,7 @@ const Index: React.VFC = () => {
           className={Styles.linkItem}
           to="sample-page/sample3/"
         >
-          <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample3</h3>
+          <h3 className={`${Styles.linkTitle}`}>Sample3</h3>
           <FontAwesomeIcon icon={faCode} />
           <p>サンプルページ3</p>
         </Link>
@@ -87,7 +77,7 @@ const Index: React.VFC = () => {
           className={Styles.linkItem}
           to="sample-page/sample4"
         >
-          <h3 className={`${Styles.title} ${Styles.linkTitle}`}>Sample4</h3>
+          <h3 className={`${Styles.linkTitle}`}>Sample4</h3>
           <FontAwesomeIcon icon={faCode} />
           <p>サンプルページ4</p>
         </Link>
@@ -101,7 +91,7 @@ const Index: React.VFC = () => {
       </div>
     </section>
 
-    <section className={`${Styles.section} ${Styles.sec2} ${Styles.sa} ${Styles.saUp}`} id="sec3">
+    <section className={`${Styles.section} ${Styles.sa} ${Styles.saUp}`} id="sec3">
       <h2 className={Styles.sectionTitle}>CSS Animation & Tips</h2>
 
       <div className={Styles.sectionWrapper}>
@@ -138,7 +128,7 @@ const Index: React.VFC = () => {
       />
     </section>
     
-    <section className={`${Styles.section} ${Styles.sectionJamstack} ${Styles.sa} ${Styles.saUp}`} id="sec5">
+    <section className={`${Styles.section} ${Styles.sa} ${Styles.saUp}`} id="sec5">
       <h2 className={Styles.sectionTitle}>JamstackなWebサイトを構築してみた</h2>
       <div className={Styles.sectionWrapper}>
         <p>Jamstack構成のWebサイト構築が面白いと感じ、サンプルで色々なサイトを作成しています。2021年度中に10個作成するのが目標です。</p>
