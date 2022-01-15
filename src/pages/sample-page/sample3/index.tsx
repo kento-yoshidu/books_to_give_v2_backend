@@ -137,7 +137,8 @@ const Sample3 = () => (
 	</header>
 
 	<main className={Styles.main}>
-	<section className={`${Styles.section} ${Styles.contentsSection}`}>
+	{/*<section className={`{/*${Styles.section} ${Styles.contentsSection}`}>*/}
+	<section className={Styles.contentsSection}>
 		<h2 className={Styles.sectionTitle}>Contents</h2>
 
 		<section className={Styles.contents1}>
@@ -152,7 +153,7 @@ const Sample3 = () => (
           src="./svg/section1-bg.svg"
           alt="hoge"
           className={Styles.sectionImage}
-          imgClassName={Styles.svgImage}
+          //imgClassName={Styles.svgImage}
         />
 			</div>
 
@@ -184,7 +185,8 @@ const Sample3 = () => (
 		</section>
 	</section>
 
-	<section className={`${Styles.section} ${Styles.sec3}`}>
+	{/*<section className={`${Styles.section} ${Styles.sec3}`}>*/}
+	<section className={Styles.sec3}>
 		<div className={Styles.sectionWrapper}>
 			<div className={Styles.introduction}>
 				<div className={Styles.inner}>
@@ -197,7 +199,7 @@ const Sample3 = () => (
 			<div className={Styles.btnWrapper}>
 				<a
           href="https://ps.toriwatari.work/Jamstack/"
-          className={Styles.linkBtn}
+          //className={Styles.linkBtn}
         >
           詳しく見る
         </a>
@@ -205,7 +207,8 @@ const Sample3 = () => (
 		</div>
 	</section>
 
-	<section className={`${Styles.section} ${Styles.sec4}`}>
+	{/*<section className={`${Styles.section} ${Styles.sec4}`}>*/}
+	<section className={Styles.sec4}>
 		<h2 className={Styles.sectionTitle}>導入事例 - お客様からの声 - </h2>
 
 		<div className={`${Styles.board} ${Styles.board1}`}>
@@ -250,7 +253,8 @@ const Sample3 = () => (
 		</div>
 	</section>
 
-	<section className={`${Styles.section} ${Styles.sec5}`}>
+	{/*<section className={`${Styles.section} ${Styles.sec5}`}>*/}
+	<section className={Styles.sec5}>
 		<h2 className={Styles.sectionTitle}>料金プラン</h2>
 
 		<div className={Styles.wrapper}>
