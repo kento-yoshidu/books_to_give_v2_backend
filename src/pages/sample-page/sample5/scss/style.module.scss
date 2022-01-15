@@ -1,0 +1,24 @@
+.body {
+  background-color: #eeeeee;
+}
+
+.wContainer {
+  width: unquote("min(92%, 1166px)");
+  margin: auto;
+}
+
+.header {
+  height: 112px;
+  background-color: #fff;
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navBtn {
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
