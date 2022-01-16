@@ -20,7 +20,7 @@ const ReactSlick = () => (
   <>
   <div className={Styles.wrapper}>
     <Slider {...SlickConfig}>
-      <div className={`${Styles.slide} ${Styles.slideA}`}>
+      <div className={Styles.slide}>
         <StaticImage
           src="../src/images/live_photograph/live1.jpg"
           alt="hoge"
@@ -29,7 +29,7 @@ const ReactSlick = () => (
         />
       </div>
 
-      <div className={`${Styles.slide} ${Styles.slideB}`}>
+      <div className={Styles.slide}>
         <StaticImage
           src="../src/images/live_photograph/live2.jpg"
           alt="hoge"
@@ -38,7 +38,7 @@ const ReactSlick = () => (
         />
       </div>
 
-      <div className={`${Styles.slide} ${Styles.slideC}`}>
+      <div className={Styles.slide}>
         <StaticImage
           src="../src/images/live_photograph/live3.jpg"
           alt="hoge"

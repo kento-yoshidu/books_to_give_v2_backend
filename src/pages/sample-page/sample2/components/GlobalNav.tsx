@@ -18,12 +18,12 @@ const GlobalNav = () => (
       <span className={`${Styles.bar} ${Styles.barBottom}`}></span>
     </label>
 
-    <label className={Styles.closeMenu} htmlFor="checked"></label>
+    <label /*>className={Styles.closeMenu}*/ htmlFor="checked"></label>
     <nav className={Styles.drawerMenu}>
       <ul className={Styles.drawerList}>
         <li className={Styles.drawerItem}>Navi</li>
-        <li className={Styles.drawerItem}><a href="#" className={Styles.drawerLink}>TOP</a></li>
-        <li className={Styles.drawerItem}><a href="#intro" className={Styles.drawerLink}>What's potsunen47?</a></li>
+        <li className={Styles.drawerItem}><a href="#" /*>className={Styles.drawerLink}*/>TOP</a></li>
+        <li className={Styles.drawerItem}><a href="#intro">What's potsunen47?</a></li>
       </ul>
     </nav>
   </nav>
