@@ -333,41 +333,9 @@ const Sample2 = () => (
     </main>
 
     <footer className={Styles.footer}>
-      <div className={`${Styles.footerNogi} ${Styles.sa}`}></div>
-      <h2 className={`${Styles.footerTitle} ${Styles.title} ${Styles.sa}`}>Potsunen 47 Official Web Site</h2>
+      <div className={Styles.footerNogi}></div>
+      <h2 className={`${Styles.footerTitle} ${Styles.title}`}>Potsunen 47 Official Web Site</h2>
 
-      {/*
-      <div className={`${Styles.wrapper} ${Styles.sa}`}>
-
-        <div className={Styles.border}></div>
-
-        <div className={Styles.list}>
-          <h3 className={Styles.listTitle}>Sample Pages</h3>
-          <ul>
-            <li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample1/">Sample1</a></li>
-            <li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample2/">Sample2</a></li>
-						<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/sample-page/sample3/">Sample3</a></li>
-					</ul>
-				</div>
-
-				<div className={Styles.border}></div>
-
-				<div className={Styles.list}>
-					<h3 className={Styles.listTitle}>Contents</h3>
-					<ul>
-						<li><i className="fas fa-caret-right"></i><a href="https://potsunen.info/css-animation/">CSS Animation & Tips</a></li>
-					<li><i className="fas fa-caret-right"></i><a href="https://potsunen-blog.netlify.com/">鳥に生まれることが出来なかった人へ</a></li>
-					</ul>
-				</div>
-			</div>
-			<div className={Styles.infomation}></div>
-				<ul className={Styles.link}>
-					<li><a href="/">HOME</a></li>
-					<li><a href="/">サイトマップ</a></li>
-					<li><a href="/">プライバシーポリシー</a></li>
-					<li><a href="/">お問い合わせ</a></li>
-				</ul>
-      */}
 				<p className={Styles.copyright}>Copyright © 2020 <Link to="/">toriwatari</Link></p>
 			</footer>
 	</>

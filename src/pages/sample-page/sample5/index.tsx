@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -32,6 +33,19 @@ const Sample6 = () => (
         </button>
       </div>
     </header>
+
+    <section className={Styles.hero}>
+      <div className={`${Styles.heroContainer} ${Styles.wContainer}`}>
+        <h1>Sample Page 5</h1>
+        <p>gjaorja</p>
+        <Link
+          to="#"
+          className={Styles.btn}
+        >
+          無料で始める
+        </Link>
+      </div>
+    </section>
   </div>
 )
 
