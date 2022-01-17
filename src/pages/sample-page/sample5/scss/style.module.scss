@@ -12,6 +12,10 @@
       filter: brightness(90%) contrast(120%);
     }
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .wContainer {
@@ -71,3 +75,50 @@
   }
 }
 
+.imgText {
+  padding: clamp(90px, 0vw, 120px) 0;
+  background-color: #fff;
+  .imgTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(45px, 6vw, 80px);
+    .headingDecoration {
+      font-size: clamp(30px, 3vw, 40px);
+      min-height: 0vw;
+      font-weight: 400;
+      &::after {
+        display: block;
+        content: "";
+        width: 160px;
+        height: 0px;
+        border-top: 1px solid #b72661;
+        margin-top: 0.6em;
+      }
+      & + p {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        color: #707070;
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .imgText {
+    .imgTextContainer {
+      flex-direction: row;
+      align-items: center;
+      & > .text {
+        flex: 1;
+        min-width: 17em;
+      }
+      & > .img {
+        flex: 2;
+      }
+    }
+  }
+}

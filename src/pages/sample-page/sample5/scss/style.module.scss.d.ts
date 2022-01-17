@@ -7,3 +7,8 @@ export const headerContainer: string;
 export const navBtn: string;
 export const hero: string;
 export const heroContainer: string;
+export const imgText: string;
+export const imgTextContainer: string;
+export const headingDecoration: string;
+export const text: string;
+export const img: string;
