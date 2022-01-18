@@ -12,3 +12,4 @@ export const imgTextContainer: string;
 export const headingDecoration: string;
 export const text: string;
 export const img: string;
+export const reverse: string;

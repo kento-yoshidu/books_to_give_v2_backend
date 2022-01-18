@@ -76,8 +76,11 @@
 }
 
 .imgText {
-  padding: clamp(90px, 0vw, 120px) 0;
+  padding: clamp(90px, 9vw, 120px) 0;
   background-color: #fff;
+  & + & {
+    padding-top: 0;
+  }
   .imgTextContainer {
     display: flex;
     flex-direction: column;
@@ -118,6 +121,9 @@
       }
       & > .img {
         flex: 2;
+      }
+      &.reverse {
+        flex-direction: row-reverse;
       }
     }
   }
