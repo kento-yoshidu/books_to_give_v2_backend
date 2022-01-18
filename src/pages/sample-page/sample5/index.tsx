@@ -64,7 +64,25 @@ const Sample6 = () => (
           />
         </figure>
       </div>
+    </section>
 
+    <section className={Styles.imgText}>
+      <div className={`${Styles.imgTextContainer} ${Styles.reverse} ${Styles.wContainer}`}>
+        <div className={Styles.text}>
+          <h2 className={Styles.headingDecoration}>効率化の手助け</h2>
+          <p>Helpful</p>
+          <p>伝説によると、誕生日が歩行者信号と互換性のあるムカデの正体を暴くのである。</p>
+        </div>
+
+        <figure className={Styles.img}>
+          <StaticImage
+            src="./images/helpful.jpg"
+            alt="hoge"
+            width={1600}
+            height={1260}
+          />
+        </figure>
+      </div>
     </section>
   </div>
 )
