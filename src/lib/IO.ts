@@ -1,19 +1,19 @@
 import * as Styles from "../styles/index.module.scss"
 
 const InterSectionObserver = () => {
-  const options = {
+  const options: IntersectionObserverInit = {
     root: null,
     rootMargin: "0%",
-    threshold: 0
+    threshold: 0,
   }
 
   const observer = new IntersectionObserver(doWhenIntersect, options);
 
   // 監視対象にしたい要素
-  const elements = document.querySelectorAll(`.${Styles.sa}`);
+  const elements = document.querySelectorAll<HTMLElement>(`.${Styles.sa}`);
 
   // それぞれの要素を監視対象にする
-  elements.forEach(element => {
+  elements.forEach((element: Element) => {
     observer.observe(element)
   })
 
@@ -27,7 +27,7 @@ const InterSectionObserver = () => {
   }
 
   // showクラスを付与する関数
-  function addShowClass(element: HTMLElement) {
+  function addShowClass(element: Element) {
     element?.classList.add(Styles.show);
   }
 }
