@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import Seo from "../../components/seo"
-import InterSectionObserver from "../../lib/IO"
+import InterSectionObserver from "../../lib/Jamstack/IO"
 
 import * as Styles from "./style.module.scss"
 

@@ -11,6 +11,7 @@ export const viewList: string;
 export const active: string;
 export const section: string;
 export const sectionTitle: string;
+export const view: string;
 export const view2: string;
 export const container: string;
 export const spanAnime1: string;
