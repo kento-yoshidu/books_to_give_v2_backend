@@ -1,9 +1,16 @@
-import * as React from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, lang, meta, title }) => {
+interface Props {
+  description: string;
+  lang: string;
+  meta: string;
+  title: string;
+}
+
+const Seo = ({ description, lang, meta, title }: Partial<Props>) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,7 +28,6 @@ const Seo = ({ description, lang, meta, title }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
 
   return (
     <Helmet
@@ -29,7 +35,6 @@ const Seo = ({ description, lang, meta, title }) => {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,

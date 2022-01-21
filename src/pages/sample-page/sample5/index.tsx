@@ -84,6 +84,30 @@ const Sample6 = () => (
         </figure>
       </div>
     </section>
+
+    <section className={Styles.posts}>
+      <div className={Styles.wContainer}>
+        <h2 className={Styles.heading}>News Release <span>最新情報</span></h2>
+      </div>
+
+      <div className={Styles.postsContainer}>
+        <article className={Styles.post}>
+          <a href="#">
+            <figure>
+              <StaticImage
+                src="./images/news01.jpg"
+                alt=""
+                width={1000}
+                height={750}
+              />
+            </figure>
+
+            <h3>スパンコール</h3>
+            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+          </a>
+        </article>
+      </div>
+    </section>
   </div>
 )
 

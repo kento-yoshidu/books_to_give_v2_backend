@@ -1,3 +1,5 @@
+$v-space: clamp(90px, 9vw, 120px);
+
 .body {
   background-color: #eeeeee;
   color: "#222";
@@ -19,8 +21,10 @@
 }
 
 .wContainer {
+  position: relative;
   width: unquote("min(92%, 1166px)");
   margin: auto;
+  border: 1px solid red;
 }
 
 .btn {
@@ -76,7 +80,7 @@
 }
 
 .imgText {
-  padding: clamp(90px, 9vw, 120px) 0;
+  padding: $v-space 0;
   background-color: #fff;
   & + & {
     padding-top: 0;
@@ -125,6 +129,23 @@
       &.reverse {
         flex-direction: row-reverse;
       }
+    }
+  }
+}
+
+.posts {
+  padding: $v-space 0;
+  background-color: #f3f1ed;
+  .heading {
+    position: absolute;
+    top: calc((clamp(90px, 9vw, 120px) + 0.6em) * -1);
+    min-height: 0vw;
+    font-size: clamp(40px, 5.2vw, 70px);
+    font-weight: 300;
+    span {
+      display: block;
+      color: #666;
+      font-size: 18px;
     }
   }
 }
