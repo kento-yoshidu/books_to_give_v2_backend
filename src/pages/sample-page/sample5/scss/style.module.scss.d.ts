@@ -13,3 +13,5 @@ export const headingDecoration: string;
 export const text: string;
 export const img: string;
 export const reverse: string;
+export const posts: string;
+export const heading: string;
