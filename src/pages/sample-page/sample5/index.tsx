@@ -88,7 +88,6 @@ const Sample6 = () => (
     <section className={Styles.posts}>
       <div className={Styles.wContainer}>
         <h2 className={Styles.heading}>News Release <span>最新情報</span></h2>
-      </div>
 
       <div className={Styles.postsContainer}>
         <article className={Styles.post}>
@@ -106,6 +105,82 @@ const Sample6 = () => (
             <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
           </a>
         </article>
+        <article className={Styles.post}>
+          <a href="#">
+            <figure>
+              <StaticImage
+                src="./images/news02.jpg"
+                alt=""
+                width={1000}
+                height={750}
+              />
+            </figure>
+
+            <h3>スパンコール</h3>
+            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+          </a>
+        </article>
+        <article className={Styles.post}>
+          <a href="#">
+            <figure>
+              <StaticImage
+                src="./images/news03.jpg"
+                alt=""
+                width={1000}
+                height={750}
+              />
+            </figure>
+
+            <h3>スパンコール</h3>
+            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+          </a>
+        </article>
+        <article className={Styles.post}>
+          <a href="#">
+            <figure>
+              <StaticImage
+                src="./images/news04.jpg"
+                alt=""
+                width={1000}
+                height={750}
+              />
+            </figure>
+
+            <h3>スパンコール</h3>
+            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+          </a>
+        </article>
+        <article className={Styles.post}>
+          <a href="#">
+            <figure>
+              <StaticImage
+                src="./images/news05.jpg"
+                alt=""
+                width={1000}
+                height={750}
+              />
+            </figure>
+
+            <h3>スパンコール</h3>
+            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+          </a>
+        </article>
+        <article className={Styles.post}>
+          <a href="#">
+            <figure>
+              <StaticImage
+                src="./images/news06.jpg"
+                alt=""
+                width={1000}
+                height={750}
+              />
+            </figure>
+
+            <h3>スパンコール</h3>
+            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+          </a>
+        </article>
+      </div>
       </div>
     </section>
   </div>
