@@ -15,3 +15,5 @@ export const img: string;
 export const reverse: string;
 export const posts: string;
 export const heading: string;
+export const postsContainer: string;
+export const post: string;

@@ -148,4 +148,45 @@ $v-space: clamp(90px, 9vw, 120px);
       font-size: 18px;
     }
   }
+  .postsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 25px;
+    .post {
+      img {
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        width: 100%;
+      }
+      a {
+        display: block;
+      }
+      h3 {
+        margin: 1em 0 0.5em;
+        font-size: clamp(12px, 2vw, 20px);
+        min-height: 0vw;
+      }
+      p {
+        max-width: 20em;
+        font-size: clamp(10px, 1.6vw, 14px);
+        min-height: 0vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .posts {
+    .postsContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } 
+}
+
+@supports not (aspect-ratio: 3 / 2) {
+  .post {
+    img {
+      height: 180px;
+    }
+  }
 }
