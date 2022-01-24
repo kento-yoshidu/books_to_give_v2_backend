@@ -190,3 +190,35 @@ $v-space: clamp(90px, 9vw, 120px);
     }
   }
 }
+
+.footer {
+  padding: 70px 0;
+  background-color: #fff;
+  color: #707070;
+  font-size: 13px;
+  .footerContainer {
+    display: grid;
+    gap: 50px;
+    justify-items: center;
+    .footerSns {
+      display: flex;
+      gap: 24px;
+      font-size: 24px;
+      a {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        aspect-ratio: 1 / 1;
+        background-color: #ccc;
+        color: #fff;
+        clip-path: circle(50%);
+      }
+    }
+    .footerMenu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}

@@ -29,7 +29,7 @@
   }
   .headerTitle {
     margin-bottom: 30px;
-    font-size: 6.3rem;
+    font-size: clamp(50px, 5vw, 73px);
     letter-spacing: 4px;
   }
   .headerSubTitle {
@@ -108,7 +108,6 @@
       width: 80%; 
     }
     .headerTitle {
-      font-size: 5rem;
       letter-spacing: 2px;
     }
     .headerSubTitle {

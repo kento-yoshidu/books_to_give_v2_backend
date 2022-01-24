@@ -17,3 +17,7 @@ export const posts: string;
 export const heading: string;
 export const postsContainer: string;
 export const post: string;
+export const footer: string;
+export const footerContainer: string;
+export const footerSns: string;
+export const footerMenu: string;
