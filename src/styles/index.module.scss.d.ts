@@ -32,6 +32,8 @@ export const finishedList: string;
 export const barSample: string;
 export const barJam: string;
 export const barEcma: string;
+export const footer: string;
+export const footerTitle: string;
 export const sa: string;
 export const show: string;
 export const saUp: string;
