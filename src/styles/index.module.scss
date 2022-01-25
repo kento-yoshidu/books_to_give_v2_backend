@@ -268,7 +268,7 @@
 
 .sec5 {
   background-color: #555;
-  padding: 50px 0;
+  padding: 50px 0 30px;
   color: #fff;
 
   h2,
@@ -432,6 +432,17 @@
   }
 }
 
+.footer {
+  padding: 35px 0;
+  background-color: #222;
+  .footer-title {
+    color: #ddd;
+    font-size: clamp(16px, 3.4vw, 23px);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}
 .sa {
   opacity: 0;
   transition: all .9s ease;

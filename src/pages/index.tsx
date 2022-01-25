@@ -202,9 +202,8 @@ const Index: React.VFC = () => {
       </div>
     </section>
 
-    <footer className="footer">
-      <h2 className="footer-title">toriwatari Portfolio Web Site</h2>
-      <p className="copyright">toriwatari @2021</p>
+    <footer className={Styles.footer}>
+      <h2 className={Styles.footerTitle}>Developed by Gatsby</h2>
     </footer>
   </>
   )
