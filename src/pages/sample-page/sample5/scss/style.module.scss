@@ -24,7 +24,6 @@ $v-space: clamp(90px, 9vw, 120px);
   position: relative;
   width: unquote("min(92%, 1166px)");
   margin: auto;
-  border: 1px solid red;
 }
 
 .btn {
@@ -221,4 +220,24 @@ $v-space: clamp(90px, 9vw, 120px);
       gap: 20px;
     }
   }
+}
+
+@media screen and (min-width: 768px) {
+  .footerContainer {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    & > .footerSite {
+      margin-bottom: 20px;
+    }
+    & > *:not(.footerSns) {
+      justify-self: start;
+    }
+    & > .footerSns {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      justify-self: end;
+      align-self: center;
+    }
+  } 
 }

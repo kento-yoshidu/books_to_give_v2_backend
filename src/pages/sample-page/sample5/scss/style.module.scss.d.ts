@@ -21,3 +21,4 @@ export const footer: string;
 export const footerContainer: string;
 export const footerSns: string;
 export const footerMenu: string;
+export const footerSite: string;
