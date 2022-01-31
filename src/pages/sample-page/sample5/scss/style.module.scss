@@ -40,6 +40,19 @@ $v-space: clamp(90px, 9vw, 120px);
   text-shadow: 0 0 6px #00000052;
 }
 
+  .heading {
+    position: absolute;
+    top: calc((clamp(90px, 9vw, 120px) + 0.6em) * -1);
+    min-height: 0vw;
+    font-size: clamp(40px, 5.2vw, 70px);
+    font-weight: 300;
+    span {
+      display: block;
+      color: #666;
+      font-size: 18px;
+    }
+  }
+
 .header {
   height: 112px;
   background-color: #fff;
@@ -137,18 +150,6 @@ $v-space: clamp(90px, 9vw, 120px);
 .posts {
   padding: $v-space 0;
   background-color: #f3f1ed;
-  .heading {
-    position: absolute;
-    top: calc((clamp(90px, 9vw, 120px) + 0.6em) * -1);
-    min-height: 0vw;
-    font-size: clamp(40px, 5.2vw, 70px);
-    font-weight: 300;
-    span {
-      display: block;
-      color: #666;
-      font-size: 18px;
-    }
-  }
   .postsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -277,4 +278,38 @@ $v-space: clamp(90px, 9vw, 120px);
       align-self: center;
     }
   } 
+}
+.plans {
+  padding: clamp(90px, 9vw, 120px);
+  background-color: #e9e5e9;
+  .plans-container {
+    display: grid;
+    gap: 27px;
+    .plan {
+      padding: 60px;
+      border-radius: 20px;
+      background-color: #fff;
+      h3 {
+        margin-bottom: 30px;
+        font-size: 38px;
+        font-weight: 400;
+        font-family: "Montserrat", sans-serif;
+      }
+      .desc {
+        margin-bottom: 38px;
+        font-size: 16px;
+      }
+      .price {
+        margin-bottom: 22px;
+        font-size: 26px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .plans-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
