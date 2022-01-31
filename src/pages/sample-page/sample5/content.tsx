@@ -31,6 +31,39 @@ const Content = () => (
         </div>
       </div>
     </article>
+
+    <div className={Styles.plans}>
+      <div className={Styles.wContainer}>
+        <h2 className={Styles.heading}>
+          Service Plans
+          <span>サービスプラン</span>
+        </h2>
+
+        <div className={Styles.plansContainer}>
+          <div className={Styles.plan}>
+            <h3>Free</h3>
+            <p className={Styles.desc}>無料プランです。</p>
+            <p className={Styles.price}>無料</p>
+            <a href="#">使ってみる</a>
+          </div>
+
+          <div className={Styles.plan}>
+            <h3>Standard</h3>
+            <p className={Styles.desc}>普通プランです。</p>
+            <p className={Styles.price}>980円/月</p>
+            <a href="#">使ってみる</a>
+          </div>
+
+          <div className={Styles.plan}>
+            <h3>Pro</h3>
+            <p className={Styles.desc}>特別プランです。</p>
+            <p className={Styles.price}>2,800円/月</p>
+            <a href="#">使ってみる</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 )
 
