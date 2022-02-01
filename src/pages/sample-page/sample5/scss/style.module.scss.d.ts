@@ -30,3 +30,4 @@ export const plansContainer: string;
 export const plan: string;
 export const desc: string;
 export const price: string;
+export const btnAccent: string;

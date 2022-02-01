@@ -286,6 +286,8 @@ $v-space: clamp(90px, 9vw, 120px);
     display: grid;
     gap: 27px;
     .plan {
+      display: flex;
+      flex-direction: column;
       padding: 60px;
       border-radius: 20px;
       background-color: #fff;
@@ -300,9 +302,16 @@ $v-space: clamp(90px, 9vw, 120px);
         font-size: 16px;
       }
       .price {
+        margin-top: auto;
         margin-bottom: 22px;
         font-size: 26px;
         font-weight: bold;
+      }
+      .btn {
+        width: auto; 
+      }
+      .btn-accent {
+        background-color: #b72661;
       }
     }
   }
