@@ -2,7 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Header from "./components/header"
+import { Header } from "./components/header"
+import { Footer } from "./components/footer"
 
 import * as Styles from "./scss/style.module.scss"
 
@@ -61,9 +62,10 @@ const Content = () => (
             <a href="#" className={`${Styles.btnAccent} ${Styles.btn}`}>使ってみる</a>
           </div>
         </div>
-
       </div>
     </div>
+
+    <Footer />
   </div>
 )
 
