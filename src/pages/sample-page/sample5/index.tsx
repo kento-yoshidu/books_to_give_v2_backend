@@ -3,21 +3,10 @@ import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 
-import Header from "./components/header"
+import { Header } from "./components/header"
+import { Footer } from "./components/footer"
 
 import * as Styles from "./scss/style.module.scss"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter,
-          faFacebook,
-          faInstagram
-      } from "@fortawesome/free-brands-svg-icons"
-
-import "@fortawesome/fontawesome-svg-core/styles.css"
-import { config } from "@fortawesome/fontawesome-svg-core"
-
-config.autoAddCss = false
 
 const Sample6 = () => (
   <div className={Styles.body}>
@@ -27,10 +16,10 @@ const Sample6 = () => (
         <h1>Sample Page 5</h1>
         <p>毛の生えたＵＦＯは気狂◯帽子屋の親戚である眼球に恋文を送るのである</p>
         <Link
-          to="#"
+          to="./content"
           className={Styles.btn}
         >
-          無料で始める
+          コンテンツを見る
         </Link>
       </div>
     </section>
@@ -172,57 +161,8 @@ const Sample6 = () => (
       </div>
     </section>
 
-    <footer className={Styles.footer}>
-      <div className={`${Styles.footerContainer} ${Styles.wContainer}`}>
-        <div className={Styles.footerSite}>
-          <a href="#">
-            <StaticImage
-              src="./images/logo.svg"
-              alt="サイトロゴ"
-              width={135}
-              height={26}
-            />
-          </a>
-        </div>
+    <Footer />
 
-        <ul className={Styles.footerSns}>
-          <li>
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faTwitter}
-              />
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faFacebook}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <FontAwesomeIcon
-                icon={faInstagram}
-              />
-            </a>
-          </li>
-        </ul>
-
-        <ul className={Styles.footerMenu}>
-          <li><a href="#">会社概要</a></li>
-          <li><a href="#">会社概要</a></li>
-          <li><a href="#">会社概要</a></li>
-          <li><a href="#">会社概要</a></li>
-          <li><a href="#">会社概要</a></li>
-        </ul>
-
-        <div className={Styles.footerCopy}>
-          @ toriwatari
-        </div>
-      </div>
-    </footer>
   </div>
 )
 

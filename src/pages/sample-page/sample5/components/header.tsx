@@ -5,19 +5,21 @@ import * as Styles from "../scss/style.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter,
-          faFacebook,
-          faInstagram
-      } from "@fortawesome/free-brands-svg-icons"
-
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 
 config.autoAddCss = false
 
-const Header = () => (
+export const Header = () => (
   <header className={Styles.header}>
     <div className={`${Styles.headerContainer} ${Styles.wContainer}`}>
+
+      <StaticImage
+        src="../images/logo.svg"
+        alt="サイトロゴ"
+        width={135}
+        height={26}
+      />
 
       <button className={Styles.navBtn}>
         <FontAwesomeIcon
@@ -29,4 +31,4 @@ const Header = () => (
   </header>
 )
 
-export default Header
+//export default Header
