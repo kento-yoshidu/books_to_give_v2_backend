@@ -9,7 +9,6 @@ const Modal = () => {
   const [imgNumber, setImgNumber] = useState<number>(0)
 
   const toggleShow = (e: React.MouseEvent<HTMLImageElement>) => {
-    console.log("onClick")
     if (!show) {
       setShow(true)
       setImgNumber(parseInt(e.target.dataset.img))

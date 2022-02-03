@@ -14,7 +14,7 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 
 config.autoAddCss = false
 
-export const Footer = () => (
+const Footer = () => (
   <footer className={Styles.footer}>
     <div className={`${Styles.footerContainer} ${Styles.wContainer}`}>
       <div className={Styles.footerSite}>
@@ -68,3 +68,5 @@ export const Footer = () => (
   </footer>
 
 )
+
+export default Footer

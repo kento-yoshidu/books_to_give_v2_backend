@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 
-import { Header } from "./components/header"
-import { Footer } from "./components/footer"
+import Header from "./components/header"
+import Footer from "./components/footer"
 
 import * as Styles from "./scss/style.module.scss"
 
@@ -29,7 +29,7 @@ const Sample6 = () => (
         <div className={Styles.text}>
           <h2 className={Styles.headingDecoration}>日常のツールたち</h2>
           <p>Conventions</p>
-          <p>伝説によると、誕生日が歩行者信号と互換性のあるムカデの正体を暴くのである。</p>
+          <p>桜は変装した原爆ドームと踊るのだろうか。</p>
         </div>
 
         <figure className={Styles.img}>
@@ -79,7 +79,7 @@ const Sample6 = () => (
             </figure>
 
             <h3>スパンコール</h3>
-            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+            <p>ブランド指向のフライパンが蒸発するとき、蝋でできた軍手が下着に似た猫であると言われていることもある。</p>
           </a>
         </article>
         <article className={Styles.post}>
@@ -94,7 +94,7 @@ const Sample6 = () => (
             </figure>
 
             <h3>スパンコール</h3>
-            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+            <p>ビル・ゲイツとしての女子中学生は消滅するに違いない。</p>
           </a>
         </article>
         <article className={Styles.post}>
@@ -109,7 +109,7 @@ const Sample6 = () => (
             </figure>
 
             <h3>スパンコール</h3>
-            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+            <p>舌切り雀が組み立て式の羅針盤を発掘するが、時計仕掛けの肝臓は快適に動作する。</p>
           </a>
         </article>
         <article className={Styles.post}>
@@ -124,7 +124,7 @@ const Sample6 = () => (
             </figure>
 
             <h3>スパンコール</h3>
-            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+            <p>まっすぐな混浴が金のシャチホコを見て絶望する。</p>
           </a>
         </article>
         <article className={Styles.post}>
@@ -139,7 +139,7 @@ const Sample6 = () => (
             </figure>
 
             <h3>スパンコール</h3>
-            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+            <p>いみじくも、無数の繊毛に包まれたビジネスマンが視力検査のことを歌うのだ。</p>
           </a>
         </article>
         <article className={Styles.post}>
@@ -154,7 +154,7 @@ const Sample6 = () => (
             </figure>
 
             <h3>スパンコール</h3>
-            <p>じゃいｒｊがｐｊｖぱんｆが＠ｒｇじゃ；ｒがあんｋｇｒｇなｐｒがヴぁｋふぁｐぎじあｐｒｊが；ヴぁｋｆｇｒｊｐｒが＠</p>
+            <p>原則として、百人一首が点字ブロックに食らい付くまでもない。</p>
           </a>
         </article>
       </div>
