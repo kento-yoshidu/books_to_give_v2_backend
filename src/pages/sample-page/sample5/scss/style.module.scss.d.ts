@@ -6,6 +6,7 @@ export const heading: string;
 export const header: string;
 export const headerContainer: string;
 export const navBtn: string;
+export const nav: string;
 export const hero: string;
 export const heroContainer: string;
 export const headingDecoration: string;
