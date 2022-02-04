@@ -3,6 +3,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import * as Styles from "../scss/style.module.scss"
+import * as FooterStyles from "../scss/footer.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTwitter,
@@ -15,9 +16,9 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const Footer = () => (
-  <footer className={Styles.footer}>
-    <div className={`${Styles.footerContainer} ${Styles.wContainer}`}>
-      <div className={Styles.footerSite}>
+  <footer className={FooterStyles.footer}>
+    <div className={`${FooterStyles.footerContainer} ${Styles.wContainer}`}>
+      <div className={FooterStyles.footerSite}>
         <a href="#">
           <StaticImage
             src="../images/logo.svg"
@@ -28,7 +29,7 @@ const Footer = () => (
         </a>
       </div>
 
-      <ul className={Styles.footerSns}>
+      <ul className={FooterStyles.footerSns}>
         <li>
           <a href="#">
             <FontAwesomeIcon
@@ -53,7 +54,7 @@ const Footer = () => (
         </li>
       </ul>
 
-      <ul className={Styles.footerMenu}>
+      <ul className={FooterStyles.footerMenu}>
         <li><a href="#">会社概要</a></li>
         <li><a href="#">会社概要</a></li>
         <li><a href="#">会社概要</a></li>
