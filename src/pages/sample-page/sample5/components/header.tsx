@@ -3,21 +3,22 @@ import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 import * as Styles from "../scss/style.module.scss"
+import * as HeaderStyles from "../scss/header.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 
 config.autoAddCss = false
 
 const handleClick = () => {
-  document.querySelector('html')?.classList.toggle(Styles.open)
+  document.querySelector('html')?.classList.toggle(HeaderStyles.open)
 }
 
 const Header = () => (
-  <header className={Styles.header}>
-    <div className={`${Styles.headerContainer} ${Styles.wContainer}`}>
+  <header className={HeaderStyles.header}>
+    <div className={`${HeaderStyles.headerContainer} ${Styles.wContainer}`}>
       <StaticImage
         src="../images/logo.svg"
         alt="サイトロゴ"
@@ -26,16 +27,22 @@ const Header = () => (
       />
 
       <button
-        className={Styles.navBtn}
+        className={HeaderStyles.navBtn}
         onClick={handleClick}
       >
         <FontAwesomeIcon
           icon={faBars}
+          className={HeaderStyles.faBars}
           color="#aaa"
+        />
+        <FontAwesomeIcon
+          icon={faTimes}
+          color="#aaa"
+          className={HeaderStyles.faTimes}
         />
       </button>
 
-      <nav className={Styles.nav}>
+      <nav className={HeaderStyles.nav}>
         <ul>
           <li><Link to="#">ホーム</Link></li>
           <li><Link to="#">コンテンツ</Link></li>
