@@ -14,12 +14,12 @@ const Sample6 = () => (
     <section className={Styles.hero}>
       <div className={`${Styles.heroContainer} ${Styles.wContainer}`}>
         <h1>Sample Page 5</h1>
-        <p>毛の生えたＵＦＯは気狂◯帽子屋の親戚である眼球に恋文を送るのである</p>
+        <p>集客、売上アップのためのWebコンテンツ制作を行います</p>
         <Link
           to="./content"
           className={Styles.btn}
         >
-          コンテンツを見る
+          サービスを見る
         </Link>
       </div>
     </section>
@@ -27,7 +27,7 @@ const Sample6 = () => (
     <section className={Styles.imgText}>
       <div className={`${Styles.imgTextContainer} ${Styles.wContainer}`}>
         <div className={Styles.text}>
-          <h2 className={Styles.headingDecoration}>日常のツールたち</h2>
+          <h2 className={Styles.headingDecoration}>HTML&CSS コーディング</h2>
           <p>Conventions</p>
           <p>桜は変装した原爆ドームと踊るのだろうか。</p>
         </div>
