@@ -3,12 +3,19 @@ import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 
+import Seo from "../../../components/seo"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
 import * as Styles from "./scss/style.module.scss"
 
-const Sample6 = () => (
+const Sample5 = () => (
+  <>
+  
+  <Seo
+    title="Sample5"
+  />
+
   <div className={Styles.body}>
     <Header />
     <section className={Styles.hero}>
@@ -28,8 +35,8 @@ const Sample6 = () => (
       <div className={`${Styles.imgTextContainer} ${Styles.wContainer}`}>
         <div className={Styles.text}>
           <h2 className={Styles.headingDecoration}>HTML&CSS コーディング</h2>
-          <p>Conventions</p>
-          <p>桜は変装した原爆ドームと踊るのだろうか。</p>
+          <p>Cording</p>
+          <p>HTMLとCSSでのコーティングを行います。</p>
         </div>
 
         <figure className={Styles.img}>
@@ -164,6 +171,8 @@ const Sample6 = () => (
     <Footer />
 
   </div>
+
+  </>
 )
 
-export default Sample6
+export default Sample5
