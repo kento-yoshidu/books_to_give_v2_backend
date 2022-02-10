@@ -34,9 +34,8 @@ const Index: React.VFC = () => {
       <div className={Styles.sa}>
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
         <h1 className={Styles.headerTitle}>Portfolio Website</h1>
-        <p>更新日 : <time>2022-02-10</time></p>
-
         <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
+        <p>更新日 : <time>2022-02-10</time></p>
 
         { windowSize }
 
@@ -98,12 +97,10 @@ const Index: React.VFC = () => {
         </Link>
       </div>
 
-      <div className={`${Styles.sa} ${Styles.saUp}`}>
-        <Button
-          path="sample-page"
-          text="more"
-        />
-      </div>
+      <Button
+        path="sample-page"
+        text="more"
+      />
     </section>
 
     <section className={`${Styles.section} ${Styles.sa} ${Styles.saUp}`} id="sec3">
