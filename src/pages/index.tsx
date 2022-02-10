@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -16,8 +16,12 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const Index: React.VFC = () => {
+  const [windowSize, setWindowSize] = useState(0)
+
   useEffect(() => {
     IO() 
+
+    setWindowSize(window.screen.width)
   },[]);
 
   return (
@@ -30,9 +34,11 @@ const Index: React.VFC = () => {
       <div className={Styles.sa}>
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
         <h1 className={Styles.headerTitle}>Portfolio Website</h1>
-        <p>更新日 : <time>2021-12-10</time></p>
+        <p>更新日 : <time>2022-02-10</time></p>
 
         <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
+
+        { windowSize }
 
         <Link className={Styles.arrowContainer} to="#sec1">
           <div className={Styles.arrow}></div>
