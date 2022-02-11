@@ -37,6 +37,7 @@ const Jamstack = () => {
       <header className={`${Styles.header} ${Styles.view}`} id="view1">
         <h1><span className={Styles.cutout}>Jamstack</span>なWebサイトを構築してみた</h1>
         <p>2021年度中に10個の<span className={Styles.cutout}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+
         <ul className={Styles.box}>
           <li>Static Site Generator</li>
           <li><span className={Styles.charGradient}>&</span></li>
