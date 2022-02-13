@@ -62,18 +62,20 @@ $bg-height: 50px;
   }
   .headerTitle,
   .headerSubTitle {
+    max-width: 80%;
     font-weight: 500;
     text-shadow: -1px 2px 0 rgba(100,100,100,1);
     text-align: center;
+    letter-spacing: 2px;
   }
   .headerSubTitle {
     margin-bottom: 20px;
-    font-size: clamp(35px, 4vw, 45px);
+    font-size: clamp(30px, 4vw, 45px);
     letter-spacing: 2px;
   }
   .headerTitle {
     margin-bottom: 30px;
-    font-size: clamp(60px, 5vw, 88px);
+    font-size: clamp(50px, 5vw, 88px);
     letter-spacing: 4px;
   }
   .message {
@@ -138,21 +140,8 @@ $bg-height: 50px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .header {
-    .headerTitle,
-    .headerSubTitle {
-      width: 80%; 
-    }
-    .headerTitle {
-      letter-spacing: 2px;
-    }
-    .headerSubTitle {
-      letter-spacing: 1px;
-    }
-    .mySkill {
-      width: 90%;
-    }
     .arrowContainer {
       width: 50px;
       margin-top: 20px;
@@ -222,7 +211,7 @@ $bg-height: 50px;
     }
     .linkItem {
       display: block;
-      width: unquote("max(30%, 300px)");
+      width: unquote("max(30%, 270px)");
       border: 2px solid rgb(190,190,190);
       border-radius: 3px;
       color: #444;
@@ -245,8 +234,8 @@ $bg-height: 50px;
       p {
         width: 80%;
         margin: 40px auto 50px;
-        font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
         font-size: clamp(15px, 1.9vw, 18px);
+        font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
         line-height: 1.6;
       }
     }
@@ -323,13 +312,13 @@ $bg-height: 50px;
       margin: 0 auto 70px;
       transition: .3s;
       h4 {
-        font-size: 1.7rem;
+        font-size: clamp(15px, 1.5vw, 19px);
         letter-spacing: 1px;
       }
       span {
         display: block;
         margin: 10px 0 15px;
-        font-size: 1.5rem;
+        font-size: clamp(15px, 1.5vw, 17px);
       }
       .progressbar {
         margin-top: 10px;
@@ -385,7 +374,7 @@ $bg-height: 50px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .sec5 {
     padding: 30px 0;
     .sectionTitle {
@@ -406,12 +395,6 @@ $bg-height: 50px;
         .progressbarWrapper {
           width: 90%;
           margin: 0 auto 40px;
-          h4 {
-            font-size: 1.3rem
-          }
-          span {
-            font-size: 1.3rem
-          }
           .progressbar {
             width: 90%;
             .side {

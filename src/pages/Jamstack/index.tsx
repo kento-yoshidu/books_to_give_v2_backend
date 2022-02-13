@@ -35,8 +35,8 @@ const Jamstack = () => {
       </nav>
 
       <header className={`${Styles.header} ${Styles.view}`} id="view1">
-        <h1><span className={Styles.cutout}>Jamstack</span>なWebサイトを構築してみた</h1>
-        <p>2021年度中に10個の<span className={Styles.cutout}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+        <h1><span className={Styles.neon}>Jamstack</span>なWebサイトを構築してみた</h1>
+        <p>2021年度中に10個の<span className={Styles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
 
         <ul className={Styles.box}>
           <li>Static Site Generator</li>
@@ -225,7 +225,7 @@ const Jamstack = () => {
       </div>
     </section>
 
-    <section className={`${Styles.section} ${Styles.view} ${Styles.view4}`} id="view4">
+    <section className={`${Styles.section} ${Styles.view}`} id="view4">
       <br />
     </section>
     </div>

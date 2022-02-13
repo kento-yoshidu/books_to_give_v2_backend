@@ -5,7 +5,7 @@ export const header: string;
 export const box: string;
 export const animate: string;
 export const scroll: string;
-export const cutout: string;
+export const neon: string;
 export const animate2: string;
 export const charGradient: string;
 export const viewList: string;

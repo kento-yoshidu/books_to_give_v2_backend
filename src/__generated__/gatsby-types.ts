@@ -3414,6 +3414,11 @@ type MarkdownRemarkSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
+type NotFoundQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type NotFoundQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
 type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3421,11 +3426,6 @@ type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'description'>
       & { readonly social: Maybe<Pick<Social, 'twitter'>> }
     )> }> };
-
-type NotFoundQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type NotFoundQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
