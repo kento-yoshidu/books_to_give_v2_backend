@@ -13,31 +13,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50%;
+    width: unquote("max(324px, 50%)");
     img {
       display: block;
+      margin-bottom: 30px;
     }
     button {
       display: block;
       color: #fff;
       text-align: center;
       width: 100%;
-      font-size: 4rem;
+      font-size: clamp(25px, 3vw, 45px);
       margin-top: 20px;
     }
   }
-}
-
-@media screen and (max-width: 768px) {
-  .overlay {
-    .content {
-      width: 90%;
-      img {
-        margin-bottom: 50px;
-      }
-      button {
-        font-size: 2.5rem;
-      }
-    }
-  } 
 }

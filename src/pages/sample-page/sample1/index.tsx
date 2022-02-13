@@ -64,7 +64,6 @@ const Sample1: React.VFC = () => (
         <div className={Styles.wrapper}>
           <div className={Styles.topic}>
             <h2 className={`${Styles.title} ${Styles.topicTitle}`}>初めてのHTML & CSS</h2>
-            <i className="topic-icon fab fa-html5"></i>
             <FontAwesomeIcon icon={faCode} />
             <p className={Styles.topicText}>前提知識はほとんどなくてOKです。HTMLとCSSを使用してWebページを作成します。</p>
             <a className={Styles.topicBtn} href="https://blog.toriwatari.work/series/HelloWeb/page/1/" target="_blink">more</a>

@@ -7,14 +7,15 @@ $sub-color2: darken(#f37335, 10%);
 $dark-color1: #292E49;
 $dark-color2: #536976;
 
+/*
 html {
-  //overflow-x: hidden;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 p {
   line-height: 1.5;
 }
+*/
 
 .header {
   position: relative;
@@ -24,14 +25,12 @@ p {
   background: -webkit-linear-gradient(to left, $main-color1, $main-color2); 
   background: linear-gradient(to left bottom, $main-color1, $main-color2);
   overflow: hidden;
-
   .circle {
     position: absolute;
     top: 50%;
     left: 50%;
     box-shadow: 0 0 10px inset rgba($main-color1, .4);
   }
-
   .circle1 {
     width: 108vh;
     height: 108vh;
@@ -40,7 +39,6 @@ p {
                 opacity 4s forwards;
     border: 100px solid rgba(160, 180, 240, 0.05);
   }
-
   .circle2 {
     width: 130vh;
     height: 116vh;
@@ -49,60 +47,13 @@ p {
                 opacity 6s forwards;
     border: 130px solid rgba(160, 180, 240, 0.05);
   }
-
   .circle3 {
     width: 85vh;
     height: 91vh;
     border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
     animation: circleAnimation1 23s linear infinite,
                 opacity 10s forwards;
-    }
   }
-
-  @keyframes circleAnimation1 {
-    0% {
-      transform: translate(-48%, -55%) rotate(0deg);
-    }
-    25% {
-      transform: translate(-50%, -48%) rotate(180deg);
-    }
-    50% {
-      transform: translate(-51%, -58%) rotate(360deg);
-    }
-    75% {
-      transform: translate(-49%, -62%) rotate(180deg);
-    }
-    100% {
-      transform: translate(-48%, -55%) rotate(0deg)
-    }
-  }
-
-  @keyframes circleAnimation2 {
-    0% {
-      transform: translate(-59%, -53%) rotate(0deg)
-    }
-    25% {
-      transform: translate(-50%, -51%) rotate(180deg);
-    }
-    50% {
-      transform: translate(-51%, -55%) rotate(360deg);
-    }
-    75% {
-      transform: translate(-49%, -59%) rotate(180deg);
-    }
-    100% {
-      transform: translate(-59%, -52%) rotate(0deg)
-    }
-  }
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .text-wrapper {
     position: absolute;
     top: 50%;
@@ -112,28 +63,77 @@ p {
     font-family: Helvetica , "游ゴシック", sans-serif;
     width: 100%;
     .header-title {
-      font-size: 3rem;
+      max-width: 80%;
+      margin: 0 auto 30px;
+      font-size: clamp(20px, 2vw, 30px);
       letter-spacing: 1px;
       text-align: center;
-      margin-bottom: 3vh;
+      border: 1px solid red;
     }
     .product-title {
-      font-size: 8rem;
-      text-align: center;
       width: 100%;
       margin-bottom: 6vh;
+      font-size: clamp(45px, 5vw, 75px);
+      text-align: center;
     }
     .text {
-      font-size: 4.2rem;
-      font-weight: 900;
       display: flex;
       justify-content: space-between;
-      width: 40%;
+      width: unquote("max(242px, 35%)");
       margin: 0 auto 15px;
+      font-size: clamp(22px, 3vw, 42px);
+      font-weight: 900;
     }
   }
+}
 
-@media screen and (max-width: 768px) {
+@keyframes circleAnimation1 {
+  0% {
+    transform: translate(-48%, -55%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -48%) rotate(180deg);
+  }
+  50% {
+    transform: translate(-51%, -58%) rotate(360deg);
+  }
+  75% {
+    transform: translate(-49%, -62%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-48%, -55%) rotate(0deg)
+  }
+}
+
+@keyframes circleAnimation2 {
+  0% {
+    transform: translate(-59%, -53%) rotate(0deg)
+  }
+  25% {
+    transform: translate(-50%, -51%) rotate(180deg);
+  }
+  50% {
+    transform: translate(-51%, -55%) rotate(360deg);
+  }
+  75% {
+    transform: translate(-49%, -59%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-59%, -52%) rotate(0deg)
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
   .header {
     .circle1 {
       width: 88vh;
@@ -150,26 +150,6 @@ p {
       height: 78vh;
       border: 80px solid rgba(160, 180, 240, 0.1);
     }
-
-    .text-wrapper {
-      .header-title {
-        font-size: 2.5rem;
-        width: 80%;
-        font-size: 2rem;  
-        margin: 0 auto 3vh;
-        letter-spacing: 1px;
-      }
-      .product-title {
-        font-size: 4.5rem;
-        line-height: 1.2;
-        letter-spacing: 2px;
-      }
-      .text {
-        font-size: 2.2rem;
-        margin-bottom: 10px;
-        width: 65%;
-      }
-    }
   }
 }
 
@@ -180,7 +160,7 @@ p {
     bottom: 50px;
     text-decoration: none;
     color: #fff;
-    font-size: 1.7rem;
+    font-size: clamp(15px, 1.6vw, 17px);
     font-weight: 900;
     border-radius: 1px;
     padding: 16px 40px;
@@ -189,19 +169,9 @@ p {
     background-size: 200%;
     background-position: right center;
     transition: .3s;
-
     &:hover {
       background-position: left center;
       transform: scale(1.05);
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .btn-wrapper {
-    a {
-      font-size: 1.5rem;
-      padding: 13px 25px;
     }
   }
 }
@@ -211,19 +181,12 @@ p {
   z-index: 1;
   background-color: #fff;
 }
+
 .section-title {
-  margin-bottom: 30px;
   color: #444;
-  font-size: 4.5rem;
+  font-size: clamp(30px, 2.8vw, 45px);
   text-align: center;
   letter-spacing: 3px;
-}
-
-@media screen and (max-width: 768px) {
-  .section-title {
-    font-size: 3rem;
-    margin: 0;
-  }
 }
 
 .contents-section {
@@ -245,7 +208,7 @@ p {
         font-size: 2.3rem;
         font-weight: 900;
         background: -webkit-linear-gradient(90deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
-        -webkit-background-clip: text;//テキストでくり抜く
+        background-clip: text;//テキストでくり抜く
         -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
       }
       .contents-title {
@@ -264,7 +227,7 @@ p {
       width: 35%;
     }
   }
-} //contents-section
+}
 
 .contents-section {
   .contents1,
@@ -300,7 +263,7 @@ p {
   } // contents-01
 } //contents-section
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .contents-section {
     .section-title {
       margin: 0;
@@ -357,7 +320,6 @@ p {
   background-image: url(../svg/section3-bg.svg), linear-gradient(to right, $main-color1, $main-color2);
   display: flex;
   padding: 50px 0 30px;
-
   .section-wrapper {
     display: flex;
     flex-direction: column;
@@ -365,7 +327,6 @@ p {
     align-items: center;
     max-width: 1500px;
     margin: 0 auto;
-
     .introduction {
       margin: 0 auto;
       width: 80%;
@@ -379,7 +340,7 @@ p {
           font-size: 3rem;
           margin-bottom: 20px;
           background: -webkit-linear-gradient(0deg, $sub-color2, $sub-color1);//背景色にグラデーションを指定
-          -webkit-background-clip: text;//テキストでくり抜く
+          background-clip: text;//テキストでくり抜く
           -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
         }
         p {
@@ -387,7 +348,7 @@ p {
           margin-bottom: 10px;
           color: #444;
           font-size: 2rem;
-            font-weight: 900;
+          font-weight: 900;
         }
       }
     }
