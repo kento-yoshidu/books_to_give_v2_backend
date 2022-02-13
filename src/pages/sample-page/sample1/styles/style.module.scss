@@ -15,9 +15,11 @@ $main-color-trans2: rgba(220,20,60,.3);
   z-index: 2;
   .wrapper {
     display: flex;
-    width: unquote("min(92%, 1166px)");
     align-items: center;
+    width: unquote("min(92%, 1166px)");
     margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
     .nav-title {
       height: 70px;
       line-height: 70px;
@@ -66,55 +68,14 @@ $main-color-trans2: rgba(220,20,60,.3);
           &:hover::after {
             width: 130%;
           }
-        } //a
-      } //nav-item
-    } //nav-list
+        }
+      }
+    }
   }
-  &.clone-nav {
-    position: fixed;
-    //最初は-100pxで画面外に隠しとく
-    top: -100px;
-    left: 0;
-    height: 50px;
-    line-height: 50px;
-    transition: all 1s;
-    background: rgba(200,200,200,.1);
-    @media (max-width: 768px) {
-      background: rgba(100, 100, 100, .1);
-      width: 100%;
-    }
-    .nav-title {
-      color: #222;
-      line-height: 50px;
-    }
-    .nav-list {
-      .nav-item {
-        a {
-          color: #222;
-          height: 50px;
-          line-height: 50px;
-          &:hover {
-            color: $main-color;
-          }
-          &::before {
-            top: 12px;
-          }
-          &::after {
-            bottom: 12px;
-          }
-        } //a
-      } //nav-item
-    } //nav-list
-    &.is-fixed-nav {
-      //0を指定して画面上部に配置
-      top: 0;
-    }
-  } //clone-nav
-} //global-nav
+}
 
 @media (max-width:768px) {
   .global-nav {
-    width: 100%;
     .nav-title {
       display: none;
     }
@@ -267,15 +228,15 @@ $main-color-trans2: rgba(220,20,60,.3);
 }
 
 .sec2 {
-  width: 80%;
+  width: unquote("max(75%, 324px)");
   .wrapper {
     display: flex;
     justify-content: center;
     .topic {
       position: relative;
-      padding: 50px 40px 90px;
-      width: 28%;
+      width: unquote("max(28%, 270px)");
       margin: 20px 15px;
+      padding: 50px 40px 90px;
       border:1px solid #bbb;
       .topic-title {
         color: #666;
@@ -283,19 +244,19 @@ $main-color-trans2: rgba(220,20,60,.3);
         text-align: center;
       }
       svg {
-        font-size: 5rem;
         display: block;
-        color: #888;
         margin: 35px auto;
+        color: #888;
+        font-size: clamp(40px, 3vw, 50px);
         text-align: center;
       }
       .topic-text {
-        color: #666;
-        font-size: 1.6rem;
-        line-height: 1.5;
-        letter-spacing: 1px;
         width: 85%;
         margin: 0 auto;
+        color: #666;
+        font-size: clamp(14px, 1.8vw, 16px);
+        line-height: 1.5;
+        letter-spacing: 1px;
       }
       .topic-btn {
         display: inline-block;
@@ -306,7 +267,7 @@ $main-color-trans2: rgba(220,20,60,.3);
         background: #ccc;
         border-radius: 2px;
         color: #444;
-        font-size: 1.5rem;
+        font-size: clamp(14px, 1.5vw, 15.5px);
         text-decoration: none;
         letter-spacing: 1px;
         &:hover {
@@ -319,24 +280,16 @@ $main-color-trans2: rgba(220,20,60,.3);
 
 @media screen and (max-width:768px) {
   .sec2 {
-    width: 95%;
     .wrapper {
       flex-direction: column;
       .topic {
-        width: 75%;
         margin: 10px auto;
         padding: 30px 25px 70px;
-        .topic-icon {
-          font-size: 4rem;
-          margin: 15px 0;
-        }
         .topic-text {
           margin: 20px auto 0;
-          font-size: 1.4rem;
         }
         .topic-btn {
           padding: 7px 13px;
-          font-size: 1.4rem;
         }
       }
     }
