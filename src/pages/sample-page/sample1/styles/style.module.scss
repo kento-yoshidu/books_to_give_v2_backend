@@ -79,7 +79,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     line-height: 50px;
     transition: all 1s;
     background: rgba(200,200,200,.1);
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
       background: rgba(100, 100, 100, .1);
       width: 100%;
     }
@@ -134,7 +134,7 @@ $main-color-trans2: rgba(220,20,60,.3);
           }
         }
       }
-    } //nav-list
+    }
   }
 }
 
@@ -199,7 +199,7 @@ $main-color-trans2: rgba(220,20,60,.3);
   .section-title {
     position: relative;
     display: inline-block;
-    font-size: 5rem;
+    font-size: clamp(30px, 2.6vw, 50px);
     letter-spacing: 5px;
     text-align: center;
     &::before,
@@ -209,7 +209,7 @@ $main-color-trans2: rgba(220,20,60,.3);
       top: 50%;
       transform: translateY(-50%);
       color: $main-color;
-      font-size: 3rem;
+      font-size: clamp(20px, 1.8vw, 30px);
     }
     &::before {
       left: -5rem;
@@ -220,15 +220,10 @@ $main-color-trans2: rgba(220,20,60,.3);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .section-title-parent {
     margin: 0 auto 20px;
     .section-title {
-      font-size: 3rem;
-      &::before,
-      &::after {
-        font-size: 2rem;
-      }
       &::before {
         left: -3rem
       }
@@ -248,7 +243,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     .intro-text {
       margin: 10px 30px;
       width: 40%;
-      font-size: 2rem;
+      font-size: clamp(17px, 1.6vw, 20px);
       letter-spacing: 1px;
       line-height: 1.5;
       text-indent: .8rem;
@@ -265,7 +260,6 @@ $main-color-trans2: rgba(220,20,60,.3);
       .intro-text {
         width: 95%;
         margin: 10px auto 30px;
-        font-size: 1.7rem;
         line-height: 1.6;
       }
     }
@@ -285,7 +279,7 @@ $main-color-trans2: rgba(220,20,60,.3);
       border:1px solid #bbb;
       .topic-title {
         color: #666;
-        font-size: 2.8rem;
+        font-size: clamp(20px, 1.8vw, 28px);
         text-align: center;
       }
       svg {
@@ -332,9 +326,6 @@ $main-color-trans2: rgba(220,20,60,.3);
         width: 75%;
         margin: 10px auto;
         padding: 30px 25px 70px;
-        .topic-title {
-          font-size: 2rem;
-        }
         .topic-icon {
           font-size: 4rem;
           margin: 15px 0;
@@ -462,7 +453,6 @@ $main-color-trans2: rgba(220,20,60,.3);
       margin: 0 auto;
       width: 90%;
       flex-wrap: wrap;
-
       .footer-section {
         margin: 0 3px;
         padding: 0;
@@ -483,5 +473,5 @@ $main-color-trans2: rgba(220,20,60,.3);
         font-size: 1.5rem;
       }
     }
-  }// footer
+  }
 }

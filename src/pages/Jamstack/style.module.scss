@@ -32,7 +32,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		li {
 			a {
 				color: #fff;
-				font-size: 1.8rem;
+				font-size: clamp(15px, 1.4vw, 18px);
 				font-weight: bold;
 				letter-spacing: 1px;
 				text-decoration: none;
@@ -49,9 +49,6 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
       li {
         margin-right: 20px;
         font-weight: normal;
-				a {
-					font-size: 1.5rem;
-				}
       }
     }
   }
@@ -70,12 +67,12 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	h1 {
 		margin-bottom: 4vh;
 		color: rgb(226, 232, 240);
-		font-size: 3rem;
+    font-size: clamp(20px, 2vw, 30px);
 		letter-spacing: 2px;
 	}
 	p {
 		margin-bottom: 6vh;
-		font-size: 1.8rem;
+    font-size: clamp(12px, 2vw, 18px);
 		text-align: center;
 		letter-spacing: 1px;
 		width: 50%;
@@ -110,7 +107,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 		li {
 			position: relative;
 			text-align: center;
-			font-size: 2rem;
+      font-size: clamp(15px, 2vw, 20px);
 			font-weight: 500;
 			letter-spacing: 1px;
 			z-index: 1;
@@ -119,7 +116,7 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	.scroll {
 		position: absolute;
 		bottom: 8vh;
-		font-size: 1.8rem;
+    font-size: clamp(15px, 1.9vw, 18px);
 		font-weight: 500;
 		border-bottom: 1.5px solid #fff;
 	}
@@ -139,11 +136,9 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
     margin-top: 30px;
 		h1 {
 			width: 80%;
-			font-size: 2rem;
 		}
 		p {
 			width: 80%;
-			font-size: 1.2rem;
 		}
 		.box {
 			width: 65%;
@@ -151,23 +146,14 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 			&::before {
 				width: 150px;
 			}
-			li {
-				font-size: 1.5rem;
-			}
-		}
-		.scroll {
-			font-size: 1.5rem;
 		}
 	}
 	
 }
 
-.cutout {
+.neon {
 	font-size: 2em;
 	color: transparent;
-  /*
-	-webkit-text-stroke: 1px $main-color;
-  */
   animation: animate2 3s linear infinite;
 }
 
@@ -232,19 +218,11 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 	.section-title {
 		color: transparent;
 		-webkit-text-stroke: 1px #fff;
-		font-size: 5rem;
+    font-size: clamp(35px, 2.8vw, 50px);
 		font-weight: 100;
 		letter-spacing: 3px;
 		text-align: center;
 	}
-}
-
-@media screen and (max-width: 768px) {
-	.section {
-		.section-title {
-			font-size: 3.5rem;
-		}
-  }
 }
 
 .view {
@@ -663,20 +641,20 @@ $gradient2: linear-gradient(315deg, #0575E6, #00F260);
 @keyframes animate2 {
   0% {
     color: #fff;
-    filter: blur(0.1px) hue-rotate(0deg);
+    filter: blur(0.1px) hue-rotate(90deg);
     text-shadow:
-      0 0 2px #00b3ff,
-      0 0 5px #00b3ff,
       0 0 10px #00b3ff,
-      0 0 5px #00b3ff,
-      0 0 5px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 30px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 50px #00b3ff,
   }
   100% {
     color: #fff;
-    filter: blur(0.1px) hue-rotate(360deg);
+    filter: blur(0.1px) hue-rotate(160deg);
     text-shadow:
-      0 0 2px #00b3ff,
-      0 0 5px #00b3ff,
-      0 0 12px #00b3ff,
+      0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 30px #00b3ff,
   }
 }
