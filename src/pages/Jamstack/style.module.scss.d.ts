@@ -31,4 +31,3 @@ export const page4: string;
 export const page5: string;
 export const page6: string;
 export const page7: string;
-export const test: string;
