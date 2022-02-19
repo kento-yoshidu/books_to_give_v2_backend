@@ -7,9 +7,9 @@ import * as FooterStyles from "../scss/footer.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTwitter,
-          faFacebook,
-          faInstagram
-      } from "@fortawesome/free-brands-svg-icons"
+  faFacebook,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 
@@ -62,7 +62,7 @@ const Footer = () => (
         <li><a href="#">会社概要</a></li>
       </ul>
 
-      <div className={Styles.footerCopy}>
+      <div>
         @ toriwatari
       </div>
     </div>

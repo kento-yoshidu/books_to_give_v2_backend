@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image"
 
 import Slider from "react-slick"
 
@@ -12,42 +12,42 @@ const SlickConfig = {
   speed: 750,
   slidesToShow: 1,
   slidesToScroll: 1
-};
+}
 
 import * as Styles from "./slick.module.scss"
 
 const ReactSlick = () => (
   <>
-  <div className={Styles.wrapper}>
-    <Slider {...SlickConfig}>
-      <div className={Styles.slide}>
-        <StaticImage
-          src="../src/images/live_photograph/live1.jpg"
-          alt="hoge"
-          placeholder="blurred"
-          layout="fullWidth"
-        />
-      </div>
+    <div className={Styles.wrapper}>
+      <Slider {...SlickConfig}>
+        <div className={Styles.slide}>
+          <StaticImage
+            src="../src/images/live_photograph/live1.jpg"
+            alt="hoge"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
 
-      <div className={Styles.slide}>
-        <StaticImage
-          src="../src/images/live_photograph/live2.jpg"
-          alt="hoge"
-          placeholder="blurred"
-          layout="fullWidth"
-        />
-      </div>
+        <div className={Styles.slide}>
+          <StaticImage
+            src="../src/images/live_photograph/live2.jpg"
+            alt="hoge"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
 
-      <div className={Styles.slide}>
-        <StaticImage
-          src="../src/images/live_photograph/live3.jpg"
-          alt="hoge"
-          placeholder="blurred"
-          layout="fullWidth"
-        />
-      </div>
-    </Slider>
-  </div>
+        <div className={Styles.slide}>
+          <StaticImage
+            src="../src/images/live_photograph/live3.jpg"
+            alt="hoge"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
+      </Slider>
+    </div>
   </>
 )
 

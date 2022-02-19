@@ -8,7 +8,7 @@ interface Props {
   path: string
 }
 
-const Button: React.VFC<Props> = ({text, path}) => {
+const Button: React.VFC<Props> = ({ text, path }) => {
   return (
     <div className={Styles.wrapper}>
       <Link
