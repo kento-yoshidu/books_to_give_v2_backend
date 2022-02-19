@@ -18,189 +18,188 @@ const Modal = () => {
   }
 
   return (
-  <>
+    <>
+      {show &&
+        <div
+          className={ModalStyles.overlay}
+          onClick={toggleShow}
+        >
+          <div
+            className={ModalStyles.content}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {imgNumber === 1 &&
+              <StaticImage
+                src={"./images/image01.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
 
-  {show && 
-    <div
-      className={ModalStyles.overlay}
-      onClick={toggleShow}
-    >
-      <div
-        className={ModalStyles.content}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {imgNumber === 1 &&
-          <StaticImage
-            src={`./images/image01.jpg`}
-            alt="hoge"
+            {imgNumber === 2 &&
+              <StaticImage
+                src={"./images/image02.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+
+            {imgNumber === 3 &&
+              <StaticImage
+                src={"./images/image03.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+
+            {imgNumber === 4 &&
+              <StaticImage
+                src={"./images/image04.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+
+            {imgNumber === 5 &&
+              <StaticImage
+                src={"./images/image05.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+
+            {imgNumber === 6 &&
+              <StaticImage
+                src={"./images/image06.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+
+            {imgNumber === 7 &&
+              <StaticImage
+                src={"./images/image07.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+
+            {imgNumber === 8 &&
+              <StaticImage
+                src={"./images/image08.jpg"}
+                alt="hoge"
+                className={Styles.imgWrapper}
+                layout="fullWidth"
+              />
+            }
+            <button onClick={toggleShow}>CLOSE</button>
+          </div>
+        </div>
+      }
+
+      <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
+        <div className={Styles.sectionTitleParent}>
+          <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
+        </div>
+
+        <div className={Styles.wrapper}>
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image01.jpg"
+              alt="hoge"
+              data-img="1"
+            />
+          </div>
 
-        {imgNumber === 2 &&
-          <StaticImage
-            src={`./images/image02.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image02.jpg"
+              alt="hoge"
+              data-img="2"
+            />
+          </div>
 
-        {imgNumber === 3 &&
-          <StaticImage
-            src={`./images/image03.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image03.jpg"
+              alt="hoge"
+              data-img="3"
+            />
+          </div>
 
-        {imgNumber === 4 &&
-          <StaticImage
-            src={`./images/image04.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image04.jpg"
+              alt="hoge"
+              data-img="4"
+            />
+          </div>
 
-        {imgNumber === 5 &&
-          <StaticImage
-            src={`./images/image05.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image05.jpg"
+              alt="hoge"
+              data-img="5"
+            />
+          </div>
 
-        {imgNumber === 6 &&
-          <StaticImage
-            src={`./images/image06.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image06.jpg"
+              alt="hoge"
+              data-img="6"
+            />
+          </div>
 
-        {imgNumber === 7 &&
-          <StaticImage
-            src={`./images/image07.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
+          >
+            <StaticImage
+              src="./images/image07.jpg"
+              alt="hoge"
+              data-img="7"
+            />
+          </div>
 
-        {imgNumber === 8 &&
-          <StaticImage
-            src={`./images/image08.jpg`}
-            alt="hoge"
+          <div
+            onClick={toggleShow}
             className={Styles.imgWrapper}
-            layout="fullWidth"
-          />
-        }
-        <button onClick={toggleShow}>CLOSE</button>
-      </div>
-    </div>
-  }
-
-  <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
-    <div className={Styles.sectionTitleParent}>
-      <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
-    </div>
-
-    <div className={Styles.wrapper}>
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image01.jpg"
-          alt="hoge"
-          data-img="1"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image02.jpg"
-          alt="hoge"
-          data-img="2"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image03.jpg"
-          alt="hoge"
-          data-img="3"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image04.jpg"
-          alt="hoge"
-          data-img="4"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image05.jpg"
-          alt="hoge"
-          data-img="5"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image06.jpg"
-          alt="hoge"
-          data-img="6"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image07.jpg"
-          alt="hoge"
-          data-img="7"
-        />
-      </div>
-
-      <div
-        onClick={toggleShow}
-        className={Styles.imgWrapper}
-      >
-        <StaticImage
-          src="./images/image08.jpg"
-          alt="hoge"
-          data-img="8"
-        />
-      </div>
-    </div>
-  </section>
-  </>
+          >
+            <StaticImage
+              src="./images/image08.jpg"
+              alt="hoge"
+              data-img="8"
+            />
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 

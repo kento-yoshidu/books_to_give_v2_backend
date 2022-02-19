@@ -24,8 +24,10 @@
   "rules": {
     "quotes": ["warn", "double"],
     "semi": ["warn", "never"],
-    "linebreak-style": ["off"],
     "object-curly-spacing": ["warn", "always"],
-    "max-len": "off"
+    "comma-dangle": ["warn", "never"],
+    "max-len": "off",
+    "linebreak-style": ["off"],
+    "require-jsdoc": "off"
   }
 }

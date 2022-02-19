@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as Styles from "./scss/style.module.scss"
 
 const Sample4 = () => (
-	<>
+  <>
     <header className={Styles.header}>
       <h1 className={Styles.siteTitle}>
         Sample4 Web site
@@ -63,19 +63,15 @@ const Sample4 = () => (
       </main>
 
       <div className={Styles.sideMenu}>
-  side
+        side
       </div>
 
     </div>
+
     <footer className={Styles.footer}>
-  footer
+      footer
     </footer>
-</>
+  </>
 )
 
 export default Sample4
-
-{/*https://dhf.co.jp/-->
-
-<!--https://www.mitsuoka-motor.com/lineup/viewtnostalgia/-->
-*/}
