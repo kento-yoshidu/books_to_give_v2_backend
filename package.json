@@ -45,8 +45,14 @@
   "devDependencies": {
     "@types/react-helmet": "^6.1.4",
     "@types/react-slick": "^0.23.7",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
     "esbuild": "^0.13.8",
     "esbuild-register": "^3.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.28.0",
     "gatsby-plugin-dts-css-modules": "^2.2.0",
     "gatsby-plugin-sass": "^4.14.0",
     "node-sass": "^6.0.1",
@@ -73,6 +79,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "eslint": "eslint src/**/*.{js,jsx,ts,tsx} gatsby-*"
   }
 }
