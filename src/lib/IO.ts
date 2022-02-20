@@ -4,7 +4,7 @@ const InterSectionObserver = () => {
   const options: IntersectionObserverInit = {
     root: null,
     rootMargin: "0%",
-    threshold: 0,
+    threshold: 0
   }
 
   const observer = new IntersectionObserver(doWhenIntersect, options)

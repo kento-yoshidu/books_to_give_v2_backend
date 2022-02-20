@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
@@ -13,7 +13,7 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const handleClick = () => {
-  document.querySelector('html')?.classList.toggle(HeaderStyles.open)
+  document.querySelector("html")?.classList.toggle(HeaderStyles.open)
 }
 
 const Header = () => (
