@@ -1,10 +1,10 @@
 $main-color: #dc143c;
 
-$main-color-trans: rgba(220,20,60,.5);
-$main-color-trans2: rgba(220,20,60,.3);
+$main-color-trans: rgba(220, 20, 60, 0.5);
+$main-color-trans2: rgba(220, 20, 60, 0.3);
 
 .wrapper {
-  font-family: 'Amiri', serif;
+  font-family: Amiri, serif;
 }
 
 .global-nav {
@@ -13,6 +13,7 @@ $main-color-trans2: rgba(220,20,60,.3);
   background-color: #fff;
   border-bottom: 1.5px solid #eee;
   z-index: 2;
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -20,6 +21,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     margin: auto;
     overflow-x: auto;
     white-space: nowrap;
+
     .nav-title {
       height: 70px;
       line-height: 70px;
@@ -29,12 +31,15 @@ $main-color-trans2: rgba(220,20,60,.3);
       font-weight: 500;
       letter-spacing: 3px;
     }
+
     .nav-list {
       padding: 0;
       list-style: none;
       display: flex;
+
       .nav-item {
         padding: 0 14px;
+
         a {
           position: relative;
           display: block;
@@ -44,9 +49,11 @@ $main-color-trans2: rgba(220,20,60,.3);
           font-weight: 500;
           text-decoration: none;
           transition: .3s;
+
           &:hover {
             color: $main-color;
           }
+
           &::before,
           &::after {
             position: absolute;
@@ -58,12 +65,15 @@ $main-color-trans2: rgba(220,20,60,.3);
             transition: .3s;
             transform: translateX(-50%);
           }
+
           &::before {
             top: 20px;
           }
+
           &::after {
             bottom: 20px;
           }
+
           &:hover::before,
           &:hover::after {
             width: 130%;
@@ -79,17 +89,22 @@ $main-color-trans2: rgba(220,20,60,.3);
     .nav-title {
       display: none;
     }
+
     .nav-list {
       justify-content: center;
       margin: 0 auto;
+
       .nav-item {
         line-height: 30px;
         margin: 0;
+
         a {
           font-size: 1.2rem;
+
           &::before {
             top: 5px;
           }
+
           &::after {
             bottom: 5px;
           }
@@ -107,6 +122,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     margin: 70px 0 0;
     text-align: center;
   }
+
   .imgWrapper {
     display: block;
     width: 80%;
@@ -116,11 +132,12 @@ $main-color-trans2: rgba(220,20,60,.3);
   }
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
   .header {
     .header-title {
       margin: 30px 0 0;
     }
+
     .imgWrapper {
       width: 90%;
       max-width: none;
@@ -129,7 +146,7 @@ $main-color-trans2: rgba(220,20,60,.3);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .main {
     padding-bottom: 50px;
   }
@@ -141,7 +158,7 @@ $main-color-trans2: rgba(220,20,60,.3);
   margin: 60px auto;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .section {
     padding-top: 30px;
     margin: 30px auto 0;
@@ -157,12 +174,14 @@ $main-color-trans2: rgba(220,20,60,.3);
   text-align: center;
   margin: 0 auto 20px;
   width: 90%;
+
   .section-title {
     position: relative;
     display: inline-block;
     font-size: clamp(30px, 2.6vw, 50px);
     letter-spacing: 5px;
     text-align: center;
+
     &::before,
     &::after {
       content: "◇";
@@ -172,9 +191,11 @@ $main-color-trans2: rgba(220,20,60,.3);
       color: $main-color;
       font-size: clamp(20px, 1.8vw, 30px);
     }
+
     &::before {
       left: -5rem;
     }
+
     &::after {
       right: -5rem;
     }
@@ -184,10 +205,12 @@ $main-color-trans2: rgba(220,20,60,.3);
 @media (max-width: 768px) {
   .section-title-parent {
     margin: 0 auto 20px;
+
     .section-title {
       &::before {
         left: -3rem
       }
+
       &::after {
         right: -3rem;
       }
@@ -201,6 +224,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     width: 80%;
     display: flex;
     justify-content: center;
+
     .intro-text {
       margin: 10px 30px;
       width: 40%;
@@ -218,6 +242,7 @@ $main-color-trans2: rgba(220,20,60,.3);
       margin: 0 auto;
       width: 90%;
       flex-direction: column;
+
       .intro-text {
         width: 95%;
         margin: 10px auto 30px;
@@ -229,20 +254,24 @@ $main-color-trans2: rgba(220,20,60,.3);
 
 .sec2 {
   width: unquote("max(75%, 324px)");
+
   .wrapper {
     display: flex;
     justify-content: center;
+
     .topic {
       position: relative;
       width: unquote("max(28%, 270px)");
       margin: 20px 15px;
       padding: 50px 40px 90px;
       border:1px solid #bbb;
+
       .topic-title {
         color: #666;
         font-size: clamp(20px, 1.8vw, 28px);
         text-align: center;
       }
+
       svg {
         display: block;
         margin: 35px auto;
@@ -250,6 +279,7 @@ $main-color-trans2: rgba(220,20,60,.3);
         font-size: clamp(40px, 3vw, 50px);
         text-align: center;
       }
+
       .topic-text {
         width: 85%;
         margin: 0 auto;
@@ -258,6 +288,7 @@ $main-color-trans2: rgba(220,20,60,.3);
         line-height: 1.5;
         letter-spacing: 1px;
       }
+
       .topic-btn {
         display: inline-block;
         position: absolute;
@@ -270,6 +301,7 @@ $main-color-trans2: rgba(220,20,60,.3);
         font-size: clamp(14px, 1.5vw, 15.5px);
         text-decoration: none;
         letter-spacing: 1px;
+
         &:hover {
           color: $main-color;
         }
@@ -278,16 +310,19 @@ $main-color-trans2: rgba(220,20,60,.3);
   }
 }
 
-@media screen and (max-width:768px) {
+@media (max-width:768px) {
   .sec2 {
     .wrapper {
       flex-direction: column;
+
       .topic {
         margin: 10px auto;
         padding: 30px 25px 70px;
+
         .topic-text {
           margin: 20px auto 0;
         }
+
         .topic-btn {
           padding: 7px 13px;
         }
@@ -298,9 +333,11 @@ $main-color-trans2: rgba(220,20,60,.3);
 
 .sec3 {
   padding-bottom: 50px;
+
   .section-title-parent {
     margin-bottom: 60px;
   }
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -308,6 +345,7 @@ $main-color-trans2: rgba(220,20,60,.3);
     gap: 20px;
     width: 90%;
     margin: 0 auto 40px;
+
     .imgWrapper {
       width: 23%;
       cursor: pointer;

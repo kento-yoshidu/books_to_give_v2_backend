@@ -1,8 +1,13 @@
 {
   "extends": "stylelint-config-standard",
   "defaultSeverity": "warning",
-  "ignoreFiles": "src/scss/_reset.scss",
+  "ignoreFiles": [
+    "src/scss/_reset.scss",
+    "node_modules/**"
+  ],
   "rules": {
-    "indentation": 2
+    "indentation": 2,
+    "at-rule-no-unknown": null
+
   }
 }
