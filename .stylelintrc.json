@@ -7,7 +7,10 @@
   ],
   "rules": {
     "indentation": 2,
-    "at-rule-no-unknown": null
-
+    "alpha-value-notation": "number",
+    "color-function-notation": "legacy",
+    "at-rule-no-unknown": null,
+    "max-line-length": null,
+    "function-no-unknown": null
   }
 }

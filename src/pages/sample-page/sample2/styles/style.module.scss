@@ -74,7 +74,7 @@ $sub-color: #ffd700;
     margin-bottom: 50px;
     color: #444;
     text-align: center;
-    font-family: 'Bitter', serif;
+    font-family: Bitter, serif;
     font-weight: 100;
   }
 }
@@ -661,7 +661,7 @@ $sub-color: #ffd700;
       width: 80%;
       margin: 50px auto 25px;
       font-size: 3rem;
-      line-height: 1.4;;
+      line-height: 1.4;
     }
 
     .wrapper {
@@ -674,7 +674,7 @@ $sub-color: #ffd700;
         width: 80%;
         margin: 0 auto 10px;
         border-bottom: 1.5px solid #555;
-        box-shadow: 0px 1px 0px $main-color2;
+        box-shadow: 0 1px 0 $main-color2;
       }
 
       .list {
@@ -730,6 +730,7 @@ $sub-color: #ffd700;
       font-size: 1.6rem;
     }
   }
+
   .member-section {
     padding: 10px 5px 20px;
 
@@ -758,9 +759,9 @@ $sub-color: #ffd700;
 }
 
 .nogi-base {
-  background: linear-gradient(to bottom right, rgba(255, 255,255, 0) 50%, $main-color 50.3%) no-repeat bottom right/100% 100%;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0%) 50%, $main-color 50.3%) no-repeat bottom right/100% 100%;
   position: relative;
-  font-family: 'Bitter', serif;
+  font-family: Bitter, serif;
 }
 
 .nogi-before {
@@ -784,18 +785,21 @@ $sub-color: #ffd700;
 
 .header-nogi {
   @extend .nogi-base;
+
   width: 60px;
   height: 63px;
   margin: -10px 20px 0 -10px;
 
   &::before {
     @extend .nogi-before;
+
     font-size: 1.2rem;
     bottom: -12px;
   }
 
   &::after {
     @extend .nogi-after;
+
     font-size: 1.5rem;
   }
 }
@@ -814,18 +818,21 @@ $sub-color: #ffd700;
 
 .footer-nogi {
   @extend .nogi-base;
+
   width: 100px;
   height: 104px;
   margin: 0 auto 100px;
 
   &::before {
     @extend .nogi-before;
+
     font-size: 2rem;
     bottom: -22px;
   }
 
   &::after {
     @extend .nogi-after;
+
     font-size: 2.5rem;
   }
 }
