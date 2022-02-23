@@ -23,33 +23,39 @@ const Jamstack = () => {
       <Seo
         title="JamstackなWebサイトを構築してみた"
       />
+
       <div className={Styles.allWrapper}>
         <nav className={Styles.nav}>
-          <ul>
-            <li><Link to="#">HOME</Link></li>
-            <li><a href="#">Architecture</a></li>
-            <li><a href="#">Sample Sites</a></li>
-            <li><a href="#">Blog Article</a></li>
+          <ul className={Styles.navList}>
+            <li className={Styles.navItem}><Link to="#">HOME</Link></li>
+            <li className={Styles.navItem}><a href="#">Architecture</a></li>
+            <li className={Styles.navItem}><a href="#">Sample Sites</a></li>
+            <li className={Styles.navItem}><a href="#">Blog Article</a></li>
           </ul>
         </nav>
 
         <header className={`${Styles.header} ${Styles.view}`} id="view1">
-          <h1><span className={Styles.neon}>Jamstack</span>なWebサイトを構築してみた</h1>
-          <p>2021年度中に10個の<span className={Styles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+          <h1 className={Styles.headerTitle}>
+            <span className={Styles.neon}>Jamstack</span>なWebサイトを構築してみた
+          </h1>
 
-          <ul className={Styles.box}>
-            <li>Static Site Generator</li>
-            <li><span className={Styles.charGradient}>&</span></li>
-            <li>HeadlessCMS<br />Text file</li>
-            <li><span className={Styles.charGradient}>&</span></li>
-            <li>Hosting Web Service</li>
+          <p className={Styles.headerText}>2021年度中に10個の<span className={Styles.neon}>Jamstack</span>サイトを作成することを目標にしています(努力目標)。</p>
+
+          <ul className={Styles.headerBox}>
+            <li className={Styles.boxItem}>Static Site Generator</li>
+            <li className={Styles.boxItem}><span className={Styles.charGradient}>&</span></li>
+            <li className={Styles.boxItem}>HeadlessCMS<br />Text file</li>
+            <li className={Styles.boxItem}><span className={Styles.charGradient}>&</span></li>
+            <li className={Styles.boxItem}>Hosting Web Service</li>
           </ul>
 
           <div className={Styles.scroll}>SCROLL</div>
         </header>
 
         <ol id="viewList" className={Styles.viewList}>
-          <li data-li="view1">
+          <li
+            data-li="view1"
+            className={Styles.viewListItem}>
             <a href="#view1">
               <HomeOutline
                 height="30px"
@@ -57,7 +63,10 @@ const Jamstack = () => {
               />
             </a>
           </li>
-          <li data-li="view2">
+          <li
+            data-li="view2"
+            className={Styles.viewListItem}
+          >
             <a href="#view2">
               <SettingsOutline
                 height="30px"
@@ -65,7 +74,11 @@ const Jamstack = () => {
               />
             </a>
           </li>
-          <li data-li="view3">
+
+          <li
+            data-li="view3"
+            className={Styles.viewListItem}
+          >
             <a href="#view3">
               <GlobeOutline
                 height="30px"
@@ -73,7 +86,11 @@ const Jamstack = () => {
               />
             </a>
           </li>
-          <li data-li="view4">
+
+          <li
+            data-li="view4"
+            className={Styles.viewListItem}
+          >
             <a href="#view4">
               <DocumentTextOutline
                 height="30px"

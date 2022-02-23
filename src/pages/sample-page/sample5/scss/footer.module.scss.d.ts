@@ -4,3 +4,4 @@ export const footerContainer: string;
 export const footerSns: string;
 export const footerMenu: string;
 export const footerSite: string;
+export const footersns: string;
