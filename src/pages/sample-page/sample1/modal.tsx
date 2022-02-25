@@ -104,12 +104,12 @@ const Modal = () => {
         </div>
       }
 
-      <section className={`${Styles.section} ${Styles.sec3}`} id="photograph">
+      <section className={Styles.section} id="photograph">
         <div className={Styles.sectionTitleParent}>
           <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>Photograph</h2>
         </div>
 
-        <div className={Styles.wrapper}>
+        <div className={Styles.photosWrapper}>
           <div
             onClick={toggleShow}
             className={Styles.imgWrapper}

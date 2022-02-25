@@ -46,99 +46,100 @@ const Sample2 = () => (
 
       <section className={`${Styles.discSection} ${Styles.section}`} id="newRelease">
         <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>New R<span className={Styles.purple}>el</span>ease</h2>
-        <div className={Styles.wrapper}>
-          <Tab.Group>
-            <div className={Styles.wrapper}>
-              <Tab.List
-                className={Styles.thumList}
-              >
-                <Tab>
+
+        <Tab.Group>
+          <div className={Styles.discWrapper}>
+            <Tab.List
+              className={Styles.thumList}
+            >
+              <Tab>
+                <StaticImage
+                  src="./src/images/disc/01.jpg"
+                  className={Styles.thum}
+                  alt="hoge"
+                />
+              </Tab>
+              <Tab>
+                <StaticImage
+                  src="./src/images/disc/02.jpg"
+                  className={Styles.thum}
+                  alt="hoge"
+                />
+              </Tab>
+              <Tab>
+                <StaticImage
+                  src="./src/images/disc/03.jpg"
+                  className={Styles.thum}
+                  alt="hoge"
+                />
+              </Tab>
+            </Tab.List>
+
+            <Tab.Panels
+              className={Styles.detail}
+            >
+              <Tab.Panel className={Styles.discItem}>
+                <p>2020.11.01 New Single</p>
+                <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
+                <div className={Styles.discWrapper}>
                   <StaticImage
                     src="./src/images/disc/01.jpg"
-                    className={Styles.thum}
                     alt="hoge"
+                    className={Styles.discImgWrapper}
                   />
-                </Tab>
-                <Tab>
+                  <ol className={Styles.musicList}>
+                    <li><p className={Styles.info}>PTNN38887-1022</p></li>
+                    <li><p className={Styles.info}>税込 : 1,895円</p></li>
+                    <li>1. 死ぬまで愛して</li>
+                    <li>2. ギャラクティカ銀河</li>
+                    <li>3. アイスホッケーの恋</li>
+                    <li>4. OL人生</li>
+                  </ol>
+                </div>
+              </Tab.Panel>
+
+              <Tab.Panel className={Styles.discItem}>
+                <p>2020.11.01 New Single</p>
+                <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-B</p>
+                <div className={Styles.discWrapper}>
                   <StaticImage
                     src="./src/images/disc/02.jpg"
-                    className={Styles.thum}
                     alt="hoge"
+                    className={Styles.discImgWrapper}
                   />
-                </Tab>
-                <Tab>
+                  <ol className={Styles.musicList}>
+                    <li><p className={Styles.info}>PTNN38887-1023</p></li>
+                    <li><p className={Styles.info}>税込 : 1,895円</p></li>
+                    <li>1. 死ぬまで愛して</li>
+                    <li>2. ロマンス浮船</li>
+                    <li>3. ケチャップ濃い目</li>
+                    <li>4. ピンクの画鋲を踏んだなら</li>
+                  </ol>
+                </div>
+              </Tab.Panel>
+
+              <Tab.Panel className={Styles.discItem}>
+                <p>2020.11.01 New Single</p>
+                <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-C</p>
+                <div className={Styles.discWrapper}>
                   <StaticImage
                     src="./src/images/disc/03.jpg"
-                    className={Styles.thum}
                     alt="hoge"
+                    className={Styles.discImgWrapper}
                   />
-                </Tab>
-              </Tab.List>
-
-              <Tab.Panels
-                className={Styles.detail}
-              >
-                <Tab.Panel className={Styles.item}>
-                  <p>2020.11.01 New Single</p>
-                  <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
-                  <div className={Styles.wrapper}>
-                    <StaticImage
-                      src="./src/images/disc/01.jpg"
-                      alt="hoge"
-                      className={Styles.imgWrapper}
-                    />
-                    <ol>
-                      <li><p className={Styles.info}>PTNN38887-1022</p></li>
-                      <li><p className={Styles.info}>税込 : 1,895円</p></li>
-                      <li>1. 死ぬまで愛して</li>
-                      <li>2. ギャラクティカ銀河</li>
-                      <li>3. アイスホッケーの恋</li>
-                      <li>4. OL人生</li>
-                    </ol>
-                  </div>
-                </Tab.Panel>
-                <Tab.Panel className={Styles.item}>
-                  <p>2020.11.01 New Single</p>
-                  <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-B</p>
-                  <div className={Styles.wrapper}>
-                    <StaticImage
-                      src="./src/images/disc/02.jpg"
-                      alt="hoge"
-                      className={Styles.imgWrapper}
-                    />
-                    <ol>
-                      <li><p className={Styles.info}>PTNN38887-1023</p></li>
-                      <li><p className={Styles.info}>税込 : 1,895円</p></li>
-                      <li>1. 死ぬまで愛して</li>
-                      <li>2. ロマンス浮船</li>
-                      <li>3. ケチャップ濃い目</li>
-                      <li>4. ピンクの画鋲を踏んだなら</li>
-                    </ol>
-                  </div>
-                </Tab.Panel>
-                <Tab.Panel className={Styles.item}>
-                  <p>2020.11.01 New Single</p>
-                  <p className={Styles.title}>死ぬまで<span className={Styles.purple}>愛</span>して Type-C</p>
-                  <div className={Styles.wrapper}>
-                    <StaticImage
-                      src="./src/images/disc/03.jpg"
-                      alt="hoge"
-                      className={Styles.imgWrapper}
-                    />
-                    <ol>
-                      <li><p className={Styles.info}>PTNN38887-1024</p></li>
-                      <li><p className={Styles.info}>税込 : 1,895円</p></li>
-                      <li>1. 死ぬまで愛して</li>
-                      <li>2. 私の父は結界師</li>
-                      <li>3. </li>
-                      <li>4. </li>
-                    </ol>
-                  </div>
-                </Tab.Panel>
-              </Tab.Panels>
-            </div>
-          </Tab.Group>
-        </div>
+                  <ol className={Styles.musicList}>
+                    <li><p className={Styles.info}>PTNN38887-1024</p></li>
+                    <li><p className={Styles.info}>税込 : 1,895円</p></li>
+                    <li>1. 死ぬまで愛して</li>
+                    <li>2. 私の父は結界師</li>
+                    <li>3. </li>
+                    <li>4. </li>
+                  </ol>
+                </div>
+              </Tab.Panel>
+            </Tab.Panels>
+          </div>
+        </Tab.Group>
       </section>
 
       <section className={`${Styles.section} ${Styles.contentsSection}`} id="contents">
@@ -147,13 +148,14 @@ const Sample2 = () => (
           className={Styles.contents}
           href="https://blog.toriwatari.work/series/GitAdvance/page/1/"
           target="_blank"
+          rel="noreferrer"
         >
           <StaticImage
             src="src/images/news/news1.jpg"
             alt="hoge"
           />
           <div className={Styles.contentsWrapper}>
-            <div className={Styles.titleWrapper}>
+            <div className={Styles.contentsTitleWrapper}>
               <p className={Styles.contentsTitle}>Git中級者を目指す</p>
               <time>2020.12.03</time>
             </div>
@@ -169,6 +171,7 @@ const Sample2 = () => (
             className={Styles.contents}
             href="https://blog.toriwatari.work/series/HelloWeb/page/1/"
             target="_blank"
+            rel="noreferrer"
           >
             <StaticImage
               src="src/images/news/news2.jpg"
@@ -176,7 +179,7 @@ const Sample2 = () => (
               className={Styles.imgWrapper}
             />
             <div className={Styles.contentsWrapper}>
-              <div className={Styles.titleWrapper}>
+              <div className={Styles.contentsTitleWrapper}>
                 <p className={Styles.contentsTitle}>初めてのHTML & CSS</p>
                 <time>2019.1.26</time>
               </div>
@@ -195,7 +198,7 @@ const Sample2 = () => (
               className={Styles.imgWrapper}
             />
             <div className={Styles.contentsWrapper}>
-              <div className={Styles.titleWrapper}>
+              <div className={Styles.contentsTitleWrapper}>
                 <p className={Styles.contentsTitle}>Flexboxをマスターする</p>
                 <time>2019.1.26</time>
               </div>
@@ -212,7 +215,7 @@ const Sample2 = () => (
               className={Styles.imgWrapper}
             />
             <div className={Styles.contentsWrapper}>
-              <div className={Styles.titleWrapper}>
+              <div className={Styles.contentsTitleWrapper}>
                 <p className={Styles.contentsTitle}>柱時計と互換性のある電子</p>
                 <time>2019.1.26</time>
               </div>
@@ -227,7 +230,7 @@ const Sample2 = () => (
               className={Styles.imgWrapper}
             />
             <div className={Styles.contentsWrapper}>
-              <div className={Styles.titleWrapper}>
+              <div className={Styles.contentsTitleWrapper}>
                 <p className={Styles.contentsTitle}>伊勢海老とは似ても似つかない月</p>
                 <time>2019.1.26</time>
               </div>
@@ -240,7 +243,7 @@ const Sample2 = () => (
       <section className={`${Styles.section} ${Styles.memberSection}`} id="member">
         <h2 className={`${Styles.title} ${Styles.sectionTitle} ${Styles.memberSectionTitle}`}>Member</h2>
 
-        <div className={Styles.flex}>
+        <div className={Styles.memberWrapper}>
           <a href="" className={Styles.member}>
             <StaticImage
               src="src/images/member/member1.jpg"

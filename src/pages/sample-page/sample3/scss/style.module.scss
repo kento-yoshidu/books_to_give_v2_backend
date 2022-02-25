@@ -7,16 +7,6 @@ $sub-color2: darken(#f37335, 10%);
 $dark-color1: #292E49;
 $dark-color2: #536976;
 
-/*
-html {
-  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-}
-
-p {
-  line-height: 1.5;
-}
-*/
-
 .header {
   position: relative;
   width: 100%;
@@ -25,35 +15,7 @@ p {
   background: -webkit-linear-gradient(to left, $main-color1, $main-color2); 
   background: linear-gradient(to left bottom, $main-color1, $main-color2);
   overflow: hidden;
-  .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    box-shadow: 0 0 10px inset rgba($main-color1, .4);
-  }
-  .circle1 {
-    width: 108vh;
-    height: 108vh;
-    border-radius: 50% 50% 50% 53%/50% 50% 55% 55%;
-    animation: circleAnimation1 20s linear infinite,
-                opacity 4s forwards;
-    border: 100px solid rgba(160, 180, 240, 0.05);
-  }
-  .circle2 {
-    width: 130vh;
-    height: 116vh;
-    border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
-    animation: circleAnimation2 15s linear infinite,
-                opacity 6s forwards;
-    border: 130px solid rgba(160, 180, 240, 0.05);
-  }
-  .circle3 {
-    width: 85vh;
-    height: 91vh;
-    border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
-    animation: circleAnimation1 23s linear infinite,
-                opacity 10s forwards;
-  }
+
   .text-wrapper {
     position: absolute;
     top: 50%;
@@ -62,20 +24,22 @@ p {
     color: #fff;
     font-family: Helvetica , "游ゴシック", sans-serif;
     width: 100%;
+
     .header-title {
       max-width: 80%;
       margin: 0 auto 30px;
       font-size: clamp(20px, 2vw, 30px);
       letter-spacing: 1px;
       text-align: center;
-      border: 1px solid red;
     }
+
     .product-title {
       width: 100%;
       margin-bottom: 6vh;
       font-size: clamp(45px, 5vw, 75px);
       text-align: center;
     }
+
     .text {
       display: flex;
       justify-content: space-between;
@@ -85,6 +49,39 @@ p {
       font-weight: 900;
     }
   }
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 10px inset rgba($main-color1, .4);
+}
+
+.circle1 {
+  width: 108vh;
+  height: 108vh;
+  border-radius: 50% 50% 50% 53%/50% 50% 55% 55%;
+  animation: circleAnimation1 20s linear infinite,
+              opacity 4s forwards;
+  border: 100px solid rgba(160, 180, 240, 0.05);
+}
+
+.circle2 {
+  width: 130vh;
+  height: 116vh;
+  border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
+  animation: circleAnimation2 15s linear infinite,
+              opacity 6s forwards;
+  border: 130px solid rgba(160, 180, 240, 0.05);
+}
+
+.circle3 {
+  width: 85vh;
+  height: 91vh;
+  border-radius: 52% 50% 50% 50%/50% 50% 52% 50%;
+  animation: circleAnimation1 23s linear infinite,
+              opacity 10s forwards;
 }
 
 @keyframes circleAnimation1 {
@@ -134,22 +131,20 @@ p {
 
 
 @media (max-width: 768px) {
-  .header {
-    .circle1 {
-      width: 88vh;
-      height: 88vh;
-      border: 60px solid rgba(160, 180, 240, 0.1);
-    }
-    .circle2 {
-      width: 85vh;
-      height: 85vh;
-      border: 80px solid rgba(160, 180, 240, 0.1);
-    }
-    .circle3 {
-      width: 80vh;
-      height: 78vh;
-      border: 80px solid rgba(160, 180, 240, 0.1);
-    }
+  .circle1 {
+    width: 88vh;
+    height: 88vh;
+    border: 60px solid rgba(160, 180, 240, 0.1);
+  }
+  .circle2 {
+    width: 85vh;
+    height: 85vh;
+    border: 80px solid rgba(160, 180, 240, 0.1);
+  }
+  .circle3 {
+    width: 80vh;
+    height: 78vh;
+    border: 80px solid rgba(160, 180, 240, 0.1);
   }
 }
 
@@ -207,9 +202,9 @@ p {
         display: inline-block;
         font-size: 2.3rem;
         font-weight: 900;
-        background: -webkit-linear-gradient(90deg, #ACB6E5, #86FDE8);//背景色にグラデーションを指定
-        background-clip: text;//テキストでくり抜く
-        -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+        background: -webkit-linear-gradient(90deg, #ACB6E5, #86FDE8);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
       .contents-title {
         margin-bottom: 20px;
@@ -260,8 +255,8 @@ p {
         }
       }
     }
-  } // contents-01
-} //contents-section
+  }
+}
 
 @media (max-width: 768px) {
   .contents-section {
@@ -339,9 +334,9 @@ p {
           color: $sub-color2;
           font-size: 3rem;
           margin-bottom: 20px;
-          background: -webkit-linear-gradient(0deg, $sub-color2, $sub-color1);//背景色にグラデーションを指定
-          background-clip: text;//テキストでくり抜く
-          -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+          background: -webkit-linear-gradient(0deg, $sub-color2, $sub-color1);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         p {
           width: 100%;
@@ -733,14 +728,17 @@ p {
       flex-direction: column;
       .info {
         margin-bottom: 20px;
+
         .footer-title {
           font-size: 2rem;
           margin-bottom: 10px;
         }
+
         address {
           .company,
           .address {
             font-size: 1.2rem;
+
             a {
               font-size: 1.2rem;
             }
@@ -749,14 +747,16 @@ p {
       }
       .list-block {
         margin: 0;
+
         .list-column {
           margin: 0 14px 0 0;
+
           a {
             font-size: 1.2rem;
             margin-bottom: 10px;
           }
         }
       }
-    } //wrapper
+    }
   }
 }

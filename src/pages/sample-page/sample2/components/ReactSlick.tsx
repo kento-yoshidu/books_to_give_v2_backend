@@ -3,6 +3,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Slider from "react-slick"
 
+export const SampleNextArrow = () => (
+  <button>botan</button>
+)
+
 const SlickConfig = {
   fade: true,
   autoplay: true,
@@ -11,8 +15,11 @@ const SlickConfig = {
   infinite: true,
   speed: 750,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  nextArrow: <SampleNextArrow />
 }
+
+/* https://dev.classmethod.jp/articles/display-react-slick-arrow/ */
 
 import * as Styles from "./slick.module.scss"
 
