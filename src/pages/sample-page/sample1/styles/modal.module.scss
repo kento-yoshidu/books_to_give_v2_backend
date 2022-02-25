@@ -9,22 +9,23 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: unquote("max(324px, 50%)");
-    img {
-      display: block;
-      margin-bottom: 30px;
-    }
-    button {
-      display: block;
-      color: #fff;
-      text-align: center;
-      width: 100%;
-      font-size: clamp(25px, 3vw, 45px);
-      margin-top: 20px;
-    }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: unquote("max(324px, 50%)");
+  img {
+    display: block;
+    margin-bottom: 30px;
+  }
+  button {
+    display: block;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(25px, 3vw, 45px);
+    margin-top: 20px;
   }
 }
