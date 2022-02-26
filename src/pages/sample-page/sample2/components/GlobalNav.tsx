@@ -11,6 +11,7 @@ const GlobalNav = () => (
       <li className={Styles.navItem}><a href="#member">Member</a></li>
     </ul>
 
+    {/*
     <input type="checkbox" className={Styles.check} id="checked" />
     <label className={Styles.menuBtn} htmlFor="checked">
       <span className={`${Styles.bar} ${Styles.barTop}`}></span>
@@ -22,10 +23,11 @@ const GlobalNav = () => (
     <nav className={Styles.drawerMenu}>
       <ul className={Styles.drawerList}>
         <li className={Styles.drawerItem}>Navi</li>
-        <li className={Styles.drawerItem}><a href="#">TOP</a></li>
-        <li className={Styles.drawerItem}><a href="#intro">What's potsunen47?</a></li>
+        <li className={Styles.drawerItem}><a href="#" className={Styles.drawerLink}>TOP</a></li>
+        <li className={Styles.drawerItem}><a href="#intro" className={Styles.drawerLink}>What's potsunen47?</a></li>
       </ul>
     </nav>
+    */}
   </nav>
 )
 

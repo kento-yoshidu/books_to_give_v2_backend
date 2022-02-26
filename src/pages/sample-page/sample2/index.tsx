@@ -36,12 +36,12 @@ const Sample2 = () => (
 
       <section className={`${Styles.section} ${Styles.introSection}`} id="intro">
         <h2 className={`${Styles.title} ${Styles.sectionTitle}`}>What's Potsunen47?</h2>
-        <p><span className={Styles.purple}>彼女たちが走り抜けた<strong>先</strong>に待っているもの、それは—</span></p>
-        <p>時々、半透明なとうもろこしは目覚まし時計と相性がよくない。総理大臣が先を尖らせて近づいてくると思われる。厳密に言えば、ウィルスは最新鋭の警察官を搭載するのだろう。</p>
-        <p>証拠は無いが、<span className={Styles.purple}>防犯カメラを代表する<strong>魚雷</strong></span>がボクサーの一部になる。情報によれば、アンモナイトとも呼ばれる結婚式が知られざる野球に憎悪を抱く気がする。</p>
-        <p>戦艦は宇宙人を見て絶望すると聞いたことがある。そして次の朝、花火が使いやすい。道頓堀の食い倒れ人形は膨張するのであるが、青い教会が柱時計の血をすするかも知れない。</p>
-        <p>軍手のような恐山が苦戦すると思われるが、その一方では、老婆の一部である草食系男子が飛行船にも似た満員電車に打ち負かされると同時に、恐るべき伊勢海老は危ない見込みである。</p>
-        <p>よりによって、<span className={Styles.purple}>ダチョウにも似た木の葉</span>は思想を問い詰めるだろうし、海亀は洗濯機の独自規格であるニンジャに変身する気がした。</p>
+        <p className={Styles.introText}><span className={Styles.purple}>彼女たちが走り抜けた<strong>先</strong>に待っているもの、それは—</span></p>
+        <p className={Styles.introText}>時々、半透明なとうもろこしは目覚まし時計と相性がよくない。総理大臣が先を尖らせて近づいてくると思われる。厳密に言えば、ウィルスは最新鋭の警察官を搭載するのだろう。</p>
+        <p className={Styles.introText}>証拠は無いが、<span className={Styles.purple}>防犯カメラを代表する<strong>魚雷</strong></span>がボクサーの一部になる。情報によれば、アンモナイトとも呼ばれる結婚式が知られざる野球に憎悪を抱く気がする。</p>
+        <p className={Styles.introText}>戦艦は宇宙人を見て絶望すると聞いたことがある。そして次の朝、花火が使いやすい。道頓堀の食い倒れ人形は膨張するのであるが、青い教会が柱時計の血をすするかも知れない。</p>
+        <p className={Styles.introText}>軍手のような恐山が苦戦すると思われるが、その一方では、老婆の一部である草食系男子が飛行船にも似た満員電車に打ち負かされると同時に、恐るべき伊勢海老は危ない見込みである。</p>
+        <p className={Styles.introText}>よりによって、<span className={Styles.purple}>ダチョウにも似た木の葉</span>は思想を問い詰めるだろうし、海亀は洗濯機の独自規格であるニンジャに変身する気がした。</p>
       </section>
 
       <section className={`${Styles.discSection} ${Styles.section}`} id="newRelease">
@@ -81,7 +81,7 @@ const Sample2 = () => (
               <Tab.Panel className={Styles.discItem}>
                 <p>2020.11.01 New Single</p>
                 <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
-                <div className={Styles.discWrapper}>
+                <div className={Styles.discInner}>
                   <StaticImage
                     src="./src/images/disc/01.jpg"
                     alt="hoge"
@@ -101,7 +101,7 @@ const Sample2 = () => (
               <Tab.Panel className={Styles.discItem}>
                 <p>2020.11.01 New Single</p>
                 <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-B</p>
-                <div className={Styles.discWrapper}>
+                <div className={Styles.discInner}>
                   <StaticImage
                     src="./src/images/disc/02.jpg"
                     alt="hoge"
@@ -121,7 +121,7 @@ const Sample2 = () => (
               <Tab.Panel className={Styles.discItem}>
                 <p>2020.11.01 New Single</p>
                 <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-C</p>
-                <div className={Styles.discWrapper}>
+                <div className={Styles.discInner}>
                   <StaticImage
                     src="./src/images/disc/03.jpg"
                     alt="hoge"
