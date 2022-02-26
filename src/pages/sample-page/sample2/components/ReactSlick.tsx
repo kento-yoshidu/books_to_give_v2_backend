@@ -17,16 +17,15 @@ const NextArrow = ({ className, onClick }) => (
 
 )
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  )
-}
+const PrevArrow = ({ className, onClick }) => (
+  <div
+    className={`${className} ${Styles.prevButton}`}
+    style={{
+      display: "block"
+    }}
+    onClick={onClick}
+  />
+)
 
 const SlickConfig = {
   fade: true,
@@ -37,10 +36,9 @@ const SlickConfig = {
   speed: 750,
   slidesToShow: 1,
   slidesToScroll: 1,
-  nextArrow: <NextArrow />
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />
 }
-
-/* https://dev.classmethod.jp/articles/display-react-slick-arrow/ */
 
 const ReactSlick = () => (
   <>
