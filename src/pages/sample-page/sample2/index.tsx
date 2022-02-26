@@ -56,21 +56,21 @@ const Sample2 = () => (
                 <StaticImage
                   src="./src/images/disc/01.jpg"
                   className={Styles.thum}
-                  alt="hoge"
+                  alt="花束の画像"
                 />
               </Tab>
               <Tab>
                 <StaticImage
                   src="./src/images/disc/02.jpg"
                   className={Styles.thum}
-                  alt="hoge"
+                  alt="花束の画像"
                 />
               </Tab>
               <Tab>
                 <StaticImage
                   src="./src/images/disc/03.jpg"
                   className={Styles.thum}
-                  alt="hoge"
+                  alt="ハートの画像"
                 />
               </Tab>
             </Tab.List>
@@ -79,7 +79,7 @@ const Sample2 = () => (
               className={Styles.detail}
             >
               <Tab.Panel className={Styles.discItem}>
-                <p>2020.11.01 New Single</p>
+                <p className={Styles.discDate}>2020.11.01 New Single</p>
                 <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-A</p>
                 <div className={Styles.discInner}>
                   <StaticImage
@@ -99,12 +99,12 @@ const Sample2 = () => (
               </Tab.Panel>
 
               <Tab.Panel className={Styles.discItem}>
-                <p>2020.11.01 New Single</p>
+                <p className={Styles.discDate}>2020.11.01 New Single</p>
                 <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-B</p>
                 <div className={Styles.discInner}>
                   <StaticImage
                     src="./src/images/disc/02.jpg"
-                    alt="hoge"
+                    alt="花束の画像"
                     className={Styles.discImgWrapper}
                   />
                   <ol className={Styles.musicList}>
@@ -119,12 +119,12 @@ const Sample2 = () => (
               </Tab.Panel>
 
               <Tab.Panel className={Styles.discItem}>
-                <p>2020.11.01 New Single</p>
+                <p className={Styles.discDate}>2020.11.01 New Single</p>
                 <p className={Styles.discTitle}>死ぬまで<span className={Styles.purple}>愛</span>して Type-C</p>
                 <div className={Styles.discInner}>
                   <StaticImage
                     src="./src/images/disc/03.jpg"
-                    alt="hoge"
+                    alt="花束の画像"
                     className={Styles.discImgWrapper}
                   />
                   <ol className={Styles.musicList}>
@@ -132,7 +132,7 @@ const Sample2 = () => (
                     <li><p className={Styles.info}>税込 : 1,895円</p></li>
                     <li>1. 死ぬまで愛して</li>
                     <li>2. 私の父は結界師</li>
-                    <li>3. </li>
+                    <li>3. 張り紙禁止令</li>
                     <li>4. </li>
                   </ol>
                 </div>
