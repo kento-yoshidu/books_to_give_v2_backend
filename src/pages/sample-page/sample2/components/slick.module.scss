@@ -1,17 +1,27 @@
 .wrapper {
   width: 55%;
   margin: 50px auto;
+}
+
+.slide {
+  overflow: hidden;
+  height: 65vh;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+
   .slide {
-    overflow: hidden;
-    height: 65vh;
+    height: auto;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .wrapper {
-    width: 90%;
-    .slide {
-      height: auto;
-    }
-  } 
+.next-button {
+  right: -40px !important;
+  &::before {
+    color: #444 !important;
+    font-size: 4rem !important;
+  }
 }
