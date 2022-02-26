@@ -322,10 +322,10 @@ const Sample3 = () => (
       </section>
 
       <footer className={Styles.footer} id="footer">
-        <div className={Styles.wrapper}>
-          <div className={Styles.info}>
+        <div className={Styles.footerWrapper}>
+          <div className={Styles.footerInfo}>
             <h2 className={Styles.footerTitle}>Sample Web Service</h2>
-            <address>
+            <address className={Styles.address}>
               <p className={Styles.company}>toriwatari net app Ltd.</p>
               <p className={Styles.address}>滋賀県 草津市 追分南 x-xx-xxxx</p>
               <p className={Styles.address}><a href="/" target="_blink">作者ポートフォリオサイト</a></p>
@@ -350,7 +350,7 @@ const Sample3 = () => (
           </div>
         </div>
         <hr />
-        <p className={Styles.refer}>このページは<a href="https://api.ce-cotoha.com/contents/index.html" target="_blank">こちらのWebサイト</a>を参考にしました。</p>
+        <p className={Styles.refer}>このページは<a href="https://api.ce-cotoha.com/contents/index.html" target="_blank" rel="noreferrer">こちらのWebサイト</a>を参考にしました。</p>
       </footer>
     </main>
   </>
