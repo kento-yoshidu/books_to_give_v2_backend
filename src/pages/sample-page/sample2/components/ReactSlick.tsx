@@ -1,11 +1,32 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import styled from 'styled-components'
 
 import Slider from "react-slick"
 
-export const SampleNextArrow = () => (
-  <button>botan</button>
+import * as Styles from "./slick.module.scss"
+
+const NextArrow = ({ className, onClick }) => (
+  <div
+    className={`${className} ${Styles.nextButton}`}
+    style={{
+      display: "block"
+    }}
+    onClick={onClick}
+  />
+
 )
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  )
+}
 
 const SlickConfig = {
   fade: true,
@@ -16,12 +37,10 @@ const SlickConfig = {
   speed: 750,
   slidesToShow: 1,
   slidesToScroll: 1,
-  nextArrow: <SampleNextArrow />
+  nextArrow: <NextArrow />
 }
 
 /* https://dev.classmethod.jp/articles/display-react-slick-arrow/ */
-
-import * as Styles from "./slick.module.scss"
 
 const ReactSlick = () => (
   <>
