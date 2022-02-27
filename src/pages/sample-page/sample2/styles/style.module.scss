@@ -116,8 +116,12 @@ $sub-color: #ffd700;
 **/
 
 .intro-section {
-  margin-top: 30px;
+  margin-top: 140px;
   padding: 50px 0 100px;
+  
+  .section-title {
+    margin-bottom: 50px;
+  }
 }
 
 .intro-text {
@@ -133,7 +137,6 @@ $sub-color: #ffd700;
     font-size: clamp(2rem, 1.9vw, 3rem);
   }
 }
-
 
 @media (max-width: 768px) {
   .intro-section {
@@ -207,12 +210,15 @@ $sub-color: #ffd700;
 .disc-date {
   margin-bottom: 12px;
   color: #444;
-  font-size: 2.2rem;
+  font-size: clamp(1.7rem, 2vw, 2.2rem);
 }
 
 .disc-title {
   color: #444;
-  font-size: 4rem;
+  font-size: clamp(2.2rem, 2.2vw, 4rem);
+  .purple {
+    font-size: clamp(3.3rem, 4vw, 7rem);
+  }
 }
 
 .disc-inner {
@@ -282,7 +288,6 @@ $sub-color: #ffd700;
 
   .detail {
     width: 95%;
-    //height: auto;
   }
 
   .disc-inner {
@@ -291,14 +296,9 @@ $sub-color: #ffd700;
     padding: 0;
   }
 
+  .disc-date,
   .disc-title {
-    color: #444;
-    font-size: 2.2rem;
-
-    .purple {
-      color: $main-color;
-      font-size: 3.5rem;
-    }
+    text-align: center;
   }
 
   .disc-wrapper {
@@ -309,7 +309,7 @@ $sub-color: #ffd700;
 
   .disc-img-wrapper {
     width: 80%;
-    margin-bottom: 10px;
+    margin: 30px auto 15px;
   }
 
   .music-list {
@@ -336,6 +336,7 @@ $sub-color: #ffd700;
   background: #222;
 
   .section-title {
+    margin-bottom: 50px;
     color: #fff;
   }
 }
@@ -343,8 +344,7 @@ $sub-color: #ffd700;
 .contents {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  max-width: 1500px;
+  width: unquote("min(1166px, 90%)");
   margin: 0 auto;
   background: $main-color;
   border: 1px solid #222;
@@ -360,8 +360,9 @@ $sub-color: #ffd700;
   }
 }
 
-.contents-wrapper {
-  padding: 30px 50px;
+.contents-inner {
+  margin: 20px auto;
+  width: 70%;
 }
 
 .contents-title-wrapper {
@@ -385,9 +386,8 @@ $sub-color: #ffd700;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-  width: 80%;
   margin: 20px auto 12px;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   letter-spacing: 1px;
   line-height: 1.6;
   text-indent: 0.7rem;
@@ -401,8 +401,10 @@ $sub-color: #ffd700;
 }
 
 .container-2 {
+  width: unquote("min(1166px, 90%)");
   .contents {
     width: 50%;
+    padding-bottom: 20px;
   }
 
   .img-wrapper {
@@ -411,7 +413,8 @@ $sub-color: #ffd700;
   }
 
   .contents-wrapper {
-    padding: 20px 0 10px;
+    width: 80%;
+    margin: 20px auto;
   }
 
   .contents-title-wrapper {
@@ -431,14 +434,13 @@ $sub-color: #ffd700;
 @media (max-width: 768px) {
   .contents {
     margin-bottom: 20px;
-    width: 90%;
 
     img {
       height: 100%;
     }
   }
 
-  .contents-wrapper {
+  .contents-inner {
     padding: 15px 0 0;
 
     .contents-title-wrapper {

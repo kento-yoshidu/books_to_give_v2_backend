@@ -154,7 +154,7 @@ const Sample2 = () => (
             src="src/images/news/news1.jpg"
             alt="hoge"
           />
-          <div className={Styles.contentsWrapper}>
+          <div className={Styles.contentsInner}>
             <div className={Styles.contentsTitleWrapper}>
               <p className={Styles.contentsTitle}>Git中級者を目指す</p>
               <time>2020.12.03</time>
@@ -183,7 +183,7 @@ const Sample2 = () => (
                 <p className={Styles.contentsTitle}>初めてのHTML & CSS</p>
                 <time>2019.1.26</time>
               </div>
-              <p className={Styles.contentsText}>HTMLとCSSはIT技術の入門に最適だと考えています。これらの言語を用い簡単なWebページを作成し、Webページの仕組みを学びます。<br />環境構築で躓くことはありません。今すぐ始められます。</p>
+              <p className={Styles.contentsText}>HTMLとCSSはIT技術の入門に最適だと考えています。これらの言語を用い簡単なWebページを作成し、Webページの仕組みを学びます。</p>
             </div>
           </a>
 
