@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Seo from "../../components/seo"
 import InterSectionObserver from "../../lib/Jamstack/IO"
 
+import Loader from "./loader"
 import * as Styles from "./style.module.scss"
 
 import {
@@ -20,6 +21,8 @@ const Jamstack = () => {
 
   return (
     <>
+      <Loader />
+
       <Seo
         title="JamstackなWebサイトを構築してみた"
       />
