@@ -35,7 +35,7 @@ const Sample1: React.VFC = () => (
         </div>
       </nav>
 
-      <header className={Styles.header}>
+      <header>
         <h1 className={`${Styles.title} ${Styles.headerTitle}`}>Sample1</h1>
         <StaticImage
           src="./images/top.webp"
