@@ -16,6 +16,7 @@ export const charGradient: string;
 export const viewList: string;
 export const viewListItem: string;
 export const active: string;
+export const viewAnime: string;
 export const section: string;
 export const sectionTitle: string;
 export const view: string;

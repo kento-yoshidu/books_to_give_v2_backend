@@ -4,15 +4,10 @@ import { Link } from "gatsby"
 import Seo from "../../components/seo"
 import InterSectionObserver from "../../lib/Jamstack/IO"
 
+import ViewList from "./components/viewList"
+
 import Loader from "./loader"
 import * as Styles from "./style.module.scss"
-
-import {
-  HomeOutline,
-  SettingsOutline,
-  GlobeOutline,
-  DocumentTextOutline
-} from "react-ionicons"
 
 const Jamstack = () => {
   useEffect(() => {
@@ -26,6 +21,8 @@ const Jamstack = () => {
       <Seo
         title="JamstackなWebサイトを構築してみた"
       />
+
+      <ViewList />
 
       <div className={Styles.allWrapper}>
         <nav className={Styles.nav}>
@@ -54,54 +51,6 @@ const Jamstack = () => {
 
           <div className={Styles.scroll}>SCROLL</div>
         </header>
-
-        <ol id="viewList" className={Styles.viewList}>
-          <li
-            data-li="view1"
-            className={Styles.viewListItem}>
-            <a href="#view1">
-              <HomeOutline
-                height="30px"
-                width="30px"
-              />
-            </a>
-          </li>
-          <li
-            data-li="view2"
-            className={Styles.viewListItem}
-          >
-            <a href="#view2">
-              <SettingsOutline
-                height="30px"
-                width="30px"
-              />
-            </a>
-          </li>
-
-          <li
-            data-li="view3"
-            className={Styles.viewListItem}
-          >
-            <a href="#view3">
-              <GlobeOutline
-                height="30px"
-                width="30px"
-              />
-            </a>
-          </li>
-
-          <li
-            data-li="view4"
-            className={Styles.viewListItem}
-          >
-            <a href="#view4">
-              <DocumentTextOutline
-                height="30px"
-                width="30px"
-              />
-            </a>
-          </li>
-        </ol>
 
         <section className={`${Styles.section} ${Styles.view} ${Styles.view2}`} id="view2">
           <h2 className={Styles.sectionTitle}>Architecture</h2>

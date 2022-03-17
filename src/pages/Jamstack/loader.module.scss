@@ -36,9 +36,8 @@
         30px -30px 20px #00efff,
         -20px 30px 0 #00efff,
         -20px 30px 20px #00efff;
-      animation: animate calc(2s * var(--s)) linear infinite;
-      animation-delay: calc(-2.5s * var(--i));
-      // transform-origin: 2px;
+      animation: animate calc(4.5s * var(--s)) linear infinite;
+      animation-delay: calc(-0.3s * var(--i));
       transition: 2s;
     }
   }
@@ -55,7 +54,6 @@
       -60px 60px 0 #00efff,
       -60px 60px 20px #00efff;
     animation: animate 3s linear infinite;
-    animation-delay: calc(-2.5s * var(--i));
   }
 }
 

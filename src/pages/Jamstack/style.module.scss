@@ -161,7 +161,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 .neon {
   font-size: 2em;
   color: transparent;
-  animation: animate2 3s linear infinite;
+  animation: animate2 10s linear infinite;
 }
 
 .char-gradient {
@@ -181,6 +181,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
   list-style: none;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  z-index: 9999;
 }
 
 .view-list-item {
@@ -212,7 +213,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 }
 
 .view-list-item.active {
-  box-shadow: 0 0 20px 1px rgba($main-color, 0.4);
+  animation: viewAnime 10s infinite;
 
   a {
     svg {
@@ -224,6 +225,18 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 @media (max-width: 768px) {
   .view-list {
     display: none;
+  }
+}
+
+@keyframes viewAnime {
+  0% {
+    box-shadow: 0 0 20px 1px adjust-hue($main-color, 0deg);
+    filter: hue-rotate(0deg)
+  } 
+
+  100% {
+    box-shadow: 0 0 20px 1px adjust-hue($main-color, 360deg);
+    filter: hue-rotate(360deg)
   }
 }
 
@@ -698,7 +711,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 @keyframes animate2 {
   0% {
     color: #fff;
-    filter: blur(0.1px) hue-rotate(90deg);
+    filter: blur(0.1px) hue-rotate(0deg);
     text-shadow:
       0 0 10px #00b3ff,
       0 0 20px #00b3ff,
@@ -709,7 +722,7 @@ $gradient2: linear-gradient(315deg, #0575e6, #00f260);
 
   100% {
     color: #fff;
-    filter: blur(0.1px) hue-rotate(160deg);
+    filter: blur(0.1px) hue-rotate(360deg);
     text-shadow:
       0 0 10px #00b3ff,
       0 0 20px #00b3ff,
