@@ -355,18 +355,21 @@ $bg-height: 50px;
         position: relative;
 
         .side {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
           height: 15px;
           background-color: rgba(254, 254, 254, 0.3);
-          top: 0;
-          left: 0;
-          position: absolute;
 
-          .bar {
+          span {
+            position: absolute;
             background-size: 150% 150%;
             height: 100%;
+            margin: 0;
             background-image: linear-gradient(120deg, rgba(0, 153, 87, 0.9), rgba(21, 153, 237, 0.7), rgba(0, 153, 87, 0.9));
             box-shadow: 5px 5px 30px 5px rgba(0, 153, 87, 0.3);
+            width: var(--i);
           }
         }
       }
@@ -385,18 +388,6 @@ $bg-height: 50px;
       }
     }
   }
-}
-
-.bar-sample {
-  width: 45%;
-}
-
-.bar-jam {
-  width: 50%;
-}
-
-.bar-ecma {
-  width: 1%;
 }
 
 @keyframes gradient {
@@ -468,14 +459,14 @@ $bg-height: 50px;
 .footer {
   padding: 35px 0;
   background-color: #222;
+}
 
-  .footer-title {
-    color: #ddd;
-    font-size: clamp(16px, 3.4vw, 23px);
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-align: center;
-  }
+.footer-title {
+  color: #ddd;
+  font-size: clamp(16px, 3.4vw, 23px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .sa {

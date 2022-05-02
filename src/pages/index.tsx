@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
 import Button from "../components/button"
-import IO from "../lib/IO"
+import intersectionObserver from "../lib/intersectionObserver"
 
 import * as Styles from "../styles/index.module.scss"
 
@@ -16,12 +16,8 @@ import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const Index: React.VFC = () => {
-  const [windowSize, setWindowSize] = useState(0)
-
   useEffect(() => {
-    IO()
-
-    setWindowSize(window.screen.width)
+    intersectionObserver()
   }, [])
 
   return (
@@ -37,7 +33,6 @@ const Index: React.VFC = () => {
           <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
           <p>更新日 : <time>2022-02-10</time></p>
 
-          { windowSize }
 
           <Link className={Styles.arrowContainer} to="#sec1">
             <div className={Styles.arrow}></div>
@@ -159,7 +154,7 @@ const Index: React.VFC = () => {
       </section>
 
       <section className={`${Styles.section} ${Styles.sec5} progress-section sa sa--up`}>
-        <h2 className={Styles.sectionTitle}>2021年度の個人タスク</h2>
+        <h2 className={Styles.sectionTitle}>2022年度の個人タスク</h2>
 
         <div className={Styles.wrapper}>
           <div className={Styles.running}>
@@ -170,7 +165,7 @@ const Index: React.VFC = () => {
               <span>50%</span>
               <div className={Styles.progressbar}>
                 <div className={Styles.side}>
-                  <div className={`${Styles.bar} ${Styles.barJam}`}></div>
+                  <span style={{ "--i": "50%" }}></span>
                 </div>
               </div>
             </div>
@@ -180,12 +175,33 @@ const Index: React.VFC = () => {
               <span>45%</span>
               <div className={Styles.progressbar}>
                 <div className={Styles.side}>
-                  <div className={`${Styles.bar} ${Styles.barSample}`}></div>
+                  <span style={{ "--i": "45%" }}></span>
+                </div>
+              </div>
+            </div>
+
+            <div className={Styles.progressbarWrapper}>
+              <h4>最新のCSSを学習する</h4>
+              <span>20%</span>
+              <div className={Styles.progressbar}>
+                <div className={Styles.side}>
+                  <span style={{ "--i": "45%" }}></span>
+                </div>
+              </div>
+            </div>
+
+            <div className={Styles.progressbarWrapper}>
+              <h4>AWS認定資格を2つ以上取る</h4>
+              <span>0%</span>
+              <div className={Styles.progressbar}>
+                <div className={Styles.side}>
+                  <span style={{ "--i": "0" }}></span>
                 </div>
               </div>
             </div>
           </div>
 
+          {/*
           <div className={Styles.hurryUp}>
             <h3>Hurry Up‍<span className={Styles.emoji}>️🏇️💦</span></h3>
 
@@ -201,7 +217,7 @@ const Index: React.VFC = () => {
           </div>
 
           <div className={Styles.finished}>
-            <h3><span className={Styles.emoji}>️🚀</span> Finished ‍<span className="emoji">️🚀</span></h3>
+            <h3><span className={Styles.emoji}>️🚀</span> Finished&nbsp;‍<span className="emoji">️🚀</span></h3>
 
             <ul className={Styles.finishedList}>
               <div className={Styles.progressbarWrapper}>
@@ -211,6 +227,7 @@ const Index: React.VFC = () => {
               </div>
             </ul>
           </div>
+          */}
         </div>
       </section>
 
