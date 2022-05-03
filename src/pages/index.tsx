@@ -6,10 +6,12 @@ import Seo from "../components/seo"
 import Button from "../components/button"
 import intersectionObserver from "../lib/intersectionObserver"
 
+import Header from "../components/header"
+
 import * as Styles from "../styles/index.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart, faCode } from "@fortawesome/free-solid-svg-icons"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
@@ -26,21 +28,9 @@ const Index: React.VFC = () => {
         title="ポートフォリオサイト"
       />
 
-      <header className={Styles.header} id="header">
-        <div className={Styles.sa}>
-          <h2 className={Styles.headerSubTitle}>toriwatari</h2>
-          <h1 className={Styles.headerTitle}>Portfolio Website</h1>
-          <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
-          <p>更新日 : <time>2022-02-10</time></p>
-
-
-          <Link className={Styles.arrowContainer} to="#sec1">
-            <div className={Styles.arrow}></div>
-            <div className={Styles.arrow}></div>
-            <div className={Styles.arrow}></div>
-          </Link>
-        </div>
-      </header>
+      <div className={Styles.sa}>
+        <Header />
+      </div>
 
       <section className={`${Styles.section} ${Styles.sec1}`} id="sec1">
         <h2 className={`${Styles.sectionTitle} ${Styles.linksTitle}`}>Sample Pages</h2>
@@ -185,7 +175,7 @@ const Index: React.VFC = () => {
               <span>20%</span>
               <div className={Styles.progressbar}>
                 <div className={Styles.side}>
-                  <span style={{ "--i": "45%" }}></span>
+                  <span style={{ "--i": "20%" }}></span>
                 </div>
               </div>
             </div>
