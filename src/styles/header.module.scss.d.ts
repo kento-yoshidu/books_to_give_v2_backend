@@ -9,4 +9,7 @@ export const message: string;
 export const arrowContainer: string;
 export const arrow: string;
 export const arrowMove: string;
+export const sa: string;
+export const show: string;
+export const saUp: string;
 export const bgScrolling: string;
