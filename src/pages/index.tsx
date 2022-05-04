@@ -7,6 +7,7 @@ import Button from "../components/button"
 import intersectionObserver from "../lib/intersectionObserver"
 
 import Header from "../components/header"
+import SamplePage from "../components/samplePage"
 
 import * as Styles from "../styles/index.module.scss"
 
@@ -36,15 +37,15 @@ const Index: React.VFC = () => {
         <h2 className={`${Styles.sectionTitle} ${Styles.linksTitle}`}>Sample Pages</h2>
 
         <div className={`${Styles.linksWrapper} ${Styles.sa} ${Styles.saUp}`}>
-          <Link
-            className={Styles.linkItem}
-            to="sample-page/sample1/"
-          >
-            <h3 className={`${Styles.linkTitle}`}>Sample1</h3>
-            <FontAwesomeIcon icon={faCode} />
-            <p>サンプルページ1</p>
-          </Link>
 
+          <SamplePage
+            path="sample1"
+            title="Sample1"
+            icon={faCode}
+            text="サンプルページ1です。"
+          />
+
+          {/*
           <Link
             className={Styles.linkItem}
             to="sample-page/sample2/"
@@ -53,33 +54,35 @@ const Index: React.VFC = () => {
             <div className={Styles.nogi}></div>
             <p>サンプルページ2です。〇木坂46をテーマにページを作成しました。</p>
           </Link>
+          */}
 
-          <Link
-            className={Styles.linkItem}
-            to="sample-page/sample3/"
-          >
-            <h3 className={`${Styles.linkTitle}`}>Sample3</h3>
-            <FontAwesomeIcon icon={faCode} />
-            <p>サンプルページ3</p>
-          </Link>
+          <SamplePage
+            path="sample2"
+            title="Sample2"
+            icon={faCode}
+            text="サンプルページ2です。"
+          />
 
-          <Link
-            className={Styles.linkItem}
-            to="sample-page/sample4"
-          >
-            <h3 className={`${Styles.linkTitle}`}>Sample4</h3>
-            <FontAwesomeIcon icon={faCode} />
-            <p>サンプルページ4</p>
-          </Link>
+          <SamplePage
+            path="sample3"
+            title="Sample3"
+            icon={faCode}
+            text="サンプルページ3です。"
+          />
 
-          <Link
-            className={Styles.linkItem}
-            to="sample-page/sample5"
-          >
-            <h3 className={`${Styles.linkTitle}`}>Sample5</h3>
-            <FontAwesomeIcon icon={faCode} />
-            <p>サンプルページ5</p>
-          </Link>
+          <SamplePage
+            path="sample4"
+            title="Sample4"
+            icon={faCode}
+            text="サンプルページ4です。"
+          />
+
+          <SamplePage
+            path="sample5"
+            title="Sample5"
+            icon={faCode}
+            text="サンプルページ5です。"
+          />
         </div>
 
         <Button

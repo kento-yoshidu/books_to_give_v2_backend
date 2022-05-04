@@ -61,68 +61,31 @@
     .links-title {
       letter-spacing: 5px;
     }
-
-    .link-item {
-      display: block;
-      width: unquote("max(30%, 270px)");
-      border: 2px solid rgb(190, 190, 190);
-      border-radius: 3px;
-      color: #444;
-      text-decoration: none;
-      text-align: center;
-      transition: 0.2s;
-
-      &:hover {
-        background: rgb(248, 248, 248);
-        color: orange;
-      }
-
-      .link-title {
-        margin: 50px 0 30px;
-        font-size: clamp(18px, 2vw, 22px);
-        letter-spacing: 2px;
-      }
-
-      svg {
-        font-size: clamp(40px, 3vw, 60px);
-        margin: 0;
-      }
-
-      p {
-        width: 80%;
-        margin: 40px auto 50px;
-        font-size: clamp(15px, 1.9vw, 18px);
-        font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-        line-height: 1.6;
-      }
-    }
   }
+}
 
-  .nogi {
-    background: linear-gradient(to bottom right, rgba(#fff, 0) 50%, rgb(147, 41, 147) 50.3%) no-repeat bottom right/100% 100%;
-    width: 62px;
-    height: 62px;
-    position: relative;
-    margin: 0 auto;
+.nogi {
+  background: linear-gradient(to bottom right, rgba(#fff, 0) 50%, rgb(147, 41, 147) 50.3%) no-repeat bottom right/100% 100%;
+  width: 62px;
+  height: 62px;
+  position: relative;
+  margin: 0 auto;
 
-    &::after {
-      content: "47";
-      font-size: 1.5rem;
-      font-family: -webkit-pictograph, sans-serif;
-      color: #fff;
-      right: 4px;
-      bottom: 0;
-      position: absolute;
-    }
+  &::after {
+    content: "47";
+    font-size: 1.5rem;
+    font-family: -webkit-pictograph, sans-serif;
+    color: #fff;
+    right: 4px;
+    bottom: 0;
+    position: absolute;
   }
 }
 
 @media (max-width: 768px) {
-  .sec1 {
-    .links-wrapper {
-      flex-direction: column;
-      align-items: center;
-    }
+  .links-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
 

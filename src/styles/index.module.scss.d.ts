@@ -6,8 +6,6 @@ export const imgWrapper: string;
 export const sec1: string;
 export const linksWrapper: string;
 export const linksTitle: string;
-export const linkItem: string;
-export const linkTitle: string;
 export const nogi: string;
 export const sec5: string;
 export const wrapper: string;

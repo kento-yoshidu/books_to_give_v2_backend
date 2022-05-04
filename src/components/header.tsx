@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import * as Styles from "../styles/header.module.scss"
@@ -10,14 +10,13 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
-const Header = () => (
+const Header = (): React.ReactChild => (
   <header className={Styles.header} id="header">
-    <div>
+    <div className={Styles.wrapper}>
       <h2 className={Styles.headerSubTitle}>toriwatari</h2>
       <h1 className={Styles.headerTitle}>Portfolio Website</h1>
       <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
-      <p>更新日 : <time>2022-02-10</time></p>
-
+      <p className={Styles.text}>更新日 : <time className={Styles.time}>2022-05-04</time></p>
 
       <Link className={Styles.arrowContainer} to="#sec1">
         <div className={Styles.arrow}></div>
