@@ -7,19 +7,22 @@ import styled, { keyframes } from "styled-components"
 import * as Styles from "../styles/header.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHeart } from "@fortawesome/free-solid-svg-icons"
+import { faHeart, faRedo } from "@fortawesome/free-solid-svg-icons"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = false
 
 const gradientColors = [
-  "270deg, rgba(18, 194, 233, 0.8), rgba(196, 113, 237, 0.8), rgba(246, 79, 89, 0.8)",
+  "124deg, rgba(21, 87, 153, 0.8), rgba(21, 153, 87, 0.7)",
+  "270deg, rgba(18, 194, 233, 0.7), rgba(196, 113, 237, 0.9), rgba(246, 79, 89, 0.7)",
   "15deg, rgba(5, 117, 230, 0.7), rgba(0, 242, 96, 0.7)",
   "90deg, rgba(131, 58, 180, 0.7), rgba(253, 29, 29, 0.7), rgba(252, 176, 69, 0.7)",
   "45deg, rgba(247, 183, 51, 0.7), rgba(252, 74, 26, 0.77)",
+  "35deg, rgba(36, 11, 54, 0.7), rgba(195, 20, 50, 0.7)",
   "320deg, rgba(241, 23, 18, 0.7), rgba(0, 153, 247, 0.77)",
-  "124deg, rgba(21, 87, 153, 0.7), rgba(21, 153, 87, 0.7)"
+  "rgba(185, 29, 115, 0.7), rgba(249, 83, 198, 0.7)",
+  "180deg, rgba(41, 72, 255, 0.7), rgba(57, 106, 252, 0.7)"
 ]
 
 const bgScrollingReverse = keyframes`
@@ -32,11 +35,7 @@ const Header = (): React.ReactChild => {
   const [theme, setTheme] = useState<number>(0)
 
   const handleClick = () => {
-    if (theme + 1 !== gradientColors.length) {
-      setTheme(() => theme + 1)
-    } else {
-      setTheme(0)
-    }
+    theme + 1 !== gradientColors.length ? setTheme(() => theme + 1) : setTheme(0)
   }
 
   const HeaderWrapper = styled.div`
@@ -58,8 +57,13 @@ const Header = (): React.ReactChild => {
 
   return (
     <HeaderWrapper>
-      <button className={Styles.button} onClick={handleClick}>CLICK ME</button>
-      <ChangeColor />
+      {/* <button className={Styles.button} onClick={handleClick}>CLICK ME</button> */}
+
+      <FontAwesomeIcon
+        icon={faRedo}
+        className={Styles.button}
+        onClick={handleClick}
+      />
 
       <div className={Styles.wrapper}>
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
