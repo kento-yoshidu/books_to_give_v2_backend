@@ -14,5 +14,3 @@ export const arrowMove: string;
 export const sa: string;
 export const show: string;
 export const saUp: string;
-export const bgScrollingReverse: string;
-export const bgScrolling: string;
