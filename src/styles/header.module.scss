@@ -11,21 +11,9 @@ $bg-height: 50px;
   0% { background-position: $bg-width $bg-height; }
 }
 
-.header {
-  position: relative;
-  background: url($bg-url) repeat 0 0;
-  color: #eee;
-  font-weight: 100;
-  animation: bg-scrolling-reverse 0.92s infinite;
-  animation-timing-function: linear;
-
-  &::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(124deg, rgba(21, 87, 153, 0.77), rgba(21, 153, 87, 0.77));
-  }
+.button {
+  position: absolute;
+  z-index: 10;
 }
 
 .wrapper {
