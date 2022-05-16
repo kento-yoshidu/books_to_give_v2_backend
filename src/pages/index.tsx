@@ -164,6 +164,16 @@ const Index: React.VFC = () => {
             </div>
 
             <div className={Styles.progressbarWrapper}>
+              <h4>AWS認定資格を2つ以上取る</h4>
+              <span>50%</span>
+              <div className={Styles.progressbar}>
+                <div className={Styles.side}>
+                  <span style={{ "--i": "50%" }}></span>
+                </div>
+              </div>
+            </div>
+
+            <div className={Styles.progressbarWrapper}>
               <h4>サンプルWebサイトを20個作る</h4>
               <span>45%</span>
               <div className={Styles.progressbar}>
@@ -179,16 +189,6 @@ const Index: React.VFC = () => {
               <div className={Styles.progressbar}>
                 <div className={Styles.side}>
                   <span style={{ "--i": "20%" }}></span>
-                </div>
-              </div>
-            </div>
-
-            <div className={Styles.progressbarWrapper}>
-              <h4>AWS認定資格を2つ以上取る</h4>
-              <span>0%</span>
-              <div className={Styles.progressbar}>
-                <div className={Styles.side}>
-                  <span style={{ "--i": "0" }}></span>
                 </div>
               </div>
             </div>

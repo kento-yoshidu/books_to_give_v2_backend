@@ -45,6 +45,7 @@
   "devDependencies": {
     "@types/react-helmet": "^6.1.4",
     "@types/react-slick": "^0.23.7",
+    "@types/styled-components": "^5.1.25",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "esbuild": "^0.13.8",
@@ -56,7 +57,7 @@
     "gatsby-plugin-dts-css-modules": "^2.2.0",
     "gatsby-plugin-sass": "^4.14.0",
     "node-sass": "^6.0.1",
-    "postcss-scss": "^4.0.3",
+    "postcss-scss": "^4.0.4",
     "prettier": "2.4.1",
     "stylelint": "^14.5.1",
     "stylelint-config-standard": "^25.0.0",
