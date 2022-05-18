@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import ChangeColor from "./changeColor"
 import styled, { keyframes } from "styled-components"
 
 import * as Styles from "../styles/header.module.scss"
@@ -25,39 +24,40 @@ const gradientColors = [
   "180deg, rgba(41, 72, 255, 0.7), rgba(57, 106, 252, 0.7)"
 ]
 
-const bgScrollingReverse = keyframes`
-  100% { background-position: 50px 50px; }
-`
-
 const bgUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+
+const HeaderWrapper = styled.header`
+    position: relative;
+    background: url(${bgUrl}) repeat 0 0;
+    color: #eee;
+    font-weight: 100;
+    animation: bgScrollingReverse 0.92s infinite;
+    animation-timing-function: linear;
+
+    &::before {
+      position: absolute;
+      content: " ";
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(${({ theme }) => typeof theme === "object" ? `${gradientColors[0]}` : `${gradientColors[theme]}`});
+    }
+
+    @keyframes bgScrollingReverse {
+      100% { background-position: 50px 50px; }
+    }
+  `
 
 const Header = (): React.ReactChild => {
   const [theme, setTheme] = useState<number>(0)
 
   const handleClick = () => {
-    theme + 1 !== gradientColors.length ? setTheme(() => theme + 1) : setTheme(0)
+    (theme < gradientColors.length - 1)
+      ? setTheme(theme + 1)
+      : setTheme(0)
   }
 
-  const HeaderWrapper = styled.div`
-    position: relative;
-    background: url(${bgUrl}) repeat 0 0;
-    color: #eee;
-    font-weight: 100;
-    animation: ${bgScrollingReverse} 0.92s infinite;
-    animation-timing-function: linear;
-
-    &::before {
-      position: absolute;
-      content: "";
-      height: 100%;
-      width: 100%;
-      background-image: linear-gradient(${gradientColors[theme]});
-    }
-  `
-
   return (
-    <HeaderWrapper>
-      {/* <button className={Styles.button} onClick={handleClick}>CLICK ME</button> */}
+    <HeaderWrapper theme={theme}>
 
       <FontAwesomeIcon
         icon={faRedo}
