@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
@@ -8,6 +7,7 @@ import intersectionObserver from "../lib/intersectionObserver"
 
 import Header from "../components/header"
 import SamplePage from "../components/samplePage"
+import Card from "../components/card"
 
 import * as Styles from "../styles/index.module.scss"
 
@@ -16,6 +16,7 @@ import { faCode } from "@fortawesome/free-solid-svg-icons"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
+import { Car } from "react-ionicons"
 config.autoAddCss = false
 
 const Index: React.VFC = () => {
@@ -149,6 +150,28 @@ const Index: React.VFC = () => {
       <section className={`${Styles.section} ${Styles.sec5} progress-section sa sa--up`}>
         <h2 className={Styles.sectionTitle}>2022年度の個人タスク</h2>
 
+        <div style={{ "display": "flex", "justifyContent": "center", "gap": "30px", "flexWrap": "wrap", "width": "80%", "margin": "0 auto" }}>
+          <Card
+            color="#04fc43"
+            num="85"
+            text="Jamstackサイトを10個作る"
+          />
+
+          <Card
+            color="#06ccff"
+            num="70"
+          />
+
+          <Card
+            color="#ff00be"
+            num="50"
+          />
+
+          <Card
+            color="#fee800"
+            num="10"
+          />
+        </div>
         <div className={Styles.wrapper}>
           <div className={Styles.running}>
             <h3>Running...<span className={Styles.emoji}>️🏃️💨</span></h3>

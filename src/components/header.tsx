@@ -26,7 +26,11 @@ const gradientColors = [
 
 const bgUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
 
-const HeaderWrapper = styled.header`
+interface CustomProps {
+  theme: number
+}
+
+const HeaderWrapper = styled.header<CustomProps>`
     position: relative;
     background: url(${bgUrl}) repeat 0 0;
     color: #eee;
@@ -36,7 +40,7 @@ const HeaderWrapper = styled.header`
 
     &::before {
       position: absolute;
-      content: " ";
+      content: "";
       height: 100%;
       width: 100%;
       background-image: linear-gradient(${({ theme }) => typeof theme === "object" ? `${gradientColors[0]}` : `${gradientColors[theme]}`});
@@ -51,9 +55,7 @@ const Header = (): React.ReactChild => {
   const [theme, setTheme] = useState<number>(0)
 
   const handleClick = () => {
-    (theme < gradientColors.length - 1)
-      ? setTheme(theme + 1)
-      : setTheme(0)
+    (theme < gradientColors.length - 1) ? setTheme(theme + 1) : setTheme(0)
   }
 
   return (
