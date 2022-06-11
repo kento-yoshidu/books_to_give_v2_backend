@@ -38,12 +38,14 @@ const Index: React.VFC = () => {
         </h2>
 
         <div className={`${Styles.linksWrapper} ${Styles.sa} ${Styles.saUp}`}>
+          {/*
           <SamplePage
             path="sample1"
             title="Sample1"
             icon={faCode}
             text="サンプルページ1です。"
           />
+          */}
 
           {/*
           <Link
