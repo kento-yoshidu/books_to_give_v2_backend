@@ -22,7 +22,7 @@ interface Props {
 const SamplePage: React.VFC<Props> = ({ path, title, icon, text }) => (
   <Link
     className={Styles.linkItem}
-    to={`sample-page/${path}/`}
+    to={path}
   >
     <h3 className={`${Styles.linkTitle}`}>{title}</h3>
     <FontAwesomeIcon icon={icon} className={Styles.icon}/>
