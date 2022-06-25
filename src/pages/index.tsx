@@ -38,25 +38,12 @@ const Index: React.VFC = () => {
         </h2>
 
         <div className={`${Styles.linksWrapper} ${Styles.sa} ${Styles.saUp}`}>
-          {/*
           <SamplePage
-            path="sample1"
+            path="https://toriwatari-sample1.netlify.app/"
             title="Sample1"
             icon={faCode}
             text="サンプルページ1です。"
           />
-          */}
-
-          {/*
-          <Link
-            className={Styles.linkItem}
-            to="sample-page/sample2/"
-          >
-            <h3 className={`${Styles.linkTitle}`}>Sample2</h3>
-            <div className={Styles.nogi}></div>
-            <p>サンプルページ2です。〇木坂46をテーマにページを作成しました。</p>
-          </Link>
-          */}
 
           <SamplePage
             path="sample2"
