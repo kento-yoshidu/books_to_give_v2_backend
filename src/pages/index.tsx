@@ -11,14 +11,6 @@ import Card from "../components/card"
 
 import * as Styles from "../styles/index.module.scss"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
-
-import "@fortawesome/fontawesome-svg-core/styles.css"
-import { config } from "@fortawesome/fontawesome-svg-core"
-import { Car } from "react-ionicons"
-config.autoAddCss = false
-
 const Index: React.VFC = () => {
   useEffect(() => {
     intersectionObserver()
@@ -41,35 +33,30 @@ const Index: React.VFC = () => {
           <SamplePage
             path="https://toriwatari-sample1.netlify.app/"
             title="Sample1"
-            icon={faCode}
             text="サンプルページ1です。"
           />
 
           <SamplePage
             path="sample2"
             title="Sample2"
-            icon={faCode}
             text="サンプルページ2です。"
           />
 
           <SamplePage
             path="sample3"
             title="Sample3"
-            icon={faCode}
             text="サンプルページ3です。"
           />
 
           <SamplePage
             path="sample4"
             title="Sample4"
-            icon={faCode}
             text="サンプルページ4です。"
           />
 
           <SamplePage
             path="sample5"
             title="Sample5"
-            icon={faCode}
             text="サンプルページ5です。"
           />
         </div>
