@@ -6,4 +6,7 @@ export const animateDot: string;
 export const svg: string;
 export const fadeIn: string;
 export const number: string;
+export const show: string;
 export const text: string;
+export const sa: string;
+export const saUp: string;

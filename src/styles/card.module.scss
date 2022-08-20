@@ -88,7 +88,10 @@
   align-items: center;
   font-size: 2.5rem;
   letter-spacing: 3px;
-  opacity: 0;
+}
+
+.number.show {
+  opacity: 1;
   animation: fadeIn 1s linear forwards;
   animation-delay: 2.5s;
 }
@@ -105,4 +108,18 @@
   .text {
     top: 200px;
   }
+}
+
+.sa {
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+.sa-up {
+  transform: translate(0, 200px);
 }

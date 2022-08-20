@@ -1,4 +1,5 @@
 import * as Styles from "../styles/index.module.scss"
+import * as CardStyles from "../styles/card.module.scss"
 
 const InterSectionObserver = () => {
   const options: IntersectionObserverInit = {
@@ -12,8 +13,13 @@ const InterSectionObserver = () => {
   // 監視対象にしたい要素
   const elements = document.querySelectorAll<HTMLElement>(`.${Styles.sa}`)
 
-  // それぞれの要素を監視対象にする
+  const cardElements = document.querySelectorAll<HTMLElement>(`.${CardStyles.sa}`)
+
   elements.forEach((element: Element) => {
+    observer.observe(element)
+  })
+
+  cardElements.forEach((element: Element) => {
     observer.observe(element)
   })
 
@@ -28,6 +34,9 @@ const InterSectionObserver = () => {
 
   // showクラスを付与する関数
   function addShowClass(element: Element) {
+    if (element.getAttribute("class")?.includes("card")) {
+      element.classList.add(CardStyles.show)
+    }
     element?.classList.add(Styles.show)
   }
 }
