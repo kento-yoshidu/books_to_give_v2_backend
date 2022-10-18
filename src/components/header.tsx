@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 import * as Styles from "../styles/header.module.scss"
 
@@ -71,7 +71,7 @@ const Header = (): React.ReactChild => {
         <h2 className={Styles.headerSubTitle}>toriwatari</h2>
         <h1 className={Styles.headerTitle}>Portfolio Website</h1>
         <h3 className={Styles.message}>I <FontAwesomeIcon icon={faHeart} /> HTML & CSS</h3>
-        <p className={Styles.text}>更新日 : <time className={Styles.time}>2022-05-04</time></p>
+        <p className={Styles.text}>更新日 : <time className={Styles.time}>2022-10-18</time></p>
 
         <Link className={Styles.arrowContainer} to="#sec1">
           <div className={Styles.arrow}></div>
