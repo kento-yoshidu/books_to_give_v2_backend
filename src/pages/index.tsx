@@ -64,6 +64,20 @@ const Index: React.VFC = () => {
         <Button path="sample-page" text="more" />
       </section>
 
+      <section className={`${Styles.section} ${Styles.sec1}`} id="sec1">
+        <h2 className={`${Styles.sectionTitle} ${Styles.linksTitle}`}>
+          Apps
+        </h2>
+
+        <div className={`${Styles.linksWrapper} ${Styles.sa} ${Styles.saUp}`}>
+          <SamplePage
+            path="https://bookstogive-kento-yoshidu.vercel.app/"
+            title="BooksToGive"
+            text="読み終わって誰かにあげたい本をリストアップ。"
+          />
+        </div>
+      </section>
+
       <section
         className={`${Styles.section} ${Styles.sa} ${Styles.saUp}`}
         id="sec3"
@@ -141,7 +155,7 @@ const Index: React.VFC = () => {
             gap: "30px",
             flexWrap: "wrap",
             width: "80%",
-            margin: "0 auto",
+            margin: "0 auto"
           }}
         >
           <Card color="#04fc43" num="50" text="Jamstackサイトを10個作る" />
