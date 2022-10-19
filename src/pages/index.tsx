@@ -7,7 +7,7 @@ import intersectionObserver from "../lib/intersectionObserver"
 
 import Header from "../components/header"
 import SamplePage from "../components/samplePage"
-import Card from "../components/card"
+import Card from "../components/Card"
 
 import * as Styles from "../styles/index.module.scss"
 
