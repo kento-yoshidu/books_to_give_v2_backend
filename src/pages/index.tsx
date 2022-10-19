@@ -7,7 +7,7 @@ import intersectionObserver from "../lib/intersectionObserver"
 
 import Header from "../components/header"
 import SamplePage from "../components/samplePage"
-import Card from "../components/Card"
+import Card from "../components/card"
 
 import * as Styles from "../styles/index.module.scss"
 
@@ -158,13 +158,13 @@ const Index: React.VFC = () => {
             margin: "0 auto"
           }}
         >
-          <Card color="#04fc43" num="50" text="Jamstackサイトを10個作る" />
+          <Card color="#04fc43" num={50} text="Jamstackサイトを10個作る" />
 
-          <Card color="#06ccff" num="50" text="AWS認定資格を2つ以上取る" />
+          <Card color="#06ccff" num={50} text="AWS認定資格を2つ以上取る" />
 
-          <Card color="#ff00be" num="45" text="サンプルWebサイトを10個作る" />
+          <Card color="#ff00be" num={45} text="サンプルWebサイトを10個作る" />
 
-          <Card color="#fee800" num="20" text="最新のCSSを学習する" />
+          <Card color="#fee800" num={45} text="最新のCSSを学習する" />
         </div>
       </section>
 
