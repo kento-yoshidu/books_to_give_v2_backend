@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import cardInterSectionObserver from "../lib/CardIO"
+import cardIntersectionObserver from "../lib/cardIntersectionObserver"
 import * as Styles from "../styles/card.module.scss"
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
 
 const Card = ({ color, num, text }: Props) => {
   useEffect(() => {
-    cardInterSectionObserver()
+    cardIntersectionObserver()
   }, [])
 
   return (
