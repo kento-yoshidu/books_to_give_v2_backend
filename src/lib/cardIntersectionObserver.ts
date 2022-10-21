@@ -1,6 +1,6 @@
 import * as Styles from "../styles/card.module.scss"
 
-const cardInterSectionObserver = () => {
+const cardIntersectionObserver = () => {
   const options: IntersectionObserverInit = {
     root: null,
     rootMargin: "0%",
@@ -31,4 +31,4 @@ const cardInterSectionObserver = () => {
   }
 }
 
-export default cardInterSectionObserver
+export default cardIntersectionObserver
