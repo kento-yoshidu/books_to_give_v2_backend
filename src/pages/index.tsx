@@ -71,10 +71,24 @@ const Index: React.VFC = () => {
         </h2>
 
         <App
+          title="鳥に生まれることが出来なかった人へ"
+          url="https://bookstogive-kento-yoshidu.vercel.app/f"
+          description="Gatsbyで作ったブログ。"
+          technologies={["Gatsby", "TypeScript", "CSS Modules", "AWS Amplify"]}
+        />
+
+        <App
           title="BooksToGive"
           url="https://bookstogive-kento-yoshidu.vercel.app/f"
           description="読み終わって誰かにあげたい本をリストアップ。"
           technologies={["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Prisma", "Vercel", "Google Books API"]} 
+        />
+
+        <App
+          title="CSS Animation & Tips"
+          url="#"
+          description="改装中。。。"
+          technologies={["Gatsby", "TypeScript", "CSS Modules"]}
         />
       </section>
 
