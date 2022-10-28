@@ -8,6 +8,7 @@ import intersectionObserver from "../lib/intersectionObserver"
 import Header from "../components/header"
 import SamplePage from "../components/samplePage"
 import Card from "../components/card"
+import App from "../components/App"
 
 import * as Styles from "../styles/index.module.scss"
 
@@ -69,13 +70,12 @@ const Index: React.VFC = () => {
           Apps
         </h2>
 
-        <div className={`${Styles.linksWrapper} ${Styles.sa} ${Styles.saUp}`}>
-          <SamplePage
-            path="https://bookstogive-kento-yoshidu.vercel.app/"
-            title="BooksToGive"
-            text="読み終わって誰かにあげたい本をリストアップ。"
-          />
-        </div>
+        <App
+          title="BooksToGive"
+          url="https://bookstogive-kento-yoshidu.vercel.app/f"
+          description="読み終わって誰かにあげたい本をリストアップ。"
+          technologies={["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Prisma", "Vercel", "Google Books API"]} 
+        />
       </section>
 
       <section
