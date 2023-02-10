@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "falling_block"
+name = "falling_piece"
 version = "0.1.0"
