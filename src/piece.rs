@@ -1,4 +1,5 @@
 // ピースの種類
+#[derive(Clone, Copy)]
 pub enum PieceKind {
     I,
     O,
