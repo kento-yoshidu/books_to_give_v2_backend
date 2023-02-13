@@ -1,14 +1,18 @@
+use std::{thread, time};
+
+mod piece;
+
+use piece::{PIECES, PieceKind};
+
 const FIELD_HEIGHT: u8 = 21;
 const FIELD_WIDTH: u8 = 13;
 
-fn main() {
-    let piece = [
-        [0,0,0,0],
-        [0,0,0,0],
-        [1,1,1,1],
-        [0,0,0,0]
-    ];
+struct Position {
+    x: usize,
+    y: usize,
+}
 
+fn main() {
     // 初期フィールド
     // y軸 : 22（壁1、空白21）
     // x軸 : 15（壁2、空白13）
@@ -37,27 +41,44 @@ fn main() {
         [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     ];
 
-    // 描画用フィールド
-    let mut field_buf = field;
+    let mut position = Position { x: 4, y: 0 };
 
-    // ピースを追記
-    for y in 0..4 {
-        for x in 0..4 {
-            if piece[y][x] == 1 {
-                field_buf[y][x+1] = 1;
+    // 画面クリア
+    println!("\x1b[2J\x1b[H\x1b[?25l");
+
+    for _ in 0..5 {
+        // 描画用フィールド
+        let mut field_buf = field;
+
+        // ピースを追記
+        for y in 0..4 {
+            for x in 0..4 {
+                if PIECES[PieceKind::I as usize][y][x] == 1 {
+                    field_buf[y+position.y][x+position.x] = 1;
+                }
             }
         }
-    }
 
-    // フィールドを描画
-    for y in 0..22 {
-        for x in 0..15 {
-            if field_buf[y][x] == 1 {
-                print!("[]");
-            } else {
-                print!(" .");
+        position.y += 1;
+
+        // カーソルを先頭に移動
+        println!("\x1b[H");
+
+        // フィールドを描画
+        for y in 0..22 {
+            for x in 0..15 {
+                if field_buf[y][x] == 1 {
+                    print!("[]");
+                } else {
+                    print!(" .");
+                }
             }
+            println!();
         }
-        println!();
+
+        // 1秒間スリーブする
+        thread::sleep(time::Duration::from_millis(1000));
     }
+    // カーソルを再表示
+    println!("\x1b[?25h");
 }
