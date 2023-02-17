@@ -24,7 +24,6 @@ fn is_collision(field: &Field, position: &Position, piece: PieceKind) -> bool {
             }
         }
     }
-
     false
 }
 
@@ -80,7 +79,7 @@ fn main() {
         };
 
         // 衝突しなかったら1つ下に落とす
-        if !is_collision(&field, &position, PieceKind::I) {
+        if !is_collision(&field, &new_position, PieceKind::I) {
             position = new_position;
         }
 
@@ -118,7 +117,7 @@ fn main() {
                     y: position.y,
                 };
 
-                if !is_collision(&field, &position, PieceKind::I) {
+                if !is_collision(&field, &new_position, PieceKind::I) {
                     position = new_position;
                 }
             },
@@ -128,7 +127,7 @@ fn main() {
                     y: position.y + 1,
                 };
 
-                if !is_collision(&field, &position, PieceKind::I) {
+                if !is_collision(&field, &new_position, PieceKind::I) {
                     position = new_position;
                 }
             },
@@ -138,7 +137,7 @@ fn main() {
                     y: position.y
                 };
 
-                if !is_collision(&field, &position, PieceKind::I) {
+                if !is_collision(&field, &new_position, PieceKind::I) {
                     position = new_position;
                 }
             },
