@@ -11,7 +11,7 @@ struct Book {
 
 #[get("/books")]
 async fn get_books() -> impl Responder {
-    let data = fs::read_to_string("data.json").expect("json error");
+    let data = fs::read_to_string("./data.json").expect("json error");
 
     let books: Vec<Book> = serde_json::from_str(&data).expect("parse error");
 
